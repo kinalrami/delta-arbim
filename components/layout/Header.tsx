@@ -121,7 +121,7 @@ export function Header() {
         aria-label="Main navigation"
         className="fixed top-0 right-0 left-0 z-[200] flex items-center border-b border-white/[0.06] bg-[#0d0d0d]/[0.96] backdrop-blur-[14px]"
       >
-        <div className="mx-auto flex w-full max-w-[1160px] items-center justify-between gap-2 px-4 sm:gap-3 sm:px-6 py-2">
+        <div className="mx-auto flex w-full items-center justify-between gap-2 sm:gap-3 px-5 sm:px-8 lg:px-14 py-2">
           <Link
             href="/"
             className="flex min-w-0 shrink items-center"
