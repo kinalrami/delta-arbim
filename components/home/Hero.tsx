@@ -3,8 +3,15 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import {
+  heroHudCornerClasses,
+  heroLayerSets,
+  heroLegendItems,
+  heroQuickLinks,
+  heroStatBadges,
+  heroTagPills,
+} from "@/components/home/content";
 import { HeroIpadCanvas } from "./HeroIpadCanvas";
-import { heroLayerSets } from "./heroLayers";
 
 type StatBadgeConfig = {
   value: string;
@@ -78,63 +85,6 @@ export function Hero() {
 
   const layers = heroLayerSets[layerIdx] ?? heroLayerSets[0];
 
-  const statBadges: StatBadgeConfig[] = [
-    {
-      value: "3",
-      valueClassName: "text-rose-400",
-      label: "CLASHES FOUND",
-      positionClassName: "top-14 right-0 translate-x-1/3",
-    },
-    {
-      value: "±2cm",
-      valueClassName: "text-orange-300",
-      label: "SPATIAL ACCURACY",
-      positionClassName: "bottom-24 right-0 translate-x-1/3",
-    },
-    {
-      value: "5",
-      valueClassName: "text-sky-400",
-      label: "BIM LAYERS LIVE",
-      positionClassName: "top-28 left-0 -translate-x-1/3",
-    },
-    {
-      value: "60fps",
-      valueClassName: "text-orange-300",
-      label: "AR RENDER RATE",
-      positionClassName: "bottom-24 left-0 -translate-x-1/3",
-    },
-  ];
-
-  const hudCorners = [
-    "absolute top-3 left-3 h-5 w-5",
-    "absolute top-3 right-3 h-5 w-5 -scale-x-100",
-    "absolute bottom-3 left-3 h-5 w-5 -scale-y-100",
-    "absolute bottom-3 right-3 h-5 w-5 -scale-x-100 -scale-y-100",
-  ];
-
-  const legendItems: LegendItemConfig[] = [
-    {
-      label: "STRUCTURE",
-      dotClassName: "bg-slate-300",
-      itemClassName: "border-slate-300/30 text-slate-300",
-    },
-    {
-      label: "HVAC DUCTS",
-      dotClassName: "bg-rose-300",
-      itemClassName: "border-rose-300/30 text-rose-300",
-    },
-    {
-      label: "MEP WATER",
-      dotClassName: "bg-sky-300",
-      itemClassName: "border-sky-300/30 text-sky-300",
-    },
-    {
-      label: "ELECTRICAL",
-      dotClassName: "bg-emerald-300",
-      itemClassName: "border-emerald-300/30 text-emerald-300",
-    },
-  ];
-
   return (
     <section className="w-full">
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
@@ -159,27 +109,20 @@ export function Hero() {
             <div className="mb-8 flex flex-wrap gap-3">
               <Link
                 href="/demo"
-                className="inline-flex items-center justify-center rounded bg-orange-400 px-7 py-3.5 font-mono text-xs font-bold tracking-widest text-black transition-opacity hover:opacity-90"
+                className="inline-flex items-center justify-center rounded bg-orange-400 px-7 py-3.5 font-mono text-xs font-bold text-black transition-opacity hover:opacity-90"
               >
                 BOOK A FREE DEMO →
               </Link>
               <Link
                 href="/#ifc-check"
-                className="inline-flex items-center justify-center rounded border border-white/25 px-6 py-3.5 font-mono text-xs font-bold tracking-widest text-white transition-colors hover:border-orange-400"
+                className="inline-flex items-center justify-center rounded border border-white/25 px-6 py-3.5 font-mono text-xs text-white transition-colors hover:border-orange-400"
               >
                 FREE IFC CHECK
               </Link>
             </div>
 
             <div className="mb-6 flex flex-wrap gap-2">
-              {[
-                "IOS & ANDROID",
-                "LIDAR ±2CM",
-                "IFC OPEN STANDARD",
-                "100% OFFLINE",
-                "MARKERLESS AR",
-                "CLASH DETECTION",
-              ].map((t) => (
+              {heroTagPills.map((t) => (
                 <span
                   key={t}
                   className="rounded border border-white/15 px-2.5 py-1.5 font-mono text-[11px] text-white/50"
@@ -190,12 +133,7 @@ export function Hero() {
             </div>
 
             <div className="flex flex-wrap gap-2">
-              {[
-                { href: "/pricing", label: "→ PRICING" },
-                { href: "/industry", label: "→ INDUSTRIES" },
-                { href: "/about", label: "→ ABOUT US" },
-                { href: "/#ifc-check", label: "→ FREE IFC CHECK" },
-              ].map((i) => (
+              {heroQuickLinks.map((i) => (
                 <Link
                   key={i.href}
                   href={i.href}
@@ -210,7 +148,7 @@ export function Hero() {
           {/* RIGHT */}
           <div className="relative flex items-center justify-center py-10 lg:px-6">
             {/* Floating stat badges */}
-            {statBadges.map((cfg) => (
+            {heroStatBadges.map((cfg) => (
               <StatBadge key={cfg.label} cfg={cfg} />
             ))}
 
@@ -231,7 +169,7 @@ export function Hero() {
                 <div className="pointer-events-none absolute inset-0">
                   <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-orange-400/70 to-transparent animate-pulse" />
 
-                  {hudCorners.map((className) => (
+                  {heroHudCornerClasses.map((className) => (
                     <HudCorner key={className} className={className} />
                   ))}
 
@@ -252,7 +190,7 @@ export function Hero() {
                   </div>
 
                   <div className="absolute bottom-5 left-5 flex flex-col gap-1.5">
-                    {legendItems.map((cfg) => (
+                    {heroLegendItems.map((cfg) => (
                       <LegendItem key={cfg.label} cfg={cfg} />
                     ))}
                   </div>

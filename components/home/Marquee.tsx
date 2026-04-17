@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { marqueeHeroStats, marqueeTrackItems } from "@/components/home/content";
 import { Hexagon } from "lucide-react";
 
 type HeroStatCardConfig = {
@@ -20,29 +20,8 @@ function HeroStatCard({ cfg }: { cfg: HeroStatCardConfig }) {
 }
 
 export function Marquee() {
-  const heroStats: HeroStatCardConfig[] = [
-    { value: "±2cm", label: "Spatial Accuracy" },
-    { value: "100%", label: "Offline Capable" },
-    { value: "<60s", label: "IFC to AR" },
-    { value: "IFC", label: "Open Standard" },
-  ];
-
-  const marqueeItems = [
-    "AR BIM Overlay",
-    "IFC Open Standard",
-    "Clash Detection",
-    "LiDAR Scanning",
-    "MEP Coordination",
-    "As-Built Verification",
-    "QA/QC Walkthroughs",
-    "±2cm Accuracy",
-    "Offline Capable",
-    "60fps AR",
-    "Built for Bharat",
-    "Global Teams",
-  ];
-
-  const marqueeTrack = [...marqueeItems, ...marqueeItems];
+  const heroStats: HeroStatCardConfig[] = marqueeHeroStats;
+  const marqueeTrack = [...marqueeTrackItems, ...marqueeTrackItems];
 
   return (
     <section className="w-full">

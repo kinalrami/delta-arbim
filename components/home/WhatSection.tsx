@@ -1,71 +1,40 @@
-"use client";
-
 import Link from "next/link";
 
-type WhatCard = {
-  stat: string;
-  label: string;
-  desc: string;
-};
-
-const cards: WhatCard[] = [
-  {
-    stat: "30%",
-    label: "Rework Reduction",
-    desc: "Sites using IFC AR overlays report up to 30% reduction in costly rework through early clash detection.",
-  },
-  {
-    stat: "80%",
-    label: "Less QA/QC Time",
-    desc: "AR-powered quality walkthroughs take a fraction of traditional time — 2 hours to 20 minutes.",
-  },
-  {
-    stat: "75%",
-    label: "Faster Understanding",
-    desc: "Workers understand complex 3D designs up to 75% faster with AR on-site visualisation.",
-  },
-  {
-    stat: "±2cm",
-    label: "Spatial Accuracy",
-    desc: "LiDAR + computer vision anchoring locks IFC models with centimetre-level precision — no markers needed.",
-  },
-];
-
-const links = [
-  { href: "/#ars", label: "→ Explore AR Layers" },
-  { href: "/demo", label: "→ Book a Demo" },
-  { href: "/pricing", label: "→ View Pricing" },
-] as const;
+import { whatLinks, whatStatCards } from "@/components/home/content";
+import { SectionHeading } from "../shared/SectionHeading";
 
 export function WhatSection() {
   return (
-    <section id="what" aria-labelledby="what-h2" className="w-full">
+    <section id="what" aria-labelledby="what-h2" className="w-full bg-[#121212]">
       <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
-        <span className="mb-4 inline-flex font-mono text-xs font-semibold tracking-widest text-orange-400">
-          What Is DeltaARBIM?
-        </span>
-
-        <h2
+        <SectionHeading
           id="what-h2"
-          className="max-w-3xl font-serif text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl"
-        >
-          The gap between <em className="not-italic text-orange-400">IFC design</em> and construction — closed.
-        </h2>
-
-        <div className="mt-6 max-w-3xl space-y-6 text-base leading-relaxed text-white/60">
-          <p>
-            Construction projects lose billions every year because the design stays on laptops while workers build
-            from printed drawings. A column 8cm off. A duct clashing with a beam. An opening in the wrong wall.
-          </p>
-          <p>
-            DeltaARBIM puts your live IFC model — every structural column, every MEP pipe, every architectural layer —
-            directly over the physical site through your device camera. If something is wrong, you see it before it
-            gets built.
-          </p>
-        </div>
+          eyebrow="What Is DeltaARBIM?"
+          eyebrowClassName="mb-4 inline-flex font-mono text-xs font-semibold uppercase tracking-widest text-orange-400"
+          title={
+            <>
+              The gap between <em className="not-italic text-orange-400">IFC design</em> and construction — closed.
+            </>
+          }
+          titleClassName="max-w-3xl font-serif text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl"
+          desc={
+            <>
+              <p>
+                Construction projects lose billions every year because the design stays on laptops while workers build
+                from printed drawings. A column 8cm off. A duct clashing with a beam. An opening in the wrong wall.
+              </p>
+              <p>
+                DeltaARBIM puts your live IFC model — every structural column, every MEP pipe, every architectural layer
+                — directly over the physical site through your device camera. If something is wrong, you see it before it
+                gets built.
+              </p>
+            </>
+          }
+          descWrapClassName="mt-4 max-w-3xl space-y-2 text-base leading-relaxed text-neutral-400"
+        />
 
         <div className="mt-8 flex flex-wrap gap-3">
-          {links.map((l) => (
+          {whatLinks.map((l) => (
             <Link
               key={l.href}
               href={l.href}
@@ -76,26 +45,21 @@ export function WhatSection() {
           ))}
         </div>
 
-        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {cards.map((c) => (
-            <div
-              key={c.label}
-              className="rounded-xl border border-white/10 bg-zinc-900/40 p-5 shadow-sm"
-            >
-              <div className="font-serif text-3xl font-extrabold leading-none text-orange-300">
-                {c.stat}
+        {/* gap-px + neutral grid bg draws all internal dividers (incl. horizontal between rows) */}
+        <div className="mt-10 border border-neutral-700 bg-neutral-700">
+          <div className="grid grid-cols-1 gap-px sm:grid-cols-2">
+            {whatStatCards.map((c) => (
+              <div key={c.label} className="bg-[#121212] p-6 sm:p-8">
+                <div className="text-2xl font-bold leading-none tracking-tight text-orange-400 sm:text-4xl">{c.stat}</div>
+                <div className="mt-2 font-mono text-xs font-bold uppercase tracking-widest text-orange-400">
+                  {c.label}
+                </div>
+                <p className="mt-4 text-sm leading-relaxed text-neutral-400">{c.desc}</p>
               </div>
-              <div className="mt-3 font-mono text-xs font-semibold tracking-widest text-white/70">
-                {c.label}
-              </div>
-              <div className="mt-3 text-sm leading-relaxed text-white/55">
-                {c.desc}
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
   );
 }
-

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useRef, useState } from "react";
+import { SectionHeading } from "../shared/SectionHeading";
 
 type IfcSchema = "" | "IFC2x3" | "IFC4" | "IFC4.1" | "IFC4.3" | "unknown";
 type IfcTool =
@@ -72,7 +73,7 @@ function computeResult(input: {
     bullets.push(`Estimated element count: ${input.elements.toLocaleString()}.`);
   } else {
     bullets.push("Element count missing — add an estimate for AR performance guidance.");
-    if (verdict !== "needs-optimization") verdict = "not-sure";
+    verdict = "not-sure";
   }
 
   if (input.notes.trim().length > 0) {
@@ -162,16 +163,24 @@ export function IfcCheckerSection() {
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
           {/* LEFT */}
           <div>
-            <span className="inline-flex font-mono text-xs font-semibold tracking-widest text-orange-400">
-              Free · No Account Needed
-            </span>
-            <h2 id="ifc-check-h" className="mt-4 font-serif text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-              Is your IFC model <em className="not-italic text-orange-400">AR-ready?</em>
-            </h2>
-            <p className="mt-4 max-w-prose text-base leading-relaxed text-white/60">
-              Before your demo — or just out of curiosity — find out if your IFC file is technically compatible with
-              DeltaARBIM&apos;s AR engine. Describe your model and our AI checks it against AR requirements in seconds.
-            </p>
+            <SectionHeading
+              id="ifc-check-h"
+              eyebrow="Free · No Account Needed"
+              eyebrowClassName="inline-flex uppercase font-mono text-xs font-semibold tracking-widest text-orange-400"
+              title={
+                <>
+                  Is your IFC model <em className="not-italic text-orange-400">AR-ready?</em>
+                </>
+              }
+              titleClassName="mt-4 font-serif text-3xl font-extrabold tracking-tight text-white sm:text-4xl"
+              desc={
+                <>
+                  Before your demo — or just out of curiosity — find out if your IFC file is technically compatible with
+                  DeltaARBIM&apos;s AR engine. Describe your model and our AI checks it against AR requirements in seconds.
+                </>
+              }
+              descWrapClassName="mt-4 max-w-prose text-base leading-relaxed text-white/60"
+            />
 
             <ul className="mt-6 space-y-3 text-sm text-white/60">
               {[
@@ -198,13 +207,13 @@ export function IfcCheckerSection() {
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 href="/demo"
-                className="inline-flex items-center uppercase bg-orange-400 px-4 py-2 font-mono text-xs text-white transition-colors hover:border-orange-400/40 hover:bg-orange-400/10 hover:text-orange-200"
+                className="inline-flex items-center uppercase bg-orange-400 px-4 py-2 font-mono text-xs font-bold text-black transition-colors hover:border-orange-400/40 hover:bg-orange-400/10 hover:text-orange-200"
               >
                 → Book a Full Demo
               </Link>
               <Link
                 href="/pricing"
-                className="inline-flex items-center border border-white/15 px-4 py-2 font-mono text-xs text-white transition-colors hover:border-orange-400/40 hover:bg-orange-400/10 hover:text-orange-200"
+                className="inline-flex uppercase items-center border border-white/15 px-4 py-2 font-mono text-xs text-white transition-colors hover:border-orange-400/40 hover:bg-orange-400/10 hover:text-orange-200"
               >
                 → Pricing Plans
               </Link>
@@ -212,7 +221,7 @@ export function IfcCheckerSection() {
           </div>
 
           {/* RIGHT */}
-          <div className="rounded-xl border border-white/10 bg-zinc-900/40 p-6">
+          <div className="border border-white/10 bg-zinc-900/40 p-6">
             <h3 className="font-serif text-xl font-bold text-white">Check your IFC model</h3>
             <p className="mt-2 text-sm leading-relaxed text-white/55">
               Describe your model or drop your file — we&apos;ll assess AR compatibility instantly.
@@ -344,7 +353,7 @@ export function IfcCheckerSection() {
                   type="button"
                   onClick={runCheck}
                   disabled={status === "loading"}
-                  className="mt-5 w-full border border-orange-400/40 bg-orange-400 px-4 py-3 font-mono text-xs font-bold text-white transition-opacity hover:opacity-90 disabled:opacity-60"
+                  className="mt-5 w-full border border-orange-400/40 bg-orange-400 px-4 py-3 font-mono text-xs font-bold text-black transition-opacity hover:opacity-90 disabled:opacity-60"
                 >
                   CHECK AR COMPATIBILITY →
                 </button>

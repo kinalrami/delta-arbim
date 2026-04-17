@@ -3,6 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import { howItWorksSteps } from "@/components/home/content";
+import { SectionHeading } from "../shared/SectionHeading";
+
 import { HowItWorksCanvas, type HowStepId } from "./HowItWorksCanvas";
 import { IpadFrame } from "./IpadFrame";
 
@@ -58,46 +61,7 @@ function StepItem({
 }
 
 export function HowItWorksSection() {
-  const steps = useMemo<Step[]>(
-    () => [
-      {
-        id: 0,
-        tag: "STEP 01",
-        title: "Upload your IFC",
-        hudLabel: "UPLOADING IFC",
-        desc: "Import your IFC file directly into DeltaARBIM. The platform parses every structural element, MEP layer, and metadata automatically — no conversion, no manual setup required.",
-      },
-      {
-        id: 1,
-        tag: "STEP 02",
-        title: "Select floor or zone",
-        hudLabel: "SELECT ZONE",
-        desc: "Choose the floor level and construction zone you want to verify. DeltaARBIM shows a live building tree — tap any floor to load its geometry.",
-      },
-      {
-        id: 2,
-        tag: "STEP 03",
-        title: "Point & anchor",
-        hudLabel: "ANCHORING MODEL",
-        desc: "Using LiDAR and computer vision, DeltaARBIM locks the IFC model to real-world coordinates. No markers needed — just point at two known site features.",
-      },
-      {
-        id: 3,
-        tag: "STEP 04",
-        title: "Walk the AR site",
-        hudLabel: "AR OVERLAY LIVE",
-        desc: "See the full IFC model overlaid on the physical site at true scale. Walk through walls, check MEP routing, and verify structural placement in real time.",
-      },
-      {
-        id: 4,
-        tag: "STEP 05",
-        title: "Report & sync",
-        hudLabel: "REPORT SYNCING",
-        desc: "Capture AR screenshots, tag clash points with annotations, and push reports directly to your PM stack. Every issue is geo-tagged to centimeter accuracy.",
-      },
-    ],
-    [],
-  );
+  const steps = useMemo<Step[]>(() => howItWorksSteps as Step[], []);
 
   const [activeStep, setActiveStep] = useState<HowStepId>(0);
 
@@ -115,16 +79,17 @@ export function HowItWorksSection() {
   return (
     <section id="how" aria-labelledby="how-h2" className="w-full">
       <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
-        <span className="mb-2 inline-flex font-mono text-xs font-semibold tracking-widest text-orange-400">
-          HOW IT WORKS
-        </span>
-
-        <h2
+        <SectionHeading
           id="how-h2"
-          className="max-w-4xl font-serif text-3xl font-extrabold tracking-tight text-white sm:text-4xl"
-        >
-          From <span className="text-orange-300">IFC file</span> to live AR overlay in under 60 seconds.
-        </h2>
+          eyebrow="HOW IT WORKS"
+          title={
+            <>
+              From <span className="text-orange-400">IFC file</span> to live AR overlay in under 60 seconds.
+            </>
+          }
+          titleClassName="max-w-4xl font-serif text-3xl font-extrabold tracking-tight text-white sm:text-4xl"
+          desc={undefined}
+        />
 
         <div className="mt-8 grid grid-cols-1 gap-10 lg:grid-cols-2">
           {/* LEFT: steps */}
@@ -151,7 +116,7 @@ export function HowItWorksSection() {
               <div className="mt-4 flex flex-wrap gap-3">
                 <Link
                   href="mailto:hi@shivlam.com"
-                  className="inline-flex items-center bg-orange-400 px-4 py-2 font-mono text-xs text-white transition-colors hover:border-orange-400/50"
+                  className="inline-flex items-center bg-orange-400 px-4 py-2 font-mono text-xs font-bold text-black transition-colors hover:border-orange-400/50"
                 >
                   → SEE IT LIVE IN A DEMO
                 </Link>

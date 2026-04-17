@@ -3,8 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { arsInfoItems, arsLayers } from "@/components/home/content";
+
 import { ArsCanvas, type ArsActiveLayers, type ArsLayerId } from "./ArsCanvas";
 import { IpadFrame } from "./IpadFrame";
+import { SectionHeading } from "../shared/SectionHeading";
 
 type LayerDef = {
   id: ArsLayerId;
@@ -77,38 +80,9 @@ export function ArsSection() {
   const clashText = hasClash ? "⚠ CLASH DETECTED" : "NO CLASHES";
   const clashColor = hasClash ? "text-rose-300/80" : "text-white/35";
 
-  const layers = useMemo<LayerDef[]>(
-    () => [
-      { id: "struct", label: "Structure Layer", dot: "#888888" },
-      { id: "walls", label: "Walls & Slabs", dot: "#4488FF" },
-      { id: "hvac", label: "MEP — HVAC", dot: "#FF4444" },
-      { id: "water", label: "MEP — Water", dot: "#44AAFF" },
-      { id: "elec", label: "MEP — Electrical", dot: "#FFCC00" },
-    ],
-    [],
-  );
+  const layers = useMemo<LayerDef[]>(() => arsLayers as LayerDef[], []);
 
-  const infoItems: InfoItem[] = useMemo(
-    () => [
-      {
-        title: "→ BIM Structure Layer",
-        desc: "Grey columns, beams and slabs from your IFC file overlaid precisely to confirm placement on site.",
-      },
-      {
-        title: "→ Wall & Slab Layer",
-        desc: "Semi-transparent panels show walls and openings — catch misplacements before they're built.",
-      },
-      {
-        title: "→ MEP Pipes & Ducts",
-        desc: "Red HVAC, blue water, yellow electrical — each trade colour-coded. Toggle to isolate for clash inspection.",
-      },
-      {
-        title: "→ AR Anchor Points",
-        desc: "LiDAR nodes lock the IFC model to physical coordinates so the overlay never drifts.",
-      },
-    ],
-    [],
-  );
+  const infoItems: InfoItem[] = useMemo(() => arsInfoItems, []);
 
   const toggleLayer = (id: ArsLayerId) => {
     setActive((s) => ({ ...s, [id]: !s[id] }));
@@ -125,20 +99,18 @@ export function ArsSection() {
   return (
     <section id="ars" aria-labelledby="ars-h2" className="w-full bg-[#1A1A1A]">
       <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
-        <span className="mb-2 inline-flex font-mono text-xs font-semibold tracking-widest text-orange-400">
-          AR Scan // What You See On Site
-        </span>
-
-        <h2
+        <SectionHeading
           id="ars-h2"
-          className="max-w-3xl font-serif text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl"
-        >
-          Every IFC layer. Every trade. <em className="not-italic text-orange-400">Live in AR.</em>
-        </h2>
-
-        <p className="mt-3 max-w-3xl text-base leading-relaxed text-white/60">
-          Toggle each layer — exactly as it works on a real construction site. Click any layer button to show or hide it.
-        </p>
+          eyebrow="AR Scan // What You See On Site"
+          title={
+            <>
+              Every IFC layer. Every trade. <em className="not-italic text-orange-400">Live in AR.</em>
+            </>
+          }
+          titleClassName="max-w-3xl font-serif text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl"
+          desc="Toggle each layer — exactly as it works on a real construction site. Click any layer button to show or hide it."
+          descWrapClassName="mt-3 max-w-3xl text-base leading-relaxed text-white/60"
+        />
 
         <div className="mt-6 grid grid-cols-1 gap-10 lg:grid-cols-2">
           {/* LEFT: iPad */}
@@ -232,7 +204,7 @@ export function ArsSection() {
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 href="/demo"
-                className="inline-flex items-center uppercase bg-orange-400 px-4 py-2 font-mono text-xs text-white transition-colors hover:border-orange-400/40 hover:text-orange-200"
+                className="inline-flex items-center uppercase bg-orange-400 px-4 py-2 font-mono text-xs font-bold text-black transition-colors hover:border-orange-400/40 hover:text-orange-200"
               >
                 → See It On Your Site
               </Link>
