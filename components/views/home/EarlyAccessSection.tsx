@@ -9,8 +9,8 @@ import {
   earlyAccessRoleOptions,
   earlyAccessTrustItems,
   siteWa,
-} from "@/components/home/content";
-import { SectionHeading } from "../shared/SectionHeading";
+} from "@/components/views/home/content";
+import { SectionHeading } from "../../shared/SectionHeading";
 
 type EarlyForm = {
   firstName: string;

@@ -3,11 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { arsInfoItems, arsLayers } from "@/components/home/content";
+import { arsInfoItems, arsLayers } from "@/components/views/home/content";
 
 import { ArsCanvas, type ArsActiveLayers, type ArsLayerId } from "./ArsCanvas";
 import { IpadFrame } from "./IpadFrame";
-import { SectionHeading } from "../shared/SectionHeading";
+import { SectionHeading } from "../../shared/SectionHeading";
 
 type LayerDef = {
   id: ArsLayerId;

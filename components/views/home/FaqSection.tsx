@@ -3,10 +3,10 @@
 import Link from "next/link";
 import { useId, useMemo, useState, type ReactNode } from "react";
 
-import type { FaqItemModel, FaqTabId } from "@/components/home/content";
-import { faqItems, faqTabs } from "@/components/home/content";
-import { SectionHeading } from "../shared/SectionHeading";
-import { SectionTabs } from "../shared/SectionTabs";
+import type { FaqItemModel, FaqTabId } from "@/components/views/home/content";
+import { faqItems, faqTabs } from "@/components/views/home/content";
+import { SectionHeading } from "../../shared/SectionHeading";
+import { SectionTabs } from "../../shared/SectionTabs";
 
 function renderFaqAnswer(item: FaqItemModel): ReactNode {
   const a = item.answer;

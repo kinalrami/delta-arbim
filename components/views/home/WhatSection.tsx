@@ -1,7 +1,7 @@
 import Link from "next/link";
 
-import { whatLinks, whatStatCards } from "@/components/home/content";
-import { SectionHeading } from "../shared/SectionHeading";
+import { whatLinks, whatStatCards } from "@/components/views/home/content";
+import { SectionHeading } from "../../shared/SectionHeading";
 
 export function WhatSection() {
   return (

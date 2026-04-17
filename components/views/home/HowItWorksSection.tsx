@@ -3,8 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
-import { howItWorksSteps } from "@/components/home/content";
-import { SectionHeading } from "../shared/SectionHeading";
+import { howItWorksSteps } from "@/components/views/home/content";
+import { SectionHeading } from "../../shared/SectionHeading";
 
 import { HowItWorksCanvas, type HowStepId } from "./HowItWorksCanvas";
 import { IpadFrame } from "./IpadFrame";

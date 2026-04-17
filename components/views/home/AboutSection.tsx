@@ -1,7 +1,7 @@
 import Link from "next/link";
 
-import { aboutOpenToItems, aboutSkills, aboutStats } from "@/components/home/content";
-import { SectionHeading } from "../shared/SectionHeading";
+import { aboutOpenToItems, aboutSkills, aboutStats } from "@/components/views/home/content";
+import { SectionHeading } from "../../shared/SectionHeading";
 
 function statCellClass(i: number) {
   const base = "p-6 sm:p-8";

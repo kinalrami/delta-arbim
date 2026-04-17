@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 
-import type { PricingTeaserCard } from "@/components/home/content";
-import { pricingTeaserCards } from "@/components/home/content";
-import { SectionHeading } from "../shared/SectionHeading";
+import type { PricingTeaserCard } from "@/components/views/home/content";
+import { pricingTeaserCards } from "@/components/views/home/content";
+import { SectionHeading } from "../../shared/SectionHeading";
 
 function PricingCardView({ c }: { c: PricingTeaserCard }) {
   const featured = Boolean(c.featured);

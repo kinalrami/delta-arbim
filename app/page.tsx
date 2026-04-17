@@ -1,19 +1,19 @@
-import { Hero } from "@/components/home/Hero";
-import { Marquee } from "@/components/home/Marquee";
-import { WhatSection } from "@/components/home/WhatSection";
-import { ArsSection } from "@/components/home/ArsSection";
-import { HowItWorksSection } from "@/components/home/HowItWorksSection";
-import { IfcCheckerSection } from "@/components/home/IfcCheckerSection";
-import { FeaturesSection } from "@/components/home/FeaturesSection";
-import { SolutionsSection } from "@/components/home/SolutionsSection";
-import { FieldDemoSection } from "@/components/home/FieldDemoSection";
-import { SimulationSection } from "@/components/home/SimulationSection";
-import { PricingTeaserSection } from "@/components/home/PricingTeaserSection";
-import { DemoRequestSection } from "@/components/home/DemoRequestSection";
-import { FaqSection } from "@/components/home/FaqSection";
-import { AboutSection } from "@/components/home/AboutSection";
-import { EarlyAccessSection } from "@/components/home/EarlyAccessSection";
-import { ContactStrip } from "@/components/home/ContactStrip";
+import { Hero } from "@/components/views/home/Hero";
+import { Marquee } from "@/components/views/home/Marquee";
+import { WhatSection } from "@/components/views/home/WhatSection";
+import { ArsSection } from "@/components/views/home/ArsSection";
+import { HowItWorksSection } from "@/components/views/home/HowItWorksSection";
+import { IfcCheckerSection } from "@/components/views/home/IfcCheckerSection";
+import { FeaturesSection } from "@/components/views/home/FeaturesSection";
+import { SolutionsSection } from "@/components/views/home/SolutionsSection";
+import { FieldDemoSection } from "@/components/views/home/FieldDemoSection";
+import { SimulationSection } from "@/components/views/home/SimulationSection";
+import { PricingTeaserSection } from "@/components/views/home/PricingTeaserSection";
+import { DemoRequestSection } from "@/components/views/home/DemoRequestSection";
+import { FaqSection } from "@/components/views/home/FaqSection";
+import { AboutSection } from "@/components/views/home/AboutSection";
+import { EarlyAccessSection } from "@/components/views/home/EarlyAccessSection";
+import { ContactStrip } from "@/components/views/home/ContactStrip";
 
 export default function Home() {
   return (

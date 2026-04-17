@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useRef, useState } from "react";
-import { SectionHeading } from "../shared/SectionHeading";
+import { SectionHeading } from "../../shared/SectionHeading";
 
 type IfcSchema = "" | "IFC2x3" | "IFC4" | "IFC4.1" | "IFC4.3" | "unknown";
 type IfcTool =

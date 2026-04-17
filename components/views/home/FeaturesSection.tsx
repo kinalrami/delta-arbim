@@ -1,6 +1,6 @@
-import type { FeatureContent } from "@/components/home/content";
-import { featuresContent } from "@/components/home/content";
-import { SectionHeading } from "../shared/SectionHeading";
+import type { FeatureContent } from "@/components/views/home/content";
+import { featuresContent } from "@/components/views/home/content";
+import { SectionHeading } from "../../shared/SectionHeading";
 
 function FeatureCard({ f }: { f: FeatureContent }) {
   const Icon = f.icon;

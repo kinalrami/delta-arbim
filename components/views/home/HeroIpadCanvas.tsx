@@ -5,7 +5,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { Edges } from "@react-three/drei";
 import { useEffect, useMemo, useRef } from "react";
 import * as THREE from "three";
-import type { HeroLayerState } from "@/components/home/content";
+import type { HeroLayerState } from "@/components/views/home/content";
 
 function Pipe({
   p1,

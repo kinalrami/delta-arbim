@@ -4,8 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Diamond, Hexagon, Play, Target, Zap } from "lucide-react";
 
-import { fieldDemoBullets, site, type FieldDemoBulletIcon } from "@/components/home/content";
-import { SectionHeading } from "../shared/SectionHeading";
+import { fieldDemoBullets, site, type FieldDemoBulletIcon } from "@/components/views/home/content";
+import { SectionHeading } from "../../shared/SectionHeading";
 
 function Corner({ className }: { className: string }) {
   return (

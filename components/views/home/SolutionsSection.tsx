@@ -3,10 +3,10 @@
 import Link from "next/link";
 import { useId, useState } from "react";
 
-import type { SolutionRoleKey } from "@/components/home/content";
-import { solutionRoles } from "@/components/home/content";
-import { SectionHeading } from "../shared/SectionHeading";
-import { SectionTabs } from "../shared/SectionTabs";
+import type { SolutionRoleKey } from "@/components/views/home/content";
+import { solutionRoles } from "@/components/views/home/content";
+import { SectionHeading } from "../../shared/SectionHeading";
+import { SectionTabs } from "../../shared/SectionTabs";
 
 type Stat = { value: string; label: string };
 type Card = { title: string; desc: string };

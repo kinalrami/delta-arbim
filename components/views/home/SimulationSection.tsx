@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 
-import { simulationStats } from "@/components/home/content";
-import { SectionHeading } from "../shared/SectionHeading";
+import { simulationStats } from "@/components/views/home/content";
+import { SectionHeading } from "../../shared/SectionHeading";
 
 type Stat = { value: string; label: string };
 

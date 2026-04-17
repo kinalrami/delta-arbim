@@ -10,7 +10,7 @@ import {
   heroQuickLinks,
   heroStatBadges,
   heroTagPills,
-} from "@/components/home/content";
+} from "@/components/views/home/content";
 import { HeroIpadCanvas } from "./HeroIpadCanvas";
 
 type StatBadgeConfig = {

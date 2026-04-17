@@ -4,8 +4,8 @@ import Link from "next/link";
 import { Check, MessageCircle, ShieldCheck } from "lucide-react";
 import { useState } from "react";
 
-import { demoChecklist, siteWa } from "@/components/home/content";
-import { SectionHeading } from "../shared/SectionHeading";
+import { demoChecklist, siteWa } from "@/components/views/home/content";
+import { SectionHeading } from "../../shared/SectionHeading";
 
 type DemoForm = {
   firstName: string;

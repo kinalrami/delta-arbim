@@ -1,6 +1,6 @@
 "use client";
 
-import { marqueeHeroStats, marqueeTrackItems } from "@/components/home/content";
+import { marqueeHeroStats, marqueeTrackItems } from "@/components/views/home/content";
 import { Hexagon } from "lucide-react";
 
 type HeroStatCardConfig = {
