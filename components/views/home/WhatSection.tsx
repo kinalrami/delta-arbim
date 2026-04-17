@@ -1,7 +1,6 @@
-import Link from "next/link";
-
 import { whatLinks, whatStatCards } from "@/components/views/home/content";
 import { SectionHeading } from "../../shared/SectionHeading";
+import { CtaPill } from "../../shared/CtaPill";
 
 export function WhatSection() {
   return (
@@ -35,13 +34,9 @@ export function WhatSection() {
 
         <div className="mt-8 flex flex-wrap gap-3">
           {whatLinks.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              className="inline-flex items-center rounded border border-orange-400/25 uppercase bg-orange-400/10 px-4 py-2 font-mono text-[11px] text-orange-300 transition-colors hover:border-orange-400/50 hover:text-orange-200"
-            >
-              {l.label}
-            </Link>
+            <CtaPill key={l.href} href={l.href} variant="outlineOrange" className="rounded">
+              {l.label.replace(/^→\s*/, "")}
+            </CtaPill>
           ))}
         </div>
 

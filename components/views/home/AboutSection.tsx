@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { aboutOpenToItems, aboutSkills, aboutStats } from "@/components/views/home/content";
 import { SectionHeading } from "../../shared/SectionHeading";
+import { CtaPill } from "../../shared/CtaPill";
 
 function statCellClass(i: number) {
   const base = "p-6 sm:p-8";
@@ -57,12 +58,13 @@ export function AboutSection() {
 
             <div className="mt-8 flex flex-wrap gap-2">
               {aboutSkills.map((s) => (
-                <span
+                <CtaPill
                   key={s}
-                  className="border border-white/10 bg-white/5 px-3 py-2 font-mono text-[11px] font-semibold uppercase text-white"
+                  variant="gray"
+                  className="border-white/10 bg-white/5 px-3 py-2 text-white font-semibold hover:border-white/15 hover:bg-white/5"
                 >
                   {s}
-                </span>
+                </CtaPill>
               ))}
             </div>
           </div>

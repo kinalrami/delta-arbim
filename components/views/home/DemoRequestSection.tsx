@@ -6,6 +6,7 @@ import { useState } from "react";
 
 import { demoChecklist, siteWa } from "@/components/views/home/content";
 import { SectionHeading } from "../../shared/SectionHeading";
+import { CtaPill } from "../../shared/CtaPill";
 
 type DemoForm = {
   firstName: string;
@@ -102,24 +103,15 @@ export function DemoRequestSection() {
               </ul>
 
               <div className="mt-8 flex flex-wrap gap-3">
-                <Link
-                  href="/pricing"
-                  className="inline-flex items-center border border-white/15 bg-white/5 px-4 py-2 font-mono text-[11px] text-white/70 transition-colors hover:border-orange-400/40 hover:bg-orange-400/10 hover:text-orange-200"
-                >
-                  → View Pricing
-                </Link>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center border border-white/15 bg-white/5 px-4 py-2 font-mono text-[11px] text-white/70 transition-colors hover:border-orange-400/40 hover:bg-orange-400/10 hover:text-orange-200"
-                >
-                  → Contact Us
-                </Link>
-                <Link
-                  href="/privacy"
-                  className="inline-flex items-center border border-white/15 bg-white/5 px-4 py-2 font-mono text-[11px] text-white/70 transition-colors hover:border-orange-400/40 hover:bg-orange-400/10 hover:text-orange-200"
-                >
-                  → Privacy Policy
-                </Link>
+                <CtaPill href="/pricing" showArrow>
+                  View Pricing
+                </CtaPill>
+                <CtaPill href="/contact" showArrow>
+                  Contact Us
+                </CtaPill>
+                <CtaPill href="/privacy" showArrow>
+                  Privacy Policy
+                </CtaPill>
               </div>
             </div>
 

@@ -12,6 +12,7 @@ import {
   heroTagPills,
 } from "@/components/views/home/content";
 import { HeroIpadCanvas } from "./HeroIpadCanvas";
+import { CtaPill } from "../../shared/CtaPill";
 
 type StatBadgeConfig = {
   value: string;
@@ -109,13 +110,13 @@ export function Hero() {
             <div className="mb-8 flex flex-wrap gap-3">
               <Link
                 href="/demo"
-                className="inline-flex items-center justify-center rounded bg-orange-400 px-7 py-3.5 font-mono text-xs font-bold text-black transition-opacity hover:opacity-90"
+                className="inline-flex items-center justify-center font-bold bg-orange-400 px-7 py-3.5 font-mono text-xs font-bold text-black transition-opacity hover:opacity-90"
               >
                 BOOK A FREE DEMO →
               </Link>
               <Link
                 href="/#ifc-check"
-                className="inline-flex items-center justify-center rounded border border-white/25 px-6 py-3.5 font-mono text-xs text-white transition-colors hover:border-orange-400"
+                className="inline-flex items-center justify-center border border-white/25 px-6 py-3.5 font-mono text-xs text-white transition-colors hover:border-orange-400"
               >
                 FREE IFC CHECK
               </Link>
@@ -123,24 +124,26 @@ export function Hero() {
 
             <div className="mb-6 flex flex-wrap gap-2">
               {heroTagPills.map((t) => (
-                <span
+                <CtaPill
                   key={t}
-                  className="rounded border border-white/15 px-2.5 py-1.5 font-mono text-[11px] text-white/50"
+                  variant="gray"
+                  className="rounded px-2.5 py-1.5 text-white/50 hover:text-white/70"
                 >
                   {t}
-                </span>
+                </CtaPill>
               ))}
             </div>
 
             <div className="flex flex-wrap gap-2">
               {heroQuickLinks.map((i) => (
-                <Link
+                <CtaPill
                   key={i.href}
                   href={i.href}
-                  className="rounded border border-orange-400/25 bg-orange-400/10 px-3 py-1.5 font-mono text-[11px] text-orange-300 transition-colors hover:border-orange-400/50 hover:text-orange-200"
+                  variant="outlineOrange"
+                  className="rounded px-3 py-1.5"
                 >
-                  {i.label}
-                </Link>
+                  {i.label.replace(/^→\s*/, "")}
+                </CtaPill>
               ))}
             </div>
           </div>
