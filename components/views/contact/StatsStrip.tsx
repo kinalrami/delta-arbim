@@ -1,10 +1,18 @@
 import { contactStats } from "./content";
 
-export function StatsStrip() {
+export type StatsStripItem = { value: string; label: string };
+
+export function StatsStrip({
+  stats = contactStats,
+  ariaLabel = "Stats",
+}: {
+  stats?: readonly StatsStripItem[];
+  ariaLabel?: string;
+}) {
   return (
-    <section aria-label="Contact stats" className="w-full bg-[#1A1A1A] border-y border-white/10">
+    <section aria-label={ariaLabel} className="w-full bg-[#1A1A1A] border-y border-white/10">
       <div className="grid grid-cols-2 overflow-hidden divide-x divide-y divide-white/10 md:divide-y-0 md:grid-cols-4">
-        {contactStats.map((s, idx) => (
+        {stats.map((s, idx) => (
           <div
             key={s.label}
             className={[

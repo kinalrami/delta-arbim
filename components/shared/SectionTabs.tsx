@@ -1,10 +1,11 @@
 "use client";
 
 import { useMemo } from "react";
+import type { ReactNode } from "react";
 
 export type SectionTabItem<T extends string> = {
   id: T;
-  label: string;
+  label: ReactNode;
 };
 
 export function SectionTabs<T extends string>({
