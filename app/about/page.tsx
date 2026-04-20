@@ -6,6 +6,9 @@ import { contactStripCopy, site } from "@/components/views/home/content";
 import { Hero } from "@/components/views/about/Hero";
 import { StatsStrip } from "@/components/views/contact/StatsStrip";
 import { statsStrip } from "@/components/views/about/content";
+import { OurVision } from "@/components/views/about/OurVision";
+import { GlobalReach } from "@/components/views/about/GlobalReach";
+import Team from "@/components/views/about/Team";
 
 export const metadata: Metadata = {
   title: "About Us | DeltaARBIM",
@@ -18,6 +21,9 @@ export default function AboutPage() {
     <main className="w-full">
       <Hero />
       <StatsStrip ariaLabel="Stats" stats={statsStrip} />
+      <OurVision />
+      <GlobalReach />
+      <Team />
       <AboutWhatWeStandForSection />
       <AboutLeadSection />
       <ContactStrip site={site} copy={contactStripCopy} />

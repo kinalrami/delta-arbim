@@ -6,7 +6,7 @@ export function AboutWhatWeStandForSection() {
   const c = aboutWhatWeStandForCopy;
 
   return (
-    <section aria-labelledby="about-what-we-stand-h2" className="w-full">
+    <section aria-labelledby="about-what-we-stand-h2" className="w-full bg-[#1A1A1A]">
       <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
         <SectionHeading
           id="about-what-we-stand-h2"

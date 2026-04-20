@@ -156,6 +156,133 @@ export const aboutLeadCopy: LeadCaptureCopy = {
   },
 };
 
+export const aboutSkills = [
+  {label:"Industry we serve", href:"/industry"},
+  {label:"View Pricing", href:"/pricing"},
+] as const;
+
+export const visions = [
+  {
+    title: "IFC-First. Always Open.",
+    subtitle: "Pillar 1",
+    desc: "We chose IFC — the open BIM standard — because locking clients into proprietary formats is not a business model. It's a trap. IFC works with every BIM tool, every contractor, every country."
+  },
+  {
+    title: "Offline-First. Field-Ready.",
+    subtitle: "Pillar 2",
+    desc: "Construction sites are not data centres. Our platform works 100% offline — basements, tunnels, remote sites, and secure defence facilities. The field doesn’t wait for connectivity."
+  },
+  {
+    title: "INR Pricing. Global Access.",
+    subtitle: "Pillar 3",
+    desc: "World-class AR BIM shouldn’t require a dollar budget. INR billing with GST-compliant invoicing for Indian teams. Competitive pricing for every market. No compromise on capability."
+  },
+  {
+    title: "Precision That Saves Money.",
+    subtitle: "Pillar 4",
+    desc: "±2cm spatial accuracy using LiDAR + computer vision. Not a demo metric — the real field accuracy that catches a misplaced column before concrete is poured and a duct clash before installation begins."
+  },
+  {
+    title: "Built by Engineers, for Engineers.",
+    subtitle: "Pillar 5",
+    desc: "No venture capital pressure to bloat features. No sales-driven roadmap. Just a focused engineering team in Ahmedabad building the tool they always wished existed on site."
+  }
+];
+
+export const languages = [
+  {
+    code: "GB",
+    title: "English — Global",
+    status: {
+      label: "EN · LIVE",
+      bg: "bg-[#44DC781A]",
+      text: "text-[#44DC78E6]"
+    },
+    desc: "India, UK, USA, Australia, Singapore & worldwide English markets"
+  },
+  {
+    code: "AE",
+    title: "العربية — Middle East & Gulf",
+    status: {
+      label: "AR · EXPANDING",
+      bg: "bg-orange-400/10",
+      text: "text-orange-400"
+    },
+    desc: "UAE, Saudi Arabia, Qatar, Kuwait, Oman & Gulf construction markets"
+  },
+  {
+    code: "FR",
+    title: "Français — France & Francophone",
+    status: {
+      label: "FR · EXPANDING",
+      bg: "bg-orange-400/10",
+      text: "text-orange-400"
+    },
+    desc: "France, Belgium, Switzerland, Canada, North & West Africa"
+  },
+  {
+    code: "ES",
+    title: "Español — Spain & Latin America",
+    status: {
+      label: "ES · EXPANDING",
+      bg: "bg-orange-400/10",
+      text: "text-orange-400"
+    },
+    desc: "Spain, Mexico, Colombia, Argentina & all Spanish-speaking markets"
+  },
+  {
+    code: "DE",
+    title: "Deutsch — Germany & DACH",
+    status: {
+      label: "DE · COMING",
+      bg: "bg-gray-300/10",
+      text: "text-gray-300"
+    },
+    desc: "Germany, Austria, Switzerland — Europe’s largest construction market"
+  },
+  {
+    code: "BR",
+    title: "Português — Brazil & Portugal",
+    status: {
+      label: "PT · COMING",
+      bg: "bg-gray-300/10",
+      text: "text-gray-300"
+    },
+    desc: "Brazil, Portugal, Mozambique, Angola — fastest-growing infrastructure markets"
+  }
+];
+
+export const pills = [
+  "AR / BIM TECH",
+  "MOBILE & WEB",
+  "IFC OPEN STANDARD",
+  "DEVOPS & INFRA",
+  "DIGITAL IDENTITY",
+  "ECOMMERCE"
+];
+
+export const statsData = [
+  {
+    value: "10+",
+    label: "Years of corporate engineering experience across AR, mobile, web & enterprise",
+  },
+  {
+    value: "50+",
+    label: "Projects delivered across AR/BIM, eCommerce, digital identity & DevOps",
+  },
+  {
+    value: "3+",
+    label: "Complex products actively maintained — DeltaARBIM is the flagship",
+  },
+  {
+    value: "5+",
+    label: "eCom brands built and scaled — deep product & growth engineering",
+  },
+  {
+    value: "IN",
+    label: "Proudly based in Ahmedabad, Gujarat — Scalable Tech for Everyone",
+  },
+]
 
 export const statsStrip: { value: string; label: string }[] = [
   { value: "₹", label: "INR Billing · Global Reach" },
