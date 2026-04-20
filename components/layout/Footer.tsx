@@ -196,9 +196,9 @@ export function Footer() {
               Pricing
             </Link>
           </div>
-          <span className="font-mono text-[10px] text-[#555555] sm:ms-auto lg:ms-0">
+          {/* <span className="font-mono text-[10px] text-[#555555] sm:ms-auto lg:ms-0">
             🌐 6 languages
-          </span>
+          </span> */}
         </div>
       </div>
     </footer>

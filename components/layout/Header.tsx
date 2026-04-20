@@ -158,7 +158,7 @@ export function Header() {
               Early Access
             </span>
 
-            <div className="relative" ref={langWrapRef}>
+            {/* <div className="relative" ref={langWrapRef}>
               <button
                 type="button"
                 id="langBtn"
@@ -203,7 +203,7 @@ export function Header() {
                   </button>
                 ))}
               </div>
-            </div>
+            </div> */}
 
             <Link
               href="/demo"
