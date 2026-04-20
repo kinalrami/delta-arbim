@@ -7,6 +7,7 @@ import { Play, X } from "lucide-react";
 export type VideoLightboxEmbed = {
   /** YouTube video ID only (e.g. from youtube.com/watch?v=XXXX) */
   youtubeVideoId?: string;
+  vimeoId?: string;
   /** Path under /public or absolute URL to .mp4 */
   mp4Src?: string;
 };
@@ -27,6 +28,7 @@ export function VideoLightbox({
   placeholderSubtitle?: string;
 }) {
   const yt = embed.youtubeVideoId?.trim();
+  const vimeo = embed.vimeoId?.trim(); // Add this
   const mp4 = embed.mp4Src?.trim();
 
   useEffect(() => {
@@ -76,9 +78,17 @@ export function VideoLightbox({
           onClick={(e) => e.stopPropagation()}
         >
           <div className="relative w-full" style={{ aspectRatio: "16 / 9" }}>
-            {yt ? (
+            {vimeo ? (
               <iframe
-                title="Video"
+                title="Vimeo Video"
+                src={`https://player.vimeo.com/video/${vimeo}?autoplay=1`}
+                className="absolute inset-0 size-full border-0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowFullScreen
+              />
+            ) : yt ? (
+              <iframe
+                title="YouTube Video"
                 src={`https://www.youtube-nocookie.com/embed/${yt}?autoplay=1&rel=0`}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen

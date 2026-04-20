@@ -14,17 +14,40 @@ import { demoHeroCopy } from "@/components/views/demo/content";
 import { site } from "@/components/views/home/content";
 
 function resolveHeroEmbed(
-  base: { readonly youtubeVideoId: string; readonly mp4Src: string },
-  override?: { readonly youtubeVideoId: string; readonly mp4Src: string },
+  base: {
+    readonly youtubeVideoId: string;
+    readonly vimeoId?: string; // Added optional Vimeo support
+    readonly mp4Src: string
+  },
+  override?: {
+    readonly youtubeVideoId: string;
+    readonly vimeoId?: string;
+    readonly mp4Src: string
+  },
 ): VideoLightboxEmbed {
+  // 1. Check for overrides (used when clicking specific reels)
+  const oVim = override?.vimeoId?.trim();
   const oYt = override?.youtubeVideoId?.trim();
   const oMp4 = override?.mp4Src?.trim();
-  if (oYt || oMp4) {
-    return { youtubeVideoId: oYt || undefined, mp4Src: oMp4 || undefined };
+
+  if (oVim || oYt || oMp4) {
+    return {
+      vimeoId: oVim || undefined,
+      youtubeVideoId: oYt || undefined,
+      mp4Src: oMp4 || undefined
+    };
   }
+
+  // 2. Fallback to base configuration (the main hero video)
+  const bVim = base.vimeoId?.trim();
   const bYt = base.youtubeVideoId?.trim();
   const bMp4 = base.mp4Src?.trim();
-  return { youtubeVideoId: bYt || undefined, mp4Src: bMp4 || undefined };
+
+  return {
+    vimeoId: bVim || undefined,
+    youtubeVideoId: bYt || undefined,
+    mp4Src: bMp4 || undefined
+  };
 }
 
 function Corner({ className }: { className: string }) {
@@ -119,15 +142,26 @@ export function DemoHeroSection() {
               </div>
 
               <div className="pointer-events-none absolute inset-0 z-20 grid place-items-center">
-                <div className="flex size-16 items-center justify-center rounded-full border-2 border-orange-400/50 bg-black/50 shadow-[0_0_24px_rgba(255,153,51,0.25)]">
-                  <Play className="size-7 translate-x-0.5 text-orange-300" fill="currentColor" aria-hidden />
+                <div className="flex size-16 items-center justify-center rounded-full border-2 border-white/50 bg-black/50 shadow-[0_0_24px_rgba(255,153,51,0.25)]">
+                  <Play className="size-7 translate-x-0.5 text-gray-300" fill="currentColor" aria-hidden />
                 </div>
               </div>
 
-              <div className="absolute inset-0 z-[5] grid place-items-center opacity-30">
+              {/* <div className="absolute inset-0 z-[5] grid place-items-center opacity-30">
                 <span className="text-6xl" aria-hidden>
                   🏗️
                 </span>
+              </div> */}
+              <div className="absolute inset-0 z-[5] overflow-hidden">
+                <iframe
+                  src="https://player.vimeo.com/video/1184717551?background=1&autoplay=1&loop=1&muted=1"
+                  className="absolute top-1/2 left-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 object-cover pointer-events-none"
+                  style={{ minWidth: '100%', minHeight: '100%' }}
+                  frameBorder="0"
+                  allow="autoplay; fullscreen"
+                />
+                {/* Optional: Keep the overlay dark so text is readable */}
+                <div className="absolute inset-0 bg-black/40" />
               </div>
 
               {/* Bottom HUD */}
@@ -194,31 +228,54 @@ export function DemoHeroSection() {
                 }
               }}
             >
-              <Corner className="absolute top-2 left-2 z-10" />
-              <Corner className="absolute top-2 right-2 z-10 -scale-x-100" />
-              <Corner className="absolute bottom-2 left-2 z-10 -scale-y-100" />
-              <Corner className="absolute bottom-2 right-2 z-10 -scale-x-100 -scale-y-100" />
-
-              <div className="absolute top-2.5 left-4 right-4 z-10 flex items-start justify-between gap-2">
-                <span className="font-mono text-[8px] font-bold uppercase tracking text-white/50">
-                  {reel.clipLabel}
-                </span>
-                <span className="font-mono text-[8px] text-white/40">@DELTAARBIM</span>
-              </div>
-
-              <div className="absolute inset-0 z-[5] grid place-items-center">
-                <div className="flex size-12 items-center justify-center rounded-full border border-orange-400/40 bg-black/50">
-                  <Play className="size-5 translate-x-0.5 text-orange-300" fill="currentColor" aria-hidden />
+              {reel.vimeoId && (
+                <div className="absolute inset-0 z-0">
+                  <iframe
+                    src={`https://player.vimeo.com/video/${reel.vimeoId}?background=1&autoplay=1&loop=1&muted=1`}
+                    className="absolute top-1/2 left-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 object-cover"
+                    style={{ minWidth: '100%', minHeight: '100%' }}
+                    frameBorder="0"
+                  />
+                  {/* Dark overlay to make text readable */}
+                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors" />
                 </div>
-              </div>
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent" />
+                // <div className="absolute inset-0 z-0">
+                //   <Image
+                //     src="/DeltaLogo.png"
+                //     alt=""
+                //     fill
+                //     className="object-cover opacity-50 grayscale group-hover:grayscale-0 transition-all duration-500"
+                //   />
+                // </div>
+              )}
+              <div className="relative z-10 h-full w-full">
+                <Corner className="absolute top-2 left-2 z-10" />
+                <Corner className="absolute top-2 right-2 z-10 -scale-x-100" />
+                <Corner className="absolute bottom-2 left-2 z-10 -scale-y-100" />
+                <Corner className="absolute bottom-2 right-2 z-10 -scale-x-100 -scale-y-100" />
 
-              <div className="absolute bottom-0 left-1 right-0 z-10 p-3">
-                <div className="mb-2 inline-block bg-orange-400 px-2 py-0.5 font-mono text-[8px] font-bold uppercase tracking-[0.12em] text-black">
-                  {reel.tag}
+                <div className="absolute top-2.5 left-4 right-4 z-10 flex items-start justify-between gap-2">
+                  <span className="font-mono text-[8px] font-bold uppercase tracking text-white/50">
+                    {reel.clipLabel}
+                  </span>
+                  <span className="font-mono text-[8px] text-white/40">@DELTAARBIM</span>
                 </div>
-                <p className="text-[11px] leading-snug text-white/85">{reel.caption}</p>
+
+                <div className="absolute inset-0 z-[5] grid place-items-center">
+                  <div className="flex size-12 items-center justify-center rounded-full border border-white/50 bg-black/50">
+                    <Play className="size-5 translate-x-0.5 text-gray-300" fill="currentColor" aria-hidden />
+                  </div>
+                </div>
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent" />
+
+                <div className="absolute bottom-0 left-1 right-0 z-10 p-3">
+                  <div className="mb-2 inline-block bg-orange-400 px-2 py-0.5 font-mono text-[8px] font-bold uppercase tracking-[0.12em] text-black">
+                    {reel.tag}
+                  </div>
+                  <p className="text-[11px] leading-snug text-white/85">{reel.caption}</p>
+                </div>
               </div>
             </div>
           ))}

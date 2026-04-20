@@ -272,7 +272,8 @@ export const demoHeroCopy = {
   ] as const,
   /** Set `youtubeVideoId` and/or `mp4Src` to play real media in the lightbox; empty shows the placeholder. */
   videoEmbed: {
-    youtubeVideoId: "",
+    vimeoId: "1184717551",
+    youtubeVideoId:"",
     mp4Src: "",
   },
   videoModal: {
@@ -285,6 +286,7 @@ export const demoHeroCopy = {
       clipLabel: "SITE CLIP",
       tag: "IFC OVERLAY",
       caption: "BIM model aligned on active site in under 60s",
+      vimeoId:"1184720044",
       youtubeVideoId: "",
       mp4Src: "",
     },
@@ -292,6 +294,7 @@ export const demoHeroCopy = {
       clipLabel: "SITE CLIP",
       tag: "CLASH DETECT",
       caption: "MEP duct clash caught before installation begins",
+      vimeoId:"1184718774",
       youtubeVideoId: "",
       mp4Src: "",
     },
@@ -299,6 +302,7 @@ export const demoHeroCopy = {
       clipLabel: "SITE CLIP",
       tag: "LIDAR SCAN",
       caption: "Room scanned, deviation flagged in real-time AR",
+      vimeoId:"",
       youtubeVideoId: "",
       mp4Src: "",
     },
