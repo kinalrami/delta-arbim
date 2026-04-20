@@ -8,9 +8,13 @@ import { overviewCopy, overviewItems } from "@/components/views/industry/content
 export function OverviewSection() {
   const items: FeatureGridItem[] = overviewItems.map((it) => ({
     key: it.key,
-    icon: it.icon,
+    iconNode: (
+      <span className="text-2xl leading-none" aria-hidden>
+        {it.icon}
+      </span>
+    ),
     title: it.title,
-    desc: it.desc,
+    description: it.desc,
     tag: (
       <div className="mt-1">
         <div className="font-mono text-[9px] font-bold uppercase tracking-[0.15em] text-orange-400">

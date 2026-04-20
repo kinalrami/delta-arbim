@@ -14,35 +14,37 @@ export type LeadCaptureBullet = {
 
 export type LeadCaptureField =
   | {
-      key: string;
-      kind: "text" | "email" | "tel";
-      label: string;
-      placeholder?: string;
-      required?: boolean;
-      autoComplete?: string;
-      colSpan?: 1 | 2;
-    }
+    key: string;
+    kind: "text" | "email" | "tel";
+    label: string;
+    placeholder?: string;
+    required?: boolean;
+    autoComplete?: string;
+    colSpan?: 1 | 2;
+  }
   | {
-      key: string;
-      kind: "select";
-      label: string;
-      placeholder: string;
-      required?: boolean;
-      options: readonly string[];
-      colSpan?: 1 | 2;
-    }
+    key: string;
+    kind: "select";
+    label: string;
+    placeholder: string;
+    required?: boolean;
+    options: readonly string[];
+    colSpan?: 1 | 2;
+  }
   | {
-      key: string;
-      kind: "textarea";
-      label: string;
-      placeholder?: string;
-      required?: boolean;
-      rows?: number;
-      colSpan?: 1 | 2;
-    };
+    key: string;
+    kind: "textarea";
+    label: string;
+    placeholder?: string;
+    required?: boolean;
+    rows?: number;
+    colSpan?: 1 | 2;
+  };
 
 export type LeadCaptureCopy = {
   eyebrow: string;
+  /** When true, title is two lines: white prefix, then orange emphasis */
+  titleStacked?: boolean;
   titlePrefix: string;
   titleEmphasis: string;
   body: string;
@@ -53,6 +55,8 @@ export type LeadCaptureCopy = {
     title: string;
     subtitle: string;
     submit: string;
+    /** When false, submit label is shown alone (no trailing arrow). Default true. */
+    submitShowArrow?: boolean;
     notePrefix: string;
     privacy: string;
     fields: readonly LeadCaptureField[];
@@ -102,6 +106,8 @@ export function LeadCaptureSection({
 
   const canSubmit = canSubmitFor(copy, values);
 
+  const showSubmitArrow = copy.form.submitShowArrow !== false;
+
   const mailtoHref = useMemo(() => {
     const subject = encodeURIComponent(copy.form.emailSubject);
     const body = encodeURIComponent(buildMailBody(copy, values));
@@ -124,14 +130,25 @@ export function LeadCaptureSection({
               id={ariaId}
               eyebrow={copy.eyebrow}
               title={
-                <>
-                  {copy.titlePrefix}{" "}
-                  <span className="text-orange-400">{copy.titleEmphasis}</span>
-                </>
+                copy.titleStacked ? (
+                  <>
+                    <span className="block">{copy.titlePrefix}</span>
+                    <span className="block text-orange-400">{copy.titleEmphasis}</span>
+                  </>
+                ) : (
+                  <>
+                    {copy.titlePrefix}{" "}
+                    <span className="text-orange-400">{copy.titleEmphasis}</span>
+                  </>
+                )
               }
               desc={<p className="text-white/55">{copy.body}</p>}
               eyebrowClassName="mb-2 inline-flex font-mono text-[10px] font-bold uppercase text-orange-400"
-              titleClassName="max-w-xl font-serif text-4xl font-extrabold text-white"
+              titleClassName={
+                copy.titleStacked
+                  ? "max-w-xl font-serif text-4xl font-extrabold leading-tight text-white"
+                  : "max-w-xl font-serif text-4xl font-extrabold text-white"
+              }
               descWrapClassName="mt-2 max-w-lg text-sm leading-relaxed"
             />
 
@@ -165,7 +182,7 @@ export function LeadCaptureSection({
                     key={l.href}
                     href={l.href}
                     variant="gray"
-                    className="text-[10px] font-bold tracking-[0.12em] text-white/55 hover:text-orange-200"
+                    className="text-[10px] font-bold text-white/55 hover:text-orange-200"
                   >
                     {l.label}
                   </CtaPill>
@@ -285,7 +302,8 @@ export function LeadCaptureSection({
                   ].join(" ")}
                   aria-disabled={!canSubmit}
                 >
-                  {copy.form.submit} →
+                  {copy.form.submit}
+                  {showSubmitArrow ? " →" : ""}
                 </button>
 
                 <div className="mt-3 flex flex-wrap items-center justify-center gap-2 text-xs text-white/45">

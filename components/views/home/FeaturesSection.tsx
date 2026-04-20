@@ -19,14 +19,21 @@ export function FeaturesSection() {
         />
 
         <FeatureGrid
+          wrapClassName="mt-10 border border-white/10 bg-white/10"
+          columnsClassName="grid grid-cols-1 gap-px md:grid-cols-2 lg:grid-cols-3"
+          cardClassName="group flex h-full flex-col bg-[#0d0d0d] p-8 transition-colors hover:bg-white/[0.04]"
           items={featuresContent.map((f: FeatureContent) => {
             const Icon = f.icon;
             return {
               key: f.title,
               title: f.title,
-              desc: f.desc,
-              tag: f.tag,
-              icon: <Icon className="size-5" aria-hidden />,
+              description: f.desc,
+              iconNode: <Icon className="size-5" aria-hidden />,
+              tag: (
+                <div className="font-mono text-[9px] font-bold uppercase tracking-[0.15em] text-orange-400">
+                  {f.tag}
+                </div>
+              ),
             };
           })}
         />

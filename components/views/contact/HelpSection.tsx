@@ -50,9 +50,13 @@ export function HelpSection() {
           items={contactHelpCards.map((c) => ({
             key: c.key,
             title: c.title,
-            desc: c.desc,
-            tag: c.tag,
-            icon: iconFor(c.icon),
+            description: c.desc,
+            iconNode: iconFor(c.icon),
+            tag: (
+              <div className="font-mono text-[9px] font-bold uppercase tracking-[0.15em] text-orange-400">
+                {c.tag}
+              </div>
+            ),
           }))}
         />
 
