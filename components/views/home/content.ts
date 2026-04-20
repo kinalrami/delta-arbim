@@ -14,6 +14,7 @@ import {
 import type { LucideIcon } from "lucide-react";
 
 import type { HowStepId } from "./HowItWorksCanvas";
+import type { IfcCheckerCopy } from "@/components/shared/IfcCheckerSection";
 
 // ——— Site / contact URLs ———
 
@@ -504,6 +505,75 @@ export const demoChecklist: string[] = [
   "Early access partnership offer for qualified construction teams",
   "Available remotely or on-site globally",
 ];
+
+// ——— Free IFC check ———
+
+export const homeIfcCheckerCopy: IfcCheckerCopy = {
+  sectionId: "ifc-check",
+  sectionAriaId: "ifc-check-h",
+  sectionClassName: "w-full bg-[#1A1A1A]",
+  eyebrow: "Free · No Account Needed",
+  titleBefore: "Is your IFC model",
+  titleEmphasis: "AR-ready?",
+  desc:
+    "Before your demo — or just out of curiosity — find out if your IFC file is technically compatible with DeltaARBIM's AR engine. Describe your model and our AI checks it against AR requirements in seconds.",
+  leftChecklist: [
+    "IFC version compatibility (IFC2x3, IFC4, IFC4.1+)",
+    "3D geometry — does it contain renderable AR elements",
+    "Discipline layers — structural, MEP, architectural",
+    "Spatial anchoring — IfcSite / IfcBuilding coordinate data",
+    "Element count — AR performance estimate",
+    "Optimisation recommendations if needed",
+  ],
+  privacyNote:
+    "⚠ No file is uploaded to our servers. AI analyses your description and metadata only. Your IFC data stays on your device.",
+  leftCtas: [
+    { href: "/demo", label: "Book a Full Demo", variant: "orange" },
+    { href: "/pricing", label: "Pricing Plans", variant: "outline" },
+  ],
+  rightTitle: "Check your IFC model",
+  rightSubtitle:
+    "Describe your model or drop your file — we'll assess AR compatibility instantly.",
+  dropTitle: "Drop your IFC file for metadata read",
+  dropSubtitle: "or fill in details below · No file leaves your device",
+  orLabel: "OR DESCRIBE YOUR MODEL",
+  placeholders: {
+    schema: "IFC Version / Schema",
+    tool: "Authoring tool (BIM software)",
+    disciplines: "Disciplines included",
+    elements: "Approximate element count (e.g. 12000)",
+    notes:
+      "Any other details — LOD level, project type, file size, specific concerns about AR compatibility…",
+  },
+  schemaOptions: [
+    { value: "IFC2x3", label: "IFC2x3 (most common · Revit default)" },
+    { value: "IFC4", label: "IFC4" },
+    { value: "IFC4.1", label: "IFC4.1 / IFC4x1" },
+    { value: "IFC4.3", label: "IFC4.3 (latest)" },
+    { value: "unknown", label: "Not sure" },
+  ],
+  toolOptions: [
+    { value: "Revit", label: "Autodesk Revit" },
+    { value: "ArchiCAD", label: "Graphisoft ArchiCAD" },
+    { value: "Tekla", label: "Trimble Tekla Structures" },
+    { value: "Vectorworks", label: "Vectorworks" },
+    { value: "Allplan", label: "Nemetschek Allplan" },
+    { value: "other", label: "Other" },
+  ],
+  disciplineOptions: [
+    { value: "arch-only", label: "Architecture only" },
+    { value: "struct-only", label: "Structural only" },
+    { value: "mep-only", label: "MEP only" },
+    { value: "all", label: "Architecture + Structural + MEP (federated)" },
+    { value: "infra", label: "Infrastructure / Civil" },
+  ],
+  primaryButton: "CHECK AR COMPATIBILITY",
+  footerNote:
+    "Powered by AI · Results in ~10 seconds · Your data never leaves your browser",
+  loadingLabel: "ANALYSING IFC COMPATIBILITY…",
+  resultCta: { href: "/demo", label: "BOOK A LIVE DEMO WITH YOUR MODEL" },
+  rerunLabel: "Run another check",
+};
 
 // ——— Pricing teaser ———
 

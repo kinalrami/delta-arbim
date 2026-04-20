@@ -127,14 +127,17 @@ export function Header() {
             className="flex min-w-0 shrink items-center"
             aria-label="DeltaARBIM home"
           >
-            <Image
-              src="/DeltaARBIM.png"
-              alt="DeltaARBIM"
-              width={220}
-              height={56}
-              priority
-              className="h-16 w-auto md:h-20"
-            />
+            {/* Circular mask hides opaque corner pixels when the asset is a round mark on a square canvas */}
+            <span className="relative flex size-12 shrink-0 items-center justify-center overflow-hidden rounded-full md:size-16">
+              <Image
+                src="/logo.png"
+                alt="DeltaARBIM"
+                width={220}
+                height={56}
+                priority
+                className="h-full w-full object-contain object-center"
+              />
+            </span>
           </Link>
 
           <ul

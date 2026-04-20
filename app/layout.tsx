@@ -28,9 +28,9 @@ export const metadata: Metadata = {
     "DeltaARBIM overlays live IFC BIM models onto real construction sites via AR on iOS & Android. Clash detection, LiDAR, as-built verification.",
   metadataBase: new URL("https://deltaarbim.tech"),
   icons: {
-    icon: "/DeltaLogo.png",
-    shortcut: "/DeltaLogo.png",
-    apple: "/DeltaLogo.png",
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
   },
 };
 
@@ -46,7 +46,7 @@ export default function RootLayout({
     >
       <body className="flex min-h-full flex-col bg-[#0d0d0d] font-sans text-white">
         <Header />
-        <div id="main" className="flex flex-1 flex-col pt-23">
+        <div id="main" className="flex flex-1 flex-col pt-20">
           {children}
         </div>
         <Footer />

@@ -32,11 +32,11 @@ function BrandBlock() {
     <>
       <div className="mb-3">
         <Image
-          src="/DeltaARBIM.png"
+          src="/delta-full.jpeg"
           alt="DeltaARBIM"
           width={220}
           height={56}
-          className="h-16 w-auto md:h-20"
+          className="h-12 w-auto md:h-16"
         />
       </div>
       <p className="mb-5 max-w-full text-[13px] leading-[1.7] text-[#888888] sm:max-w-[320px] lg:max-w-[280px]">

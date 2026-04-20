@@ -1,12 +1,13 @@
 import { contactStats } from "./content";
 
 export type StatsStripItem = { value: string; label: string };
+export type StatsStripItemV2 = { value: string; label: string; sub?: string };
 
 export function StatsStrip({
   stats = contactStats,
   ariaLabel = "Stats",
 }: {
-  stats?: readonly StatsStripItem[];
+  stats?: readonly StatsStripItemV2[];
   ariaLabel?: string;
 }) {
   return (
@@ -29,6 +30,11 @@ export function StatsStrip({
             <div className="mt-2 font-mono text-[10px] font-semibold uppercase tracking-[0.18em] text-white/40">
               {s.label}
             </div>
+            {s.sub ? (
+              <div className="mt-1 text-[11px] leading-snug text-white/35">
+                {s.sub}
+              </div>
+            ) : null}
           </div>
         ))}
       </div>
