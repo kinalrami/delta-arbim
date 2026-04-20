@@ -5,6 +5,8 @@ import { CustomQuote } from "@/components/views/pricing/CustomQuote";
 import { StatsStrip } from "@/components/views/contact/StatsStrip";
 import { statsStrip } from "@/components/views/pricing/content";
 import { Steps } from "@/components/views/pricing/Steps";
+import { Plan } from "@/components/views/pricing/Plan"
+import { Tiers } from "@/components/views/pricing/Tiers";
 
 export default function Pricing() {
     return (
@@ -12,6 +14,8 @@ export default function Pricing() {
             <Hero />
             <StatsStrip ariaLabel="Stats" stats={statsStrip} />
             <Steps />
+            <Plan />
+            <Tiers />
             <CustomQuote />
             <ContactStrip site={site} copy={contactStripCopy} />
         </main>
