@@ -198,12 +198,27 @@ export function IfcCheckerSectionShared({ copy }: { copy: IfcCheckerCopy }) {
 
   const [status, setStatus] = useState<CheckStatus>("idle");
   const [result, setResult] = useState<CheckResult | null>(null);
+  const [attempted, setAttempted] = useState(false);
 
   const safeElements = useMemo(() => {
     const n = Number(elements);
-    if (!Number.isFinite(n) || n < 0) return null;
+    if (!Number.isFinite(n) || n < 1) return null;
     return Math.floor(n);
   }, [elements]);
+
+  const errors = useMemo(() => {
+    const e: Partial<
+      Record<"schema" | "tool" | "disciplines" | "elements", string>
+    > = {};
+    if (!schema) e.schema = "Select your IFC schema.";
+    if (!tool) e.tool = "Select your authoring tool.";
+    if (!disciplines) e.disciplines = "Select the disciplines included.";
+    if (safeElements === null) e.elements = "Enter a valid element count (>= 1).";
+    return e;
+  }, [schema, tool, disciplines, safeElements]);
+
+  const canRun =
+    status !== "loading" && Object.keys(errors).length === 0;
 
   const onPickFile = (f: File | null) => {
     if (!f) return;
@@ -211,6 +226,8 @@ export function IfcCheckerSectionShared({ copy }: { copy: IfcCheckerCopy }) {
   };
 
   const runCheck = async () => {
+    setAttempted(true);
+    if (!canRun) return;
     setStatus("loading");
     setResult(null);
     await new Promise((r) => setTimeout(r, 900));
@@ -371,7 +388,13 @@ export function IfcCheckerSectionShared({ copy }: { copy: IfcCheckerCopy }) {
                   <select
                     value={schema}
                     onChange={(e) => setSchema(e.target.value as IfcSchema)}
-                    className="w-full border border-white/10 bg-black/30 px-3 py-2.5 text-sm text-white/80 outline-none transition-colors focus:border-orange-400/40"
+                    aria-invalid={attempted && Boolean(errors.schema)}
+                    className={[
+                      "w-full border bg-black/30 px-3 py-2.5 text-sm text-white/80 outline-none transition-colors focus:border-orange-400/40",
+                      attempted && errors.schema
+                        ? "border-orange-400/60"
+                        : "border-white/10",
+                    ].join(" ")}
                   >
                     <option value="">{copy.placeholders.schema}</option>
                     {copy.schemaOptions.map((o) => (
@@ -380,11 +403,20 @@ export function IfcCheckerSectionShared({ copy }: { copy: IfcCheckerCopy }) {
                       </option>
                     ))}
                   </select>
+                  {attempted && errors.schema ? (
+                    <div className="-mt-1 text-xs text-orange-200">
+                      {errors.schema}
+                    </div>
+                  ) : null}
 
                   <select
                     value={tool}
                     onChange={(e) => setTool(e.target.value as IfcTool)}
-                    className="w-full border border-white/10 bg-black/30 px-3 py-2.5 text-sm text-white/80 outline-none transition-colors focus:border-orange-400/40"
+                    aria-invalid={attempted && Boolean(errors.tool)}
+                    className={[
+                      "w-full border bg-black/30 px-3 py-2.5 text-sm text-white/80 outline-none transition-colors focus:border-orange-400/40",
+                      attempted && errors.tool ? "border-orange-400/60" : "border-white/10",
+                    ].join(" ")}
                   >
                     <option value="">{copy.placeholders.tool}</option>
                     {copy.toolOptions.map((o) => (
@@ -393,13 +425,24 @@ export function IfcCheckerSectionShared({ copy }: { copy: IfcCheckerCopy }) {
                       </option>
                     ))}
                   </select>
+                  {attempted && errors.tool ? (
+                    <div className="-mt-1 text-xs text-orange-200">
+                      {errors.tool}
+                    </div>
+                  ) : null}
 
                   <select
                     value={disciplines}
                     onChange={(e) =>
                       setDisciplines(e.target.value as IfcDisciplines)
                     }
-                    className="w-full border border-white/10 bg-black/30 px-3 py-2.5 text-sm text-white/80 outline-none transition-colors focus:border-orange-400/40"
+                    aria-invalid={attempted && Boolean(errors.disciplines)}
+                    className={[
+                      "w-full border bg-black/30 px-3 py-2.5 text-sm text-white/80 outline-none transition-colors focus:border-orange-400/40",
+                      attempted && errors.disciplines
+                        ? "border-orange-400/60"
+                        : "border-white/10",
+                    ].join(" ")}
                   >
                     <option value="">{copy.placeholders.disciplines}</option>
                     {copy.disciplineOptions.map((o) => (
@@ -408,15 +451,31 @@ export function IfcCheckerSectionShared({ copy }: { copy: IfcCheckerCopy }) {
                       </option>
                     ))}
                   </select>
+                  {attempted && errors.disciplines ? (
+                    <div className="-mt-1 text-xs text-orange-200">
+                      {errors.disciplines}
+                    </div>
+                  ) : null}
 
                   <input
                     value={elements}
                     onChange={(e) => setElements(e.target.value)}
                     type="number"
-                    min={0}
+                    min={1}
                     placeholder={copy.placeholders.elements}
-                    className="w-full border border-white/10 bg-black/30 px-3 py-2.5 text-sm text-white/80 outline-none transition-colors placeholder:text-white/30 focus:border-orange-400/40"
+                    aria-invalid={attempted && Boolean(errors.elements)}
+                    className={[
+                      "w-full border bg-black/30 px-3 py-2.5 text-sm text-white/80 outline-none transition-colors placeholder:text-white/30 focus:border-orange-400/40",
+                      attempted && errors.elements
+                        ? "border-orange-400/60"
+                        : "border-white/10",
+                    ].join(" ")}
                   />
+                  {attempted && errors.elements ? (
+                    <div className="-mt-1 text-xs text-orange-200">
+                      {errors.elements}
+                    </div>
+                  ) : null}
 
                   <textarea
                     value={notes}
@@ -430,7 +489,7 @@ export function IfcCheckerSectionShared({ copy }: { copy: IfcCheckerCopy }) {
                 <button
                   type="button"
                   onClick={runCheck}
-                  disabled={status === "loading"}
+                  disabled={!canRun}
                   className="mt-5 w-full border border-orange-400/40 bg-orange-400 px-4 py-3 font-mono text-xs font-bold text-black transition-opacity hover:opacity-90 disabled:opacity-60"
                 >
                   {copy.primaryButton} →
