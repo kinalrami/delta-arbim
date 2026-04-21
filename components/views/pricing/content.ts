@@ -103,50 +103,226 @@ export const plans = {
   ]
 }
 
-export const tiers = {
-  eyebrow: "Plans",
-  titlePrefix: "Three starting points.",
-  titleEmphasis: "All fully custom.",
-  desc: "These tiers describe the typical team profile for each plan — your actual price is built around your specific situation. Every plan starts with a free demo.",
-  data: [
+  export const tiers = {
+    eyebrow: "Plans",
+    titlePrefix: "Three starting points.",
+    titleEmphasis: "All fully custom.",
+    desc: "These tiers describe the typical team profile for each plan — your actual price is built around your specific situation. Every plan starts with a free demo.",
+    data: [
+      {
+        title: "Field",
+        hud: "SMALL TEAMS · SUBCONTRACTORS · MEP",
+        desc: "AR BIM for field workers, subcontractors, and MEP teams. IFC overlay, clash detection, LiDAR scanning, field reports. Up to 5 users, 3 active IFC models.",
+        features: ["IFC OVERLAY", "CLASH DETECTION", "LIDAR SCAN", "FIELD REPORTS", "MULTI-SITE", "WHITE-LABEL", "MOU"],
+        activeFeatures: 4, // First 4 are active
+        cta: "GET A QUOTE",
+        href: "/demo"
+      },
+      {
+        title: "Project",
+        hud: "FULL PROJECT TEAMS · GC · BIM MANAGERS",
+        desc: "AR BIM for full project teams — GC, MEP, owner, BIM manager. Unlimited users per project, multi-discipline IFC, Procore/BIM360 integration, on-site visit included.",
+        features: ["IFC OVERLAY", "CLASH DETECTION", "LIDAR SCAN", "FIELD REPORTS", "MULTI-SITE", "WHITE-LABEL", "MOU"],
+        activeFeatures: 5, // First 5 are active
+        cta: "BOOK DEMO",
+        href: "/demo"
+
+      },
+      {
+        title: "Enterprise",
+        hud: "LARGE CONTRACTORS · DEVELOPERS · GOVT",
+        desc: "Full-platform AR BIM for large contractors, developers, and government agencies. Unlimited sites and users, white-label deployment, IFC-based MOU, API access, dedicated SLA.",
+        features: ["IFC OVERLAY", "CLASH DETECTION", "LIDAR SCAN", "FIELD REPORTS", "MULTI-SITE", "WHITE-LABEL", "MOU"],
+        activeFeatures: 7, // All active
+        cta: "CONTACT US",
+        href: "/contact"
+
+      }
+    ],
+    links: [
+      { href: "/demo", label: "→ BOOK A FREE DEMO" },
+      { href: "/contact", label: "→ CUSTOM QUOTE" },
+      { href: "/industry", label: "→ YOUR INDUSTRIES" },
+      { href: "/about", label: "→ WHY DELTAARBIM" },
+
+    ]
+  }
+
+  export const partnership = {
+    eyebrow: "Long-Term Partnerships",
+    titlePrefix: "Built for teams that ",
+    titleEmphasis: "plan years ahead.",
+    desc: "For large contractors, BIM consultancies, government agencies, and developers with multi-year project pipelines — the IFC-based MOU formalises a long-term technology partnership built on open standards.",
+    cards: [
+      {
+        icon: "mou",
+        title: "IFC-Based MOU",
+        body: "A formal Memorandum of Understanding covering data handling, platform access, support commitments, and roadmap collaboration — anchored to IFC as the shared open standard. Suitable for multi-year relationships.",
+        bullets: [
+          "Data isolation and NDA included",
+          "Platform roadmap collaboration rights",
+          "Dedicated engineering support line",
+        ],
+      },
+      {
+        icon: "visits",
+        title: "Global Site Visits",
+        body: "The DeltaARBIM engineering team travels to any country for live AR demonstrations, onboarding, and on-site technical validation. Available under Project and Enterprise plans.",
+        bullets: [
+          "Live AR demo on your actual construction site",
+          "Full team onboarding — not a help doc",
+          "Client covers travel logistics",
+        ],
+      },
+      {
+        icon: "multi",
+        title: "Multi-Site Deployments",
+        body: "Enterprise pricing is built around concurrent active sites, not user counts. Run DeltaARBIM across 10, 50, or 200 sites simultaneously — one subscription, one SLA, one support contact.",
+        bullets: [
+          "Unlimited sites per Enterprise contract",
+          "White-label deployment available",
+          "API access for BIM management platforms",
+        ],
+      },
+      {
+        icon: "india",
+        title: "India-First Billing",
+        body: "Built in Ahmedabad by Shivlam — DeltaARBIM was always intended to be priced fairly for Indian teams. INR billing, GST compliance, and DPDPA 2023-aware data handling from day one.",
+        bullets: [
+          "INR ₹ billing with GST invoices",
+          "DPDPA 2023 compliant data handling",
+          "iDEX-aligned for defence applications",
+        ],
+      },
+    ],
+    data: [
+      {
+        title: "Field",
+        hud: "SMALL TEAMS · SUBCONTRACTORS · MEP",
+        desc: "AR BIM for field workers, subcontractors, and MEP teams. IFC overlay, clash detection, LiDAR scanning, field reports. Up to 5 users, 3 active IFC models.",
+        features: ["IFC OVERLAY", "CLASH DETECTION", "LIDAR SCAN", "FIELD REPORTS", "MULTI-SITE", "WHITE-LABEL", "MOU"],
+        activeFeatures: 4, // First 4 are active
+        cta: "GET A QUOTE",
+        href: "/demo"
+      },
+      {
+        title: "Project",
+        hud: "FULL PROJECT TEAMS · GC · BIM MANAGERS",
+        desc: "AR BIM for full project teams — GC, MEP, owner, BIM manager. Unlimited users per project, multi-discipline IFC, Procore/BIM360 integration, on-site visit included.",
+        features: ["IFC OVERLAY", "CLASH DETECTION", "LIDAR SCAN", "FIELD REPORTS", "MULTI-SITE", "WHITE-LABEL", "MOU"],
+        activeFeatures: 5, // First 5 are active
+        cta: "BOOK DEMO",
+        href: "/demo"
+
+      },
+      {
+        title: "Enterprise",
+        hud: "LARGE CONTRACTORS · DEVELOPERS · GOVT",
+        desc: "Full-platform AR BIM for large contractors, developers, and government agencies. Unlimited sites and users, white-label deployment, IFC-based MOU, API access, dedicated SLA.",
+        features: ["IFC OVERLAY", "CLASH DETECTION", "LIDAR SCAN", "FIELD REPORTS", "MULTI-SITE", "WHITE-LABEL", "MOU"],
+        activeFeatures: 7, // All active
+        cta: "CONTACT US",
+        href: "/contact"
+
+      }
+    ],
+    links: [
+      { href: "/demo", label: "→ BOOK A FREE DEMO" },
+      { href: "/contact", label: "→ CUSTOM QUOTE" },
+      { href: "/industry", label: "→ YOUR INDUSTRIES" },
+      { href: "/about", label: "→ WHY DELTAARBIM" },
+
+    ]
+  }
+
+export type PricingFaqAnswer =
+  | { kind: "text"; body: string }
+  | { kind: "link"; before: string; linkLabel: string; href: string; after?: string };
+
+export type PricingFaqItem = {
+  id: string;
+  question: string;
+  answer: PricingFaqAnswer;
+};
+
+export const pricingFaq = {
+  eyebrow: "COMMON QUESTIONS",
+  titlePrefix: "Pricing questions",
+  titleEmphasis: "answered.",
+  desc: "Still unsure? Ask us directly — we reply personally to every message within 24 hours.",
+  items: [
     {
-      title: "Field",
-      hud: "SMALL TEAMS · SUBCONTRACTORS · MEP",
-      desc: "AR BIM for field workers, subcontractors, and MEP teams. IFC overlay, clash detection, LiDAR scanning, field reports. Up to 5 users, 3 active IFC models.",
-      features: ["IFC OVERLAY", "CLASH DETECTION", "LIDAR SCAN", "FIELD REPORTS", "MULTI-SITE", "WHITE-LABEL", "MOU"],
-      activeFeatures: 4, // First 4 are active
-      cta: "GET A QUOTE",
-      href: "/demo"
+      id: "no-fixed",
+      question: "Why no fixed public pricing?",
+      answer: {
+        kind: "text",
+        body: "Construction teams vary enormously — a 3-person MEP sub has very different needs to a 200-person general contractor. Fixed tiers either overcharge small teams or underserve large ones. A quick conversation lets us give you a fair, accurate number built for your situation.",
+      },
     },
     {
-      title: "Project",
-      hud: "FULL PROJECT TEAMS · GC · BIM MANAGERS",
-      desc: "AR BIM for full project teams — GC, MEP, owner, BIM manager. Unlimited users per project, multi-discipline IFC, Procore/BIM360 integration, on-site visit included.",
-      features: ["IFC OVERLAY", "CLASH DETECTION", "LIDAR SCAN", "FIELD REPORTS", "MULTI-SITE", "WHITE-LABEL", "MOU"],
-      activeFeatures: 5, // First 5 are active
-      cta: "BOOK DEMO",
-      href: "/demo"
-
+      id: "ifc-only",
+      question: "Why IFC only — what if my model is in Revit?",
+      answer: {
+        kind: "link",
+        before:
+          "IFC is the open BIM standard — format-neutral and future-proof. If your model is in Revit, ArchiCAD, or any other BIM tool, export it to IFC in one click. We chose IFC so you're never locked into a vendor. ",
+        linkLabel: "See how it works.",
+        href: "/#how",
+      },
     },
     {
-      title: "Enterprise",
-      hud: "LARGE CONTRACTORS · DEVELOPERS · GOVT",
-      desc: "Full-platform AR BIM for large contractors, developers, and government agencies. Unlimited sites and users, white-label deployment, IFC-based MOU, API access, dedicated SLA.",
-      features: ["IFC OVERLAY", "CLASH DETECTION", "LIDAR SCAN", "FIELD REPORTS", "MULTI-SITE", "WHITE-LABEL", "MOU"],
-      activeFeatures: 7, // All active
-      cta: "CONTACT US",
-      href: "/contact"
-
-    }
-  ],
+      id: "free-trial",
+      question: "Is there a free trial?",
+      answer: {
+        kind: "link",
+        before:
+          "Yes — every plan includes a 14-day free trial. More importantly, we run your first demo using your actual IFC model so you see DeltaARBIM working on your real project before committing to anything. No credit card required. ",
+        linkLabel: "Book your demo.",
+        href: "/demo",
+      },
+    },
+    {
+      id: "inr",
+      question: "Can I pay in Indian Rupees (₹)?",
+      answer: {
+        kind: "text",
+        body: "Yes. Indian teams are invoiced in INR with GST-compliant billing. International clients can pay in their local currency. Just mention it when you reach out and we'll set it up from day one.",
+      },
+    },
+    {
+      id: "mou",
+      question: "What is an IFC-based MOU?",
+      answer: {
+        kind: "text",
+        body: "A Memorandum of Understanding (MOU) formalises a long-term partnership between your organisation and DeltaARBIM. It covers data handling, platform access, support commitments, and roadmap collaboration — built around IFC as the shared open standard. Suitable for large contractors, BIM consultancies, and developers planning multi-year relationships.",
+      },
+    },
+    {
+      id: "site-visit",
+      question: "Can Team DeltaARBIM visit our construction site?",
+      answer: {
+        kind: "link",
+        before:
+          "Yes — we travel to any country for live AR demonstrations, onboarding, and on-site technical validation. Available under Project and Enterprise plans. The client provides return travel, accommodation, meals, and relevant local logistics. ",
+        linkLabel: "Contact us to arrange.",
+        href: "/contact",
+      },
+    },
+    {
+      id: "start",
+      question: "How quickly can we get started?",
+      answer: {
+        kind: "text",
+        body: "Most teams are fully onboarded and running AR on site within 48 hours of signing. All you need is your IFC file and a compatible iOS or Android device. Our team walks you through the first session personally.",
+      },
+    },
+  ] satisfies PricingFaqItem[],
   links: [
-    { href: "/demo", label: "→ BOOK A FREE DEMO" },
-    { href: "/contact", label: "→ CUSTOM QUOTE" },
-    { href: "/industry", label: "→ YOUR INDUSTRIES" },
-    { href: "/about", label: "→ WHY DELTAARBIM" },
-
-  ]
-}
+    { href: "/demo", label: "— BOOK A DEMO" },
+    { href: "/contact", label: "— ASK A QUESTION" },
+    { href: "/privacy", label: "— PRIVACY POLICY" },
+  ],
+} as const;
 
 export const quoteCopy: LeadCaptureCopy = {
     eyebrow: "Get Your Custom Quote",

@@ -28,9 +28,9 @@ export const metadata: Metadata = {
     "DeltaARBIM overlays live IFC BIM models onto real construction sites via AR on iOS & Android. Clash detection, LiDAR, as-built verification.",
   metadataBase: new URL("https://deltaarbim.tech"),
   icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
   },
 };
 

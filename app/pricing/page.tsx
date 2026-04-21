@@ -7,6 +7,8 @@ import { statsStrip } from "@/components/views/pricing/content";
 import { Steps } from "@/components/views/pricing/Steps";
 import { Plan } from "@/components/views/pricing/Plan"
 import { Tiers } from "@/components/views/pricing/Tiers";
+import { Partnership } from "@/components/views/pricing/partnership";
+import { Faq } from "@/components/views/pricing/Faq";
 
 export default function Pricing() {
     return (
@@ -16,6 +18,8 @@ export default function Pricing() {
             <Steps />
             <Plan />
             <Tiers />
+            <Partnership />
+            <Faq />
             <CustomQuote />
             <ContactStrip site={site} copy={contactStripCopy} />
         </main>
