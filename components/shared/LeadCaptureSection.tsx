@@ -122,10 +122,10 @@ export function LeadCaptureSection({
 
   return (
     <section aria-labelledby={ariaId} className="w-full">
-      <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
+      <div className="mx-auto w-full max-w-6xl px-4 py-10 md:py-16 sm:px-6">
         <div className="grid grid-cols-1 overflow-hidden border border-white/10 bg-black/10 bg-white/10 lg:grid-cols-[1fr_1fr]">
           {/* LEFT */}
-          <div className="border-b border-white/10 p-10 lg:border-b-0 lg:border-r">
+          <div className="border-b border-white/10 p-6 md:p-10 lg:border-b-0 lg:border-r">
             <SectionHeading
               id={ariaId}
               eyebrow={copy.eyebrow}
@@ -198,7 +198,7 @@ export function LeadCaptureSection({
           </div>
 
           {/* RIGHT */}
-          <div className="p-10">
+          <div className="p-6 md:p-10">
             {!submitted ? (
               <form
                 onSubmit={(e) => {

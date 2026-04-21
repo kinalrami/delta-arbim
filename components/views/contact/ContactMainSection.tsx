@@ -12,7 +12,7 @@ export function ContactMainSection() {
       <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
         <div className="grid grid-cols-1 overflow-hidden border border-white/10 bg-black/10 lg:grid-cols-[420px_1fr]">
           {/* LEFT — CONTACT DETAILS */}
-          <aside className="border-b border-white/10 p-8 lg:border-b-0 lg:border-r">
+          <aside className="border-b border-white/10 p-6 md:p-8 lg:border-b-0 lg:border-r">
             <h3 className="font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-orange-400">
               {contactMainCopy.reachHeading}
             </h3>

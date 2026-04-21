@@ -30,7 +30,7 @@ function HeroCard({
   return (
     <div
       className={[
-        "relative overflow-hidden px-10 py-12 sm:py-20 sm:px-12",
+        "relative overflow-hidden px-6 md:px-10 py-12 sm:py-20 sm:px-12",
         isDefence ? "bg-gradient-to-b from-emerald-900/30 via-black/30 to-black/30" : "bg-black/20",
       ].join(" ")}
     >

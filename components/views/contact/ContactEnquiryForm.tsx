@@ -46,7 +46,7 @@ export function ContactEnquiryForm({ emailTo }: { emailTo: string }) {
   }, [emailTo, enquiryDisplay, form]);
 
   return (
-    <div className="p-8">
+    <div className="p-6 md:p-8">
       <SectionHeading
         id="contact-form-h"
         eyebrow=" "
@@ -148,7 +148,7 @@ export function ContactEnquiryForm({ emailTo }: { emailTo: string }) {
               <Field
                 label={contactFormCopy.fields.enquiryType.label}
                 value={enquiryDisplay}
-                onChange={() => {}}
+                onChange={() => { }}
                 readOnly
                 className="text-orange-300"
               />

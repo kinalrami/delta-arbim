@@ -91,7 +91,7 @@ export function Footer() {
       className="border-t border-[#2e2e2e] bg-[#1a1a1a] text-white"
     >
       <div className="mx-auto w-full px-5 sm:px-8 lg:px-14 py-10 sm:py-12 lg:py-14">
-        <div className="grid grid-cols-1 gap-10 border-b border-[#2e2e2e] pb-10 md:grid-cols-2 md:gap-x-8 md:gap-y-10 md:border-b-0 md:pb-0 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)] lg:gap-x-10 lg:gap-y-0">
+        <div className="grid grid-cols-1 gap-10 md:border-b border-[#2e2e2e] md:pb-10 md:grid-cols-2 md:gap-x-8 md:gap-y-10 md:border-b-0 md:pb-0 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)] lg:gap-x-10 lg:gap-y-0">
           <div className="md:col-span-2 md:border-b md:border-[#2e2e2e] md:pb-10 lg:col-span-1 lg:border-b-0 lg:pb-0">
             <BrandBlock />
           </div>

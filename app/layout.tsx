@@ -3,6 +3,8 @@ import { Inter, JetBrains_Mono, Roboto_Slab } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { ContactStrip } from "@/components/shared/ContactStrip";
+import { contactStripCopy, site } from "@/components/views/home/content";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -46,9 +48,10 @@ export default function RootLayout({
     >
       <body className="flex min-h-full flex-col bg-[#0d0d0d] font-sans text-white">
         <Header />
-        <div id="main" className="flex flex-1 flex-col pt-20">
+        <div id="main" className="flex flex-1 flex-col pt-14 md:pt-20">
           {children}
         </div>
+        <ContactStrip site={site} copy={contactStripCopy} />
         <Footer />
       </body>
     </html>

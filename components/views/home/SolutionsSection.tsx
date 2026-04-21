@@ -67,7 +67,7 @@ export function SolutionsSection() {
             id={`${baseId}-panel-${role.key}`}
             role="tabpanel"
             aria-labelledby={`${baseId}-tab-${role.key}`}
-            className="grid grid-cols-1 gap-8 p-6 lg:grid-cols-2"
+            className="grid grid-cols-1 gap-8 md:p-6 lg:grid-cols-2"
           >
             {/* LEFT */}
             <div className="border border-white/10 bg-black/20 p-6">

@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import { ContactStrip } from "@/components/shared/ContactStrip";
 import { AboutLeadSection } from "@/components/views/about/AboutLeadSection";
 import { AboutWhatWeStandForSection } from "@/components/views/about/AboutWhatWeStandForSection";
-import { contactStripCopy, site } from "@/components/views/home/content";
 import { Hero } from "@/components/views/about/Hero";
 import { StatsStrip } from "@/components/views/contact/StatsStrip";
 import { statsStrip } from "@/components/views/about/content";
@@ -26,7 +24,6 @@ export default function AboutPage() {
       <Team />
       <AboutWhatWeStandForSection />
       <AboutLeadSection />
-      <ContactStrip site={site} copy={contactStripCopy} />
     </main>
   );
 }

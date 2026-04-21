@@ -1,5 +1,3 @@
-import { ContactStrip } from "@/components/shared/ContactStrip";
-import { contactStripCopy, site } from "@/components/views/home/content";
 import { Hero } from "@/components/views/pricing/Hero";
 import { CustomQuote } from "@/components/views/pricing/CustomQuote";
 import { StatsStrip } from "@/components/views/contact/StatsStrip";
@@ -21,7 +19,6 @@ export default function Pricing() {
             <Partnership />
             <Faq />
             <CustomQuote />
-            <ContactStrip site={site} copy={contactStripCopy} />
         </main>
     );
 }

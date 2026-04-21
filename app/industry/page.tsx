@@ -1,5 +1,3 @@
-import { ContactStrip } from "@/components/shared/ContactStrip";
-import { contactStripCopy, site } from "@/components/views/home/content";
 import { Hero } from "@/components/views/industry/Hero";
 import { StatsStrip } from "@/components/views/contact/StatsStrip";
 import { industryStatsStrip } from "@/components/views/industry/content";
@@ -15,7 +13,6 @@ export default function IndustryPage() {
       <DeepDiveSection />
       <OverviewSection />
       <DemoLeadSection />
-      <ContactStrip site={site} copy={contactStripCopy} />
     </main>
   );
 }

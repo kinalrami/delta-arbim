@@ -81,7 +81,7 @@ export function DeepDiveSection() {
           className="grid grid-cols-1 gap-px border border-white/10 bg-white/10 lg:grid-cols-2"
         >
           {/* LEFT */}
-          <div className="bg-[#1A1A1A] p-10">
+          <div className="bg-[#1A1A1A] p-6 md:p-10">
             <span className="inline-flex border border-orange-400/25 bg-orange-400/10 px-3 py-1.5 font-mono text-[9px] font-bold uppercase tracking-[0.2em] text-orange-300">
               {panel.badge}
             </span>

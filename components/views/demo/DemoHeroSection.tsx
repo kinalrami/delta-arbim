@@ -165,7 +165,7 @@ export function DemoHeroSection() {
               </div>
 
               {/* Bottom HUD */}
-              <div className="absolute inset-x-0 bottom-0 z-10 border-t border-white/10 bg-black/75 px-3 py-3 backdrop-blur-sm sm:px-4">
+              <div className="hidden md:block absolute inset-x-0 bottom-0 z-10 border-t border-white/10 bg-black/75 px-3 py-3 backdrop-blur-sm sm:px-4">
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
                   <div className="grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:gap-6">
                     {c.mainVideo.stats.map((s) => (

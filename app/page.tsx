@@ -13,8 +13,6 @@ import { DemoRequestSection } from "@/components/views/home/DemoRequestSection";
 import { FaqSection } from "@/components/views/home/FaqSection";
 import { AboutSection } from "@/components/views/home/AboutSection";
 import { EarlyAccessSection } from "@/components/views/home/EarlyAccessSection";
-import { ContactStrip } from "@/components/shared/ContactStrip";
-import { contactStripCopy, site } from "@/components/views/home/content";
 
 export default function Home() {
   return (
@@ -34,7 +32,6 @@ export default function Home() {
       <FaqSection />
       <AboutSection />
       <EarlyAccessSection />
-      <ContactStrip site={site} copy={contactStripCopy} />
     </main>
   );
 }

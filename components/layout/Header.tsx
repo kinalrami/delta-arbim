@@ -244,7 +244,7 @@ export function Header() {
             aria-label="Mobile navigation"
             className="absolute top-16 right-0 bottom-0 left-0 flex max-h-[calc(100dvh-4rem)] flex-col border-t border-[#2e2e2e] bg-[#1a1a1a] shadow-[0_-4px_32px_rgba(0,0,0,0.45)]"
           >
-            <div className="flex min-h-0 flex-1 flex-col overflow-y-auto overscroll-contain px-4 pb-8 sm:px-6">
+            <div className="flex min-h-0 flex-1 flex-col overflow-y-auto overscroll-contain px-4 py-4 md:pt-8 sm:px-6">
               <nav className="flex flex-col">
                 {navItems.map(({ href, label }) => (
                   <Link
@@ -258,7 +258,7 @@ export function Header() {
                 ))}
               </nav>
 
-              <div className="mt-6 border-t border-[#2e2e2e] pt-6">
+              <div className="lg:mt-6 border-t border-[#2e2e2e] pt-6">
                 <Link
                   href="/demo"
                   className="block w-full bg-[#FF9933] py-3.5 text-center font-mono text-xs font-bold uppercase tracking-[0.12em] text-black transition-opacity hover:opacity-[0.92]"
