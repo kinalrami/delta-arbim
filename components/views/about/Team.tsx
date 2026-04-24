@@ -15,15 +15,15 @@ export default function Team() {
                 <div>
                     <SectionHeading
                         id="team-h2"
-                        eyebrow="The Team Behind DeltaARBIM"
+                        eyebrow="The Team Behind Delta ARBIM"
                         title={<>
                             Shivlam - <br />
                             <span className="text-orange-400">Ahmedabad's Tech Backbone.</span>
                         </>}
                         desc={
                             <>
-                                <p>DeltaARBIM is the flagship construction product of Shivlam — an Ahmedabad, Gujarat-based IT firm with over 10 years of corporate engineering experience across AR, mobile, web, and enterprise product development.</p>
-                                <p>Shivlam has delivered 50+ projects across AR/BIM technology, mobile & web platforms, eCommerce, digital identity, and DevOps infrastructure. DeltaARBIM is the product that brings all of that together — built by engineers who kept watching the same site coordination failures repeat, and decided to fix them with technology.</p>
+                                <p>Delta ARBIM is the flagship construction product of Shivlam — an Ahmedabad, Gujarat-based IT firm with over 10 years of corporate engineering experience across AR, mobile, web, and enterprise product development.</p>
+                                <p>Shivlam has delivered 50+ projects across AR/BIM technology, mobile & web platforms, eCommerce, digital identity, and DevOps infrastructure. Delta ARBIM is the product that brings all of that together — built by engineers who kept watching the same site coordination failures repeat, and decided to fix them with technology.</p>
                             </>
                         }
                         descWrapClassName="mt-4 max-w-prose text-sm space-y-4 leading-relaxed text-white/60"
@@ -40,7 +40,7 @@ export default function Team() {
                         <div className="flex flex-col gap-1">
                             <h4 className="text-[12px] text-orange-400 uppercase font-bold">Headquarters</h4>
                             <p className="text-sm text-gray-400">Ahmedabad, Gujarat, India</p>
-                            <Link className="text-sm text-orange-400" href="mailto:build@deltaarbim.tech">build@deltaarbim.tech</Link>
+                            <Link className="text-sm text-orange-400" href="mailto:build@Delta ARBIM.tech">build@Delta ARBIM.tech</Link>
                             <Link className="text-sm text-orange-400" href="tel:+918460473271">+91 8460 47 3271</Link>
                         </div>
                     </div>
@@ -59,7 +59,7 @@ export default function Team() {
                 </div>
                 {/* RIGHT */}
                 <div>
-                    <div className="text-center text-xl md:text-2xl font-bold mb-6">Shivlam — <span className="text-orange-400">the tech behind DeltaARBIM.</span></div>
+                    <div className="text-center text-xl md:text-2xl font-bold mb-6">Shivlam — <span className="text-orange-400">the tech behind Delta ARBIM.</span></div>
 
                     <IpadFrame
                         orientation="portrait"

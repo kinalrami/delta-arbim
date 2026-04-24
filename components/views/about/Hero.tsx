@@ -13,15 +13,17 @@ export function Hero() {
                     <div className="mb-2 font-mono text-xs font-medium text-orange-400">
                         {aboutHeroCopy.eyebrow}
                     </div>
-                    <h1 className="mb-6 font-serif md:text-6xl text-3xl font-extrabold leading-tight tracking-tight">
-                        Not only Bharat.
+                    <h1 className="mb-6 font-serif md:text-6xl text-3xl font-extrabold">
+                        Digital Construction
                         <br />
-                        <span className="text-orange-400">The whole world - </span>
-                        <br />at
-                        <span className="text-orange-400"> ₹ INR </span>pricing.
+                        Born in Ahmedabad.
+                        <br /><span className="text-orange-400">Engineered for the world. </span>
                     </h1>
-                    <p className="mb-9 max-w-md text-base leading-relaxed text-white/60">
-                        {aboutHeroCopy.description}
+                    <p className="mb-2 max-w-md text-sm leading-relaxed text-white/60">
+                        The world's best infrastructure deserves the world's most accessible technology. Delta ARBIM is our answer to a high-precision IFC-based AR BIM platform built in Ahmedabad, Gujarat.
+                    </p>
+                    <p className="mb-9 max-w-md text-sm leading-relaxed text-white/60">
+                        We’ve engineered this solution for every team that builds, defends, or maintains the world's infrastructure, offering top-tier augmented reality construction tools at INR pricing that makes sense for your project budget.
                     </p>
                     <div className="flex flex-wrap gap-3">
                         <Link

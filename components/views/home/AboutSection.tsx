@@ -25,7 +25,7 @@ export function AboutSection() {
           <div>
             <SectionHeading
               id="about-h2"
-              eyebrow="About DeltaARBIM"
+              eyebrow="About Delta ARBIM"
               title={
                 <>
                   <span className="block text-white">Engineered in Bharat.</span>
@@ -36,9 +36,7 @@ export function AboutSection() {
               desc={
                 <>
                   <p>
-                    DeltaARBIM is built by an India-based technology team with deep engineering experience across AR,
-                    mobile, and construction technology. We spent years watching the same site coordination problems
-                    repeat — the IFC model existed, the site existed, and nothing connected them.
+                    Delta ARBIM was built by an India-based technology team with deep engineering experience across AR, mobile, and construction technology. We spent years watching the same site coordination problems repeat—the IFC model existed, the site existed, and nothing connected them. So we built the connection.
                   </p>
                   <p>So we built the connection.</p>
                 </>
@@ -48,11 +46,11 @@ export function AboutSection() {
 
             <blockquote className="mt-5 border-l-4 border-orange-400 pl-5">
               <p className="font-serif text-base italic leading-relaxed text-orange-400 sm:text-lg">
-                &ldquo;We built DeltaARBIM because we kept seeing the same problem on every construction project — the BIM
+                &ldquo;We built Delta ARBIM because we kept seeing the same problem on every construction project — the BIM
                 model existed, the site existed, and nothing connected them. So we built the connection.&rdquo;
               </p>
               <cite className="mt-4 block font-mono text-xs font-bold uppercase text-orange-400 not-italic">
-                — DeltaARBIM Engineering Team
+                — Delta ARBIM Engineering Team
               </cite>
             </blockquote>
 

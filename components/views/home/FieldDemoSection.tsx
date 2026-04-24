@@ -74,7 +74,7 @@ export function FieldDemoSection() {
             <div
               role="button"
               tabIndex={0}
-              aria-label="Play DeltaARBIM field demo video"
+              aria-label="Play Delta ARBIM field demo video"
               className="relative w-full max-w-xl overflow-hidden border border-orange-400/25 bg-black shadow-2xl outline-none transition-colors hover:border-orange-400/40 focus-visible:ring-2 focus-visible:ring-orange-400/50"
               onKeyDown={(e) => {
                 if (e.key === "Enter" || e.key === " ") {
@@ -135,11 +135,11 @@ export function FieldDemoSection() {
               eyebrow="Real Human. Real Site. Real AR."
               title={
                 <>
-                  Watch DeltaARBIM on an <em className="not-italic text-orange-400">active construction site.</em>
+                  Watch Delta ARBIM on an <em className="not-italic text-orange-400">active construction site.</em>
                 </>
               }
               titleClassName="font-serif text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl"
-              desc="Not a studio recording. Our engineer walks onto a live construction floor, opens DeltaARBIM, and aligns the full IFC model in under 60 seconds — then detects a duct clash before concrete is poured."
+              desc="See our engineer step onto a live construction floor, open Delta ARBIM and align the entire IFC model in less than 60 seconds. See how Augmented Reality can be used practically in the construction industry to identify a duct clash prior to the concrete being poured."
               descWrapClassName="mt-4 max-w-prose text-base leading-relaxed text-white/60"
             />
 

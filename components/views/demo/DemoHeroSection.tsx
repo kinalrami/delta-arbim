@@ -259,7 +259,7 @@ export function DemoHeroSection() {
                   <span className="font-mono text-[8px] font-bold uppercase tracking text-white/50">
                     {reel.clipLabel}
                   </span>
-                  <span className="font-mono text-[8px] text-white/40">@DELTAARBIM</span>
+                  <span className="font-mono text-[8px] text-white/40">@Delta ARBIM</span>
                 </div>
 
                 <div className="absolute inset-0 z-[5] grid place-items-center">

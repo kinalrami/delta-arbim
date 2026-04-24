@@ -93,18 +93,16 @@ export function Hero() {
           {/* LEFT */}
           <div className="relative z-10 flex flex-col justify-center py-16 lg:py-20">
             <div className="mb-5 font-mono text-xs font-medium text-orange-400">
-              IFC-FIRST AR BIM PLATFORM — BUILT FOR CONSTRUCTION
+              BIM to AR: Augmented Reality Construction Site Overlay
             </div>
             <h1 className="mb-6 font-serif md:text-4xl text-2xl font-extrabold leading-tight tracking-tight">
-              Delta<span className="text-orange-400">ARBIM</span>
-              <br />
-              See your building
-              <br />
-              <span className="text-orange-400">before it exists.</span>
+              See Your Building Before it Exists with <span className="text-orange-400">AR BIM.</span>
             </h1>
+            <p className="mb-1.5 max-w-md text-base leading-relaxed text-white/60">
+              Directly overlay live IFC models onto your construction site to close the design to physical execution gap. Detect clashes and check as-built data in real-time on iOS and Android with LiDAR-anchored Augmented Reality.
+            </p>
             <p className="mb-9 max-w-md text-base leading-relaxed text-white/60">
-              Overlay live IFC models directly onto your construction site. Detect clashes, scan
-              with LiDAR, verify as-built — real-time AR on iOS &amp; Android.
+              Delta AR BIM is an IFC-first platform that translates BIM to AR within less than 60 seconds, with spatial precision of ±2cm to ensure that field teams do not have to rework.
             </p>
 
             <div className="mb-8 flex flex-wrap gap-3">

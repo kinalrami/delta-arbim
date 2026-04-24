@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const platformLinks = [
-  { href: "/#what", label: "What Is DeltaARBIM" },
+  { href: "/#what", label: "What Is Delta ARBIM" },
   { href: "/#ars", label: "AR Live Demo" },
   { href: "/#how", label: "How It Works" },
   { href: "/#features", label: "Features" },
@@ -33,7 +33,7 @@ function BrandBlock() {
       <div className="mb-3">
         <Image
           src="/delta-full.jpeg"
-          alt="DeltaARBIM"
+          alt="Delta ARBIM"
           width={220}
           height={56}
           className="h-12 w-auto md:h-16"
@@ -44,7 +44,7 @@ function BrandBlock() {
       </p>
       <div className="flex flex-wrap gap-2.5" aria-label="Social media links">
         <a
-          href="https://linkedin.com/company/deltaarbim/"
+          href="https://linkedin.com/company/Delta ARBIM/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
@@ -56,7 +56,7 @@ function BrandBlock() {
           </SocialIcon>
         </a>
         <a
-          href="https://www.instagram.com/deltaarbim/"
+          href="https://www.instagram.com/Delta ARBIM/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"
@@ -68,7 +68,7 @@ function BrandBlock() {
           </SocialIcon>
         </a>
         <a
-          href="https://www.facebook.com/deltaarbim/"
+          href="https://www.facebook.com/Delta ARBIM/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Facebook"
@@ -138,10 +138,10 @@ export function Footer() {
             </h4>
             <p className="mb-2 text-[13px] leading-relaxed text-[#888888]">
               <a
-                href="mailto:build@deltaarbim.tech"
+                href="mailto:build@Delta ARBIM.tech"
                 className="break-all text-[#FF9933] hover:underline"
               >
-                build@deltaarbim.tech
+                build@Delta ARBIM.tech
               </a>
             </p>
             <p className="mb-2 text-[13px] leading-relaxed text-[#888888]">
@@ -168,7 +168,7 @@ export function Footer() {
       <div className="border-t border-[#2e2e2e]">
         <div className="mx-auto flex max-w-[1160px] flex-col gap-4 px-4 py-5 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:gap-3 sm:px-6">
           <span className="max-w-full font-mono text-[10px] leading-relaxed tracking-[0.04em] text-[#555555] sm:text-[11px] lg:whitespace-nowrap">
-            © {new Date().getFullYear()} DELTAARBIM · Built by Shivlam, Ahmedabad · IFC-First AR BIM Platform
+            © {new Date().getFullYear()} Delta ARBIM · Built by Shivlam, Ahmedabad · IFC-First AR BIM Platform
           </span>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
             <Link

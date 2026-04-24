@@ -69,12 +69,12 @@ export function GlobalReach() {
                                 Built in Bharat.
                                 <br />
                                 <span className="text-orange-400">Available everywhere.
-                                </span>
+                                </span><br />
+                                <span className="text-xl font-bold text-white/70">Engineering Without Borders</span>
                             </>}
                             desc={
                                 <>
-                                    <p>DeltaARBIM is headquartered in Ahmedabad, Gujarat — but every construction team, every defence facility, and every industrial plant anywhere in the world can use it. Remote demos globally. On-site visits available on request.</p>
-                                    <p>INR billing for Indian teams. Custom invoicing for international clients. 6-language support including Arabic, French, Spanish, German, and Portuguese.</p>
+                                    <p>Delta ARBIM is designed for every construction team, defence facility, and industrial plant on the planet. While we are rooted in India, our reach is global. Offering remote demos anywhere in the world and on-site visits upon request to ensure your digital construction goals are met.</p>
                                 </>
                             }
                             descWrapClassName="mt-4 max-w-prose text-sm space-y-4 leading-relaxed text-white/60"

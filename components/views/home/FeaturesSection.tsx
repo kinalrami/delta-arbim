@@ -15,7 +15,7 @@ export function FeaturesSection() {
               AR for Construction — Built for the <em className="not-italic text-orange-400">job site.</em>
             </>
           }
-          desc="Every feature engineered for real field conditions — dust, bright sun, low connectivity, and fast-moving teams."
+          desc="All functionalities have been designed for the field – dust, sun, lack of connections, and moving crews. In this chapter, we will examine high-end digital construction tools designed to meet the needs of field execution following office-based BIM software."
         />
 
         <FeatureGrid

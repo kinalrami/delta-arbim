@@ -5,7 +5,7 @@ import { CtaPill } from "@/components/shared/CtaPill";
 export type ExploreStripLink = { href: string; label: string };
 
 export function ExploreStrip({
-  title = "Explore DeltaARBIM",
+  title = "Explore Delta ARBIM",
   links,
 }: {
   title?: string;

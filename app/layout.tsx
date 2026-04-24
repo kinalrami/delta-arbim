@@ -25,9 +25,9 @@ const robotoSlab = Roboto_Slab({
 });
 
 export const metadata: Metadata = {
-  title: "DeltaARBIM | IFC Augmented Reality BIM Platform",
+  title: "Augmented Reality Construction Site Overlay | Delta ARBIM",
   description:
-    "DeltaARBIM overlays live IFC BIM models onto real construction sites via AR on iOS & Android. Clash detection, LiDAR, as-built verification.",
+    "±2cm precision for augmented reality construction site overlay. Detect clashes & verify IFC models in real-time, 100% offline.",
   metadataBase: new URL("https://deltaarbim.tech"),
   icons: {
     icon: "/favicon.svg",

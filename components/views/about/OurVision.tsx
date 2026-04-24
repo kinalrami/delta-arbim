@@ -17,21 +17,23 @@ export function OurVision() {
                                     World-class infrastructure technology.
                                     <br />
                                     <span className="text-orange-400">Accessible to every nation.</span>
+                                    <br />
+                                    <span className="text-xl font-bold text-white/70"> The Mission: Breaking the Cost Barrier</span>
                                 </>
+
                             }
                             desc={
                                 <>
-                                    <p>The gap in construction technology has never been about capability — it's been about cost. Enterprise AR BIM platforms charge in dollars and euros, locking out the teams who build Bharat's hospitals, bridges, defence facilities, and homes.</p>
-                                    <p>DeltaARBIM was built to break that barrier. IFC-based, offline-first, iOS & Android — priced in INR and available to every construction team on earth. Not because we had to. Because we believe the world deserves better infrastructure, and better infrastructure starts with better tools.</p>
+                                    <p>The gap in digital construction technology has never been about capability—it's been about cost. Enterprise AR BIM platforms often lock teams into expensive dollar-based subscriptions, creating a barrier for the teams building Bharat's hospitals, bridges, and homes.</p>
+                                    <p>Delta ARBIM was built in Ahmedabad to break that barrier. We provide an IFC-based, offline-first solution for iOS and Android, priced in INR to ensure world-class tools are available to every construction team on earth.</p>
                                     <blockquote className="mt-5 border-l-4 border-orange-400 pl-5">
                                         <p className="font-serif text-base italic leading-relaxed text-orange-400 sm:text-lg">
-                                            &ldquo;We built DeltaARBIM because we kept seeing the same problem on every project — the IFC model existed, the site existed, and nothing connected them. So we built the connection.&rdquo;
+                                            “We built Delta ARBIM because we kept seeing the same problem on every project—the IFC model existed, the site existed, and nothing connected them. So we built the connection.”
                                         </p>
                                         <cite className="mt-4 block font-mono text-xs font-bold uppercase text-orange-400 not-italic">
-                                            — DeltaARBIM Engineering Team, Ahmedabad
+                                            — Delta ARBIM Engineering Team, Ahmedabad
                                         </cite>
                                     </blockquote>
-                                    <p>Our mission is not just to serve Bharat — it is to give the world world-class infrastructure AR technology at prices that make sense for every market. INR billing. GST-compliant invoicing. Global delivery.</p>
                                 </>
                             }
                             descWrapClassName="mt-4 max-w-prose text-sm space-y-4 leading-relaxed text-white/60"

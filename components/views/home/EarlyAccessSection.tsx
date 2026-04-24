@@ -86,7 +86,7 @@ export function EarlyAccessSection() {
               eyebrowClassName="mb-2 inline-flex font-mono text-xs font-semibold uppercase text-orange-400"
               title={
                 <>
-                  Start using DeltaARBIM on <em className="italic text-orange-400">your site today.</em>
+                  Start using Delta ARBIM on <em className="italic text-orange-400">your site today.</em>
                 </>
               }
               titleClassName="font-serif text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl"

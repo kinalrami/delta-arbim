@@ -9,9 +9,9 @@ import { GlobalReach } from "@/components/views/about/GlobalReach";
 import Team from "@/components/views/about/Team";
 
 export const metadata: Metadata = {
-  title: "About Us | DeltaARBIM",
+  title: "Digital Construction from Ahmedabad: ARBIM Construction | Delta ARBIM",
   description:
-    "Engineering principles behind DeltaARBIM — precision-first IFC AR, open standards, field-tested tools, and fair global access. Book a demo; we respond within 24 hours.",
+    "Built in Ahmedabad by Shivlam, Digital Construction developing Delta ARBIM brings high-precision IFC-based AR to the world. Go global with ARBIM.",
 };
 
 export default function AboutPage() {

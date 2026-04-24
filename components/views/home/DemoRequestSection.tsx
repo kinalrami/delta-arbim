@@ -78,13 +78,13 @@ export function DemoRequestSection() {
                 eyebrowClassName="mb-2 inline-flex font-mono text-xs font-semibold text-orange-400 uppercase"
                 title={
                   <>
-                    See DeltaARBIM on <em className="not-italic text-orange-400">your actual site.</em>
+                    See Delta ARBIM on <em className="not-italic text-orange-400">your actual site.</em>
                   </>
                 }
                 titleClassName="font-serif text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl"
                 desc={
                   <>
-                    Bring your IFC model. We bring it to life in real-time AR — so you see exactly what DeltaARBIM does
+                    Bring your IFC model. We bring it to life in real-time AR — so you see exactly what Delta ARBIM does
                     for your specific project and team.
                   </>
                 }

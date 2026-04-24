@@ -1,7 +1,7 @@
 export const contactHeroCopy = {
   eyebrow: "CONTACT US",
   titlePrefix: "We reply to",
-  titleEmphasis: "every message.",
+  titleEmphasis: "every AR BIM message.",
   desc:
     "Demo requests, pricing questions, partnerships, technical queries, or just a hello — our engineering team reads and responds to everything personally within 24 hours.",
 } as const;
@@ -15,10 +15,10 @@ export const contactStats: { value: string; label: string }[] = [
 
 export const contactHelpCopy = {
   eyebrow: "WHAT CAN WE HELP WITH",
-  titlePrefix: "Not sure what to",
+  titlePrefix: "Not sure what AR BIM to",
   titleEmphasis: "ask for?",
   desc:
-    "Here are the most common reasons people contact us. Click any card to get the right link (demo, pricing, or contact).",
+    "Navigating digital construction solutions can be complex. Here are the most common reasons people contact us. Click any card to get the right link—whether you need an IFC-based demo, specific AR BIM pricing, or direct technical support.",
 } as const;
 
 export type ContactHelpCardIconKey =
@@ -41,7 +41,7 @@ export const contactHelpCards: ContactHelpCard[] = [
   {
     key: "demo",
     title: "Book a Demo",
-    desc: "See DeltaARBIM live on your actual IFC model. 30-minute walkthrough with our engineering team — no sales script, not a generic file.",
+    desc: "See Delta ARBIM live on your actual IFC model. 30-minute walkthrough with our engineering team — no sales script, not a generic file.",
     tag: "→ 30 MIN · YOUR IFC MODEL · FREE",
     icon: "sparkles",
   },
@@ -62,7 +62,7 @@ export const contactHelpCards: ContactHelpCard[] = [
   {
     key: "visit",
     title: "Site Visit Request",
-    desc: "Team DeltaARBIM travels globally for on-site AR demonstrations and onboarding. Available for Enterprise. Client provides travel and accommodation.",
+    desc: "Team Delta ARBIM travels globally for on-site AR demonstrations and onboarding. Available for Enterprise. Client provides travel and accommodation.",
     tag: "→ ANY COUNTRY · ENTERPRISE PLAN",
     icon: "plane",
   },
@@ -100,7 +100,7 @@ export const contactMainCopy = {
   preferWaHeading: "Prefer WhatsApp?",
   preferWaCta: "Chat on WhatsApp",
   preferWaNote: "Fastest response for Indian construction teams",
-  followHeading: "Follow DeltaARBIM",
+  followHeading: "Follow Delta ARBIM",
   promiseQuote:
     "We reply within 24 hours. Every message is read and responded to personally by our engineering team — not a bot, not a ticket queue. You write to a person, a person writes back.",
   officeHeading: "Office · Headquarters",
@@ -111,13 +111,13 @@ export const contactMainCopy = {
 } as const;
 
 export const contactSocialLinks = {
-  linkedin: "https://linkedin.com/company/deltaarbim/",
-  instagram: "https://www.instagram.com/deltaarbim/",
-  facebook: "https://www.facebook.com/deltaarbim/",
+  linkedin: "https://linkedin.com/company/Delta ARBIM/",
+  instagram: "https://www.instagram.com/Delta ARBIM/",
+  facebook: "https://www.facebook.com/Delta ARBIM/",
 } as const;
 
 export const contactWaDirectHref =
-  "https://wa.me/918460473271?text=Hi%20DeltaARBIM%2C%20I%27d%20like%20to%20get%20in%20touch.";
+  "https://wa.me/918460473271?text=Hi%20Delta ARBIM%2C%20I%27d%20like%20to%20get%20in%20touch.";
 
 export type EnquiryType = "general" | "demo" | "pricing" | "partnership" | "sitevisit";
 
@@ -139,7 +139,7 @@ export const contactFormCopy = {
   privacy: "Privacy Policy",
   successTitle: "Message received.",
   successBody:
-    "Thanks for reaching out. A member of Team DeltaARBIM will reply to you personally within 24 hours — check your inbox and spam just in case.",
+    "Thanks for reaching out. A member of Team Delta ARBIM will reply to you personally within 24 hours — check your inbox and spam just in case.",
   fields: {
     firstName: { label: "First Name", placeholder: "Rahul", required: true, autoComplete: "given-name" },
     lastName: { label: "Last Name", placeholder: "Sharma", required: false, autoComplete: "family-name" },

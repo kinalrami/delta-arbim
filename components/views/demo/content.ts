@@ -4,10 +4,10 @@ import type { StatsStripItemV2 } from "@/components/views/contact/StatsStrip";
 
 export const demoLeadCopy: LeadCaptureCopy = {
   eyebrow: "Book your session",
-  titlePrefix: "See DeltaARBIM on",
+  titlePrefix: "See Delta ARBIM on",
   titleEmphasis: "your actual site.",
   body:
-    "Bring your IFC model. We bring it to life in real-time AR — so you see exactly what DeltaARBIM does for your specific project and team.",
+    "Bring your IFC model. We bring it to life in real-time AR — so you see exactly what Delta ARBIM does for your specific project and team.",
   bullets: [
     {
       title: "30-minute live session",
@@ -39,9 +39,9 @@ export const demoLeadCopy: LeadCaptureCopy = {
     submit: "Book my free demo",
     notePrefix: "No commitments. No credit card.",
     privacy: "Privacy Policy",
-    emailSubject: "DeltaARBIM — Demo Request",
+    emailSubject: "Delta ARBIM — Demo Request",
     mailHeader: "Demo request",
-    waText: "Hi DeltaARBIM, I'd like to book a demo.",
+    waText: "Hi Delta ARBIM, I'd like to book a demo.",
     fields: [
       {
         key: "firstName",
@@ -134,10 +134,10 @@ export const demoIfcCheckerCopy: IfcCheckerCopy = {
   titleBefore: "Is your IFC model",
   titleEmphasis: "AR-ready?",
   desc:
-    "Before your demo, find out if your IFC file is technically compatible with DeltaARBIM’s AR overlay engine. Tell us about your model — our AI checks it against AR requirements in seconds.",
+    "Before your demo, find out if your IFC file is technically compatible with Delta ARBIM’s high-precision AR overlay engine. Describe your model—our AI-driven system checks it against industry-standard augmented reality requirements in seconds.",
   leftChecklist: [
     "IFC version compatibility (IFC2x3, IFC4, IFC4.1+)",
-    "Geometry type — does it contain 3D elements DeltaARBIM can render",
+    "Geometry type — does it contain 3D elements Delta ARBIM can render",
     "Discipline layers present — structural, MEP, architectural",
     "Spatial anchoring — IfcSite / IfcBuilding coordinate data",
     "File size and element count — performance estimate",
@@ -212,27 +212,27 @@ export const demoWhatHappensCopy = {
     after: "Live.",
   },
   desc:
-    "No slides. No generic walkthrough. We use your actual project file so you see exactly what DeltaARBIM does for your team.",
+    "No slides. No generic walkthroughs. We use your actual project file so you see exactly how our AR BIM engine performs for your specific digital construction needs.",
   columns: [
     {
       stepLabel: "01 — MINUTES 0-5",
       heading: "We load your IFC",
       body:
-        "Send us your IFC file before the session. We have it loaded, parsed, and ready to overlay before the call starts. No setup time wasted.",
+        "Send us your IFC file before the session. We have it loaded, parsed, and ready to overlay before the call starts. No setup time wasted—just immediate BIM to AR results.",
       footerTag: "YOUR FILE · ZERO SETUP",
     },
     {
       stepLabel: "02 — MINUTES 5-20",
       heading: "Live AR walkthrough",
       body:
-        "We align your IFC to a real site, toggle structural and MEP layers, trigger clash detection, and show field reporting — all live on screen.",
+        "We align your IFC model to a real site, toggle structural and MEP layers, trigger automated clash detection, and showcase field reporting—all live on screen with ±2cm spatial accuracy.",
       footerTag: "LIVE · YOUR MODEL · REAL AR",
     },
     {
       stepLabel: "03 — MINUTES 20-30",
       heading: "Your questions, our engineers",
       body:
-        "Direct access to the people who built DeltaARBIM. IFC compatibility, device requirements, pricing, integrations — no sales filter.",
+        "Get direct access to the team in Ahmedabad who built Delta ARBIM. Discuss IFC compatibility, device requirements, INR pricing, and API integrations—no sales scripts, just engineering.",
       footerTag: "NO SALES SCRIPT · ENGINEERING TEAM",
     },
   ] as const satisfies readonly DemoWhatHappensColumn[],
@@ -242,16 +242,16 @@ export const demoWhatHappensCopy = {
 export const demoHeroCopy = {
   eyebrow: "REAL SITE · REAL AR · REAL RESULTS",
   title: {
-    before: "See it on a",
+    before: "See AR BIM on a",
     emphasis: "live",
     after: "construction site.",
   },
   desc:
-    "Watch our engineer walk onto an active site, open DeltaARBIM, align the IFC model in under 60 seconds — then detect a duct clash before concrete is poured.",
+    "Watch our engineer walk onto an active job site, open Delta ARBIM, and align a complex IFC model in under 60 seconds. Witness how augmented reality construction technology detects a critical duct-to-beam clash before the concrete is even poured, saving lakhs in potential rework costs.",
   mainVideo: {
     hudLeft: "● LIVE FIELD RECORDING",
     badge: "SEC · REAL SITE",
-    hudRight: "DELTAARBIM // AN ACTIVE SITE",
+    hudRight: "Delta ARBIM // AN ACTIVE SITE",
     stats: [
       { value: "±2cm", label: "ACCURACY" },
       { value: "<60s", label: "ALIGN TIME" },
@@ -309,7 +309,7 @@ export const demoHeroCopy = {
   ] as const,
   reelsFooter: {
     left: "FROM THE FIELD — INSTAGRAM REELS",
-    follow: "FOLLOW @DELTAARBIM",
+    follow: "FOLLOW @Delta ARBIM",
   },
 } as const;
 

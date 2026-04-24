@@ -125,13 +125,13 @@ export function Header() {
           <Link
             href="/"
             className="flex min-w-0 shrink items-center"
-            aria-label="DeltaARBIM home"
+            aria-label="Delta ARBIM home"
           >
             {/* Circular mask hides opaque corner pixels when the asset is a round mark on a square canvas */}
             <span className="relative flex size-12 shrink-0 items-center justify-center overflow-hidden rounded-full md:size-16">
               <Image
                 src="/logo.png"
-                alt="DeltaARBIM"
+                alt="Delta ARBIM"
                 width={220}
                 height={56}
                 priority

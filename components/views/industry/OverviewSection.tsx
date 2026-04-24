@@ -37,8 +37,8 @@ export function OverviewSection() {
           eyebrow={overviewCopy.eyebrow}
           title={
             <>
-              {overviewCopy.titleBefore}{" "}
-              <em className="not-italic text-orange-400">{overviewCopy.titleEmphasis}</em>
+              {overviewCopy.titleBefore}<br />
+              {overviewCopy.titleEmphasis}
             </>
           }
           desc={overviewCopy.desc}

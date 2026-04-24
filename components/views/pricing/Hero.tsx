@@ -18,7 +18,7 @@ export function Hero() {
                             {HeroCopy.eyebrow}
                         </div>
                         <h1 className="mb-4 font-serif md:text-5xl text-2xl font-extrabold leading-tight tracking-tight">
-                            Pricing built
+                            AR BIM Pricing built
                             <br />
                             around <span className="text-orange-400">your project.</span>
                         </h1>

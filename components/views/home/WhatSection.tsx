@@ -8,24 +8,21 @@ export function WhatSection() {
       <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
         <SectionHeading
           id="what-h2"
-          eyebrow="What Is DeltaARBIM?"
+          eyebrow="Measurable ROI"
           eyebrowClassName="mb-4 inline-flex font-mono text-xs font-semibold uppercase tracking-widest text-orange-400"
           title={
             <>
-              The gap between <em className="not-italic text-orange-400">IFC design</em> and construction — closed.
+              Digital Construction Intelligence: Eliminating Rework with AR
             </>
           }
           titleClassName="max-w-3xl font-serif text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl"
           desc={
             <>
               <p>
-                Construction projects lose billions every year because the design stays on laptops while workers build
-                from printed drawings. A column 8cm off. A duct clashing with a beam. An opening in the wrong wall.
+                The Issue: Construction projects are losing billions of dollars as designs remain on laptops and workers work with printed drawings
               </p>
               <p>
-                DeltaARBIM puts your live IFC model — every structural column, every MEP pipe, every architectural layer
-                — directly over the physical site through your device camera. If something is wrong, you see it before it
-                gets built.
+                The Solution: In our Augmented Reality building solution, all structural columns and MEP pipes are placed directly on the site.
               </p>
             </>
           }

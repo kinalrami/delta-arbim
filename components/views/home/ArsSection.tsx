@@ -101,14 +101,14 @@ export function ArsSection() {
       <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
         <SectionHeading
           id="ars-h2"
-          eyebrow="AR Scan // What You See On Site"
+          eyebrow="AR Scan // ±2cm Spatial Accuracy for Augmented Reality Blueprints"
           title={
             <>
-              Every IFC layer. Every trade. <em className="not-italic text-orange-400">Live in AR.</em>
+              <em className="not-italic text-orange-400">Live AR BIM:</em> Multi-Layer <br />IFC Coordination on Site
             </>
           }
           titleClassName="max-w-3xl font-serif text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl"
-          desc="Toggle each layer — exactly as it works on a real construction site. Click any layer button to show or hide it."
+          desc="Switch on and off each layer. Just as it is in a real construction site. Delta AR BIM also makes your augmented reality blueprints interactive, so that when you press any layer button, you can show or hide certain trades to have unambiguous coordination."
           descWrapClassName="mt-3 max-w-3xl text-base leading-relaxed text-white/60"
         />
 
@@ -192,7 +192,7 @@ export function ArsSection() {
               IFC layers in your hands.
             </h3>
             <p className="mt-2 text-sm leading-relaxed text-white/55">
-              Each IFC discipline colour-coded and individually toggleable. Structural, MEP, architectural — isolate any trade mid-walk without losing spatial reference on site.
+              All IFC disciplines are color-coded and can be individually switched off, such as Structural, MEP, architectural, enabling you to isolate any trade without losing spatial reference on-site.
             </p>
 
             <div className="mt-6 grid">

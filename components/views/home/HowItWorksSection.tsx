@@ -146,7 +146,7 @@ export function HowItWorksSection() {
                       {badge}
                     </div>
                     <div className="absolute bottom-2 left-3 font-mono text-[10px] text-white/35">
-                      DELTAARBIM
+                      Delta ARBIM
                     </div>
 
                     {/* corner brackets */}

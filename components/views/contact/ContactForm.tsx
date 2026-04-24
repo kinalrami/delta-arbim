@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 
 export function ContactForm({
   emailTo,
-  defaultSubject = "DeltaARBIM — Contact request",
+  defaultSubject = "Delta ARBIM — Contact request",
 }: {
   emailTo: string;
   defaultSubject?: string;
@@ -79,7 +79,7 @@ export function ContactForm({
               </p>
               <p className="pt-3 text-white/45">Body:</p>
               <pre className="whitespace-pre-wrap rounded border border-white/10 bg-black/20 p-4 text-xs leading-relaxed text-white/60">
-{`Name: ${form.name || "-"}
+                {`Name: ${form.name || "-"}
 Email: ${form.email || "-"}
 Company: ${form.company || "-"}
 

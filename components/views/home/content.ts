@@ -19,14 +19,14 @@ import type { IfcCheckerCopy } from "@/components/shared/IfcCheckerSection";
 // ——— Site / contact URLs ———
 
 export const site = {
-  email: "build@deltaarbim.tech",
+  email: "build@Delta ARBIM.tech",
   phoneDisplay: "+91 8460 47 3271",
   phoneTel: "+918460473271",
   waUrl: "https://wa.me/918460473271",
   waEarlyAccessQuery:
-    "Hi%20DeltaARBIM%2C%20I%27d%20like%20early%20access.",
-  waDemoQuery: "Hi%20DeltaARBIM%2C%20I%27d%20like%20to%20book%20a%20demo.",
-  instagramUrl: "https://www.instagram.com/deltaarbim/",
+    "Hi%20Delta ARBIM%2C%20I%27d%20like%20early%20access.",
+  waDemoQuery: "Hi%20Delta ARBIM%2C%20I%27d%20like%20to%20book%20a%20demo.",
+  instagramUrl: "https://www.instagram.com/Delta ARBIM/",
 } as const;
 
 export const siteWa = {
@@ -213,18 +213,18 @@ export type WhatStatCard = { stat: string; label: string; desc: string };
 export const whatStatCards: WhatStatCard[] = [
   {
     stat: "30%",
-    label: "Rework Reduction",
-    desc: "Sites using IFC AR overlays report up to 30% reduction in costly rework through early clash detection.",
+    label: "Less Rework",
+    desc: "Prevent deviations during construction 80% Faster.",
   },
   {
     stat: "80%",
-    label: "Less QA/QC Time",
-    desc: "AR-powered quality walkthroughs take a fraction of traditional time — 2 hours to 20 minutes.",
+    label: "Faster QA/QC",
+    desc: "AI-based walkthroughs are used in place of manual checklists 75%.",
   },
   {
     stat: "75%",
-    label: "Faster Understanding",
-    desc: "Workers understand complex 3D designs up to 75% faster with AR on-site visualisation.",
+    label: "Quickest Learning",
+    desc: "Workers intuitively visualise intricate 3D designs.",
   },
   {
     stat: "±2cm",
@@ -252,52 +252,52 @@ export const featuresContent: FeatureContent[] = [
   {
     icon: Box,
     title: "Live IFC AR 3D Overlay",
-    desc: "View your full IFC model in 3D augmented reality at true scale over the physical site. Walk through walls, verify placements, inspect hidden MEP systems live on device.",
+    desc: "View your entire IFC model in 3D AR overlay at actual scale, overlaid on the real world. Walk through walls, validate placements, and check hidden MEP installations all in 3D AR.",
     tag: "REAL-TIME AR · IFC",
   },
   {
     icon: Diamond,
-    title: "LiDAR Room Scanning",
-    desc: "Capture precise as-built geometry using the device LiDAR sensor. Compare scanned point clouds against your IFC model and instantly flag deviations — without a surveyor.",
+    title: "LiDAR Room Scan Comparison",
+    desc: "Get accurate as-built measurements by scanning room dimensions using your device’s LiDAR sensor. Compare point cloud scans against your IFC file and receive instant notifications of structural discrepancies without involving a surveyor.",
     tag: "POINT CLOUD · AS-BUILT",
   },
   {
     icon: Zap,
     title: "Automated Clash Detection",
-    desc: "DeltaARBIM highlights model-vs-reality clashes visually in AR. Walk to the exact location of a clash and see the conflict rendered in place — no laptop required.",
+    desc: "Identify clashes between your 3D model and actual space with Delta ARBIM. Go precisely where the clash occurred and visualise it in context—no need for your laptop.",
     tag: "CLASH ENGINE · AUTOMATED",
   },
   {
     icon: Square,
     title: "Multi-Layer IFC Control",
-    desc: "Toggle structural, MEP, architectural and fit-out layers independently. Isolate any discipline mid-walk without losing spatial reference.",
+    desc: "Toggle structural, MEP, architectural, and fit-out layers independently. Isolate any discipline mid-walk without losing your spatial reference in the augmented reality building environment.",
     tag: "IFC LAYERS · FULL CONTROL",
   },
   {
     icon: Target,
     title: "Markerless Geo-Anchoring",
-    desc: "LiDAR + computer vision locks IFC models to physical space with centimetre precision. No printed markers, no QR codes, no GPS dependency indoors.",
+    desc: "Leverage LiDAR and Computer Vision to lock down IFC models to physical locations with centimetre-level accuracy. Enjoy freedom of movement without marker prints, QR codes, or GPS limitations indoors.",
     tag: "CV ANCHORING · ±2CM",
   },
   {
     icon: LayoutGrid,
-    title: "Field Reporting & Markup",
-    desc: "Annotate issues in AR, capture geo-tagged screenshots, and sync reports to Procore, Autodesk Construction Cloud, or any webhook.",
+    title: "In-field Issue Reporting and Annotation",
+    desc: "Report problems in AR mode, take geo-referenced screenshots, and send issue reports directly to Procore, Autodesk Construction Cloud, or any custom webhook.",
     tag: "INTEGRATIONS · GEO-TAGGED",
   },
 ];
 
 // ——— FAQ ———
 
-export type FaqCategory = "product" | "technical" | "pricing" | "industry";
-export type FaqTabId = "all" | FaqCategory;
+export type FaqCategory = "product" | "technical" | "pricing" | "industry" | "all";
+export type FaqTabId = "product" | FaqCategory;
 
 export const faqTabs: { id: FaqTabId; label: string }[] = [
-  { id: "all", label: "All Questions" },
   { id: "product", label: "Product & Features" },
   { id: "technical", label: "Technical & Setup" },
   { id: "pricing", label: "Pricing & Plans" },
   { id: "industry", label: "Defence & Gov" },
+  { id: "all", label: "All Questions" },
 ];
 
 export type FaqAnswerModel =
@@ -318,46 +318,46 @@ export const faqItems: FaqItemModel[] = [
   {
     id: "what-is",
     category: "product",
-    question: "What is DeltaARBIM and how does it work?",
+    question: "What is Delta ARBIM and how does it work?",
     answer: {
       kind: "text",
-      body: "DeltaARBIM is an IFC-based augmented reality BIM platform that overlays your live 3D building model directly onto the real construction site through your device camera. Using LiDAR and computer vision, it anchors your IFC model to real-world coordinates with ±2cm accuracy — no QR codes or printed markers required.",
+      body: "Delta ARBIM is an IFC-based augmented reality BIM platform that overlays your live 3D building model directly onto the real construction site through your device camera. Using LiDAR and computer vision, it anchors your IFC model to real-world coordinates with ±2cm accuracy—no QR codes or printed markers required.",
     },
   },
   {
     id: "formats",
     category: "technical",
-    question: "Which BIM file formats does DeltaARBIM support?",
+    question: "Which BIM file formats does Delta ARBIM support?",
     answer: {
       kind: "text",
-      body: "DeltaARBIM is built on IFC — the open BIM standard. IFC files from Revit, ArchiCAD, or any BIM software are supported via one-click export. We chose IFC intentionally: it's format-neutral, vendor-independent, and future-proof.",
+      body: "Delta ARBIM is built on IFC, the open BIM standard. IFC files from Revit, ArchiCAD, or any BIM software are supported via one-click export.",
     },
   },
   {
     id: "mep",
     category: "product",
-    question: "Is DeltaARBIM suitable for MEP coordination?",
+    question: "Is Delta ARBIM suitable for MEP coordination?",
     answer: {
       kind: "text",
-      body: "Absolutely. DeltaARBIM was purpose-built for MEP coordination. You can overlay HVAC ducts (red), water pipes (blue), electrical conduits (yellow) independently in AR and toggle individual trades to detect clashes against structure before fabrication begins.",
+      body: "Absolutely. Delta ARBIM was purpose-built for MEP coordination. You can overlay HVAC ducts (red), water pipes (blue), and electrical conduits (yellow) independently in AR to detect clashes against the structure before fabrication begins.",
     },
   },
   {
     id: "offline",
     category: "technical",
-    question: "Does DeltaARBIM work without internet on site?",
+    question: "Does Delta ARBIM work without internet on site?",
     answer: {
       kind: "text",
-      body: "Yes. DeltaARBIM is 100% offline capable. Once your IFC model is synced to the device, the AR overlay, LiDAR scanning, clash detection, and field reporting all work without any internet connection — essential for basements, tunnels, and remote zones.",
+      body: "Yes. Delta ARBIM is 100% offline capable. Once your model is synced, the AR overlay, LiDAR scanning, and clash detection all work without any internet connection—essential for basements and tunnels.",
     },
   },
   {
     id: "accuracy",
     category: "technical",
-    question: "What spatial accuracy does DeltaARBIM achieve?",
+    question: "What spatial accuracy does Delta ARBIM achieve?",
     answer: {
       kind: "text",
-      body: "DeltaARBIM achieves ±2cm spatial accuracy using LiDAR sensor fusion with computer vision anchoring. This is accurate enough to detect rebar displacement, duct misalignment, and wall positioning errors before they are built.",
+      body: "Delta ARBIM achieves ±2cm spatial accuracy using LiDAR sensor fusion. This is accurate enough to detect rebar displacement, duct misalignment, and wall positioning errors before they are built.",
     },
   },
   {
@@ -366,16 +366,16 @@ export const faqItems: FaqItemModel[] = [
     question: "Which devices are supported?",
     answer: {
       kind: "text",
-      body: "DeltaARBIM runs on iOS and Android. LiDAR-enhanced scanning is available on iPhone 12 Pro and newer, and iPad Pro 2020 and newer. AR overlay and clash detection work on all ARKit and ARCore compatible devices.",
+      body: "Delta ARBIM runs on iOS and Android. LiDAR-enhanced scanning is available on iPhone 12 Pro and iPad Pro 2020 (or newer).",
     },
   },
   {
     id: "integrations",
     category: "product",
-    question: "Can DeltaARBIM integrate with Procore or BIM360?",
+    question: "Can Delta ARBIM integrate with Procore or BIM360?",
     answer: {
       kind: "text",
-      body: "Yes. DeltaARBIM integrates natively with Procore and Autodesk Construction Cloud on Project and Enterprise plans. Field reports, geo-tagged clash screenshots, and deviation logs sync directly to your project management platform.",
+      body: "Yes. Delta ARBIM integrates natively with Procore and Autodesk Construction Cloud on Project and Enterprise plans. Field reports, geo-tagged clash screenshots, and deviation logs sync directly to your project management platform.",
     },
   },
   {
@@ -384,17 +384,17 @@ export const faqItems: FaqItemModel[] = [
     question: "How long does it take to get an IFC model into AR?",
     answer: {
       kind: "text",
-      body: "Under 60 seconds. Upload your IFC file, open the app on site, and DeltaARBIM uses LiDAR and computer vision to anchor the model automatically. No manual configuration, no QR codes, no targets required.",
+      body: "Under 60 seconds. Simply upload your IFC file and open the app; Delta ARBIM anchors the model automatically using LiDAR and computer vision.",
     },
   },
   {
     id: "pricing-what",
     category: "pricing",
-    question: "What is the pricing for DeltaARBIM?",
+    question: "What is the pricing for Delta ARBIM?",
     answer: {
       kind: "pricingLink",
       beforeLink:
-        "DeltaARBIM uses custom pricing built around your team size and project scope — Field, Project, and Enterprise tiers. INR billing with GST-compliant invoicing available for Indian teams. All plans include a 14-day free trial. ",
+        "Pricing is custom-built around your team size and project scope—Field, Project, and Enterprise tiers. See our full pricing page for details.",
     },
   },
   {
@@ -403,34 +403,34 @@ export const faqItems: FaqItemModel[] = [
     question: "Is there a free trial?",
     answer: {
       kind: "text",
-      body: "Yes. All plans include a 14-day free trial with no credit card required. Every demo also includes a live walkthrough using your actual IFC model — so you see DeltaARBIM working on your real project before committing.",
+      body: "Yes. All plans include a 14-day free trial with no credit card required. Every demo includes a live walkthrough using your actual IFC model.",
     },
   },
   {
     id: "india",
     category: "product",
-    question: "Is DeltaARBIM built for the Indian construction market?",
+    question: "Is Delta ARBIM built for the Indian construction market?",
     answer: {
       kind: "text",
-      body: "Yes. DeltaARBIM is built by an India-based technology team for the Indian and South Asian construction market, with awareness of local site conditions, connectivity constraints, and project workflows. International teams are fully supported. INR billing available.",
+      body: "Yes. Delta ARBIM is built by an India-based technology team with awareness of local site conditions, connectivity constraints, and project workflows. INR billing and GST-compliant invoicing are available.",
     },
   },
   {
     id: "defence",
     category: "industry",
-    question: "Is DeltaARBIM suitable for defence and government infrastructure?",
+    question: "Is Delta ARBIM suitable for defence and government infrastructure?",
     answer: {
       kind: "text",
-      body: "Yes. DeltaARBIM is fully offline-capable — it operates without any internet connection, making it suitable for secure defence facilities, classified construction sites, and government infrastructure projects where network connectivity is restricted. All IFC data stays on-device. We are aligned with iDEX (Innovation for Defence Excellence) principles and are open to MOU partnerships with defence contractors and government agencies.",
+      body: "Yes. As a fully offline-capable platform, it is suitable for secure defence facilities and classified sites where network connectivity is restricted.",
     },
   },
   {
     id: "infrastructure",
     category: "industry",
-    question: "Does DeltaARBIM work for infrastructure projects like tunnels or highways?",
+    question: "Does Delta ARBIM work for infrastructure projects like tunnels or highways?",
     answer: {
       kind: "text",
-      body: "Yes. DeltaARBIM supports IFC-based infrastructure models including tunnels, highways, bridges, and utility networks. The offline-first architecture means it works in GPS-denied environments like tunnels, basements, and underground construction zones. LiDAR anchoring maintains accuracy without any external reference signal.",
+      body: "Yes. Delta ARBIM supports IFC-based infrastructure models, including tunnels, highways, and bridges. The offline-first architecture is ideal for GPS-denied environments.",
     },
   },
 ];
@@ -516,17 +516,17 @@ export const homeIfcCheckerCopy: IfcCheckerCopy = {
   titleBefore: "Is your IFC model",
   titleEmphasis: "AR-ready?",
   desc:
-    "Before your demo — or just out of curiosity — find out if your IFC file is technically compatible with DeltaARBIM's AR engine. Describe your model and our AI checks it against AR requirements in seconds.",
+    "Check the compatibility of your model with our Free IFC File Checker before your demo or simply out of curiosity. Drag and drop your file or describe your model, and our IFC File Checker will compare it with high-performance AR requirements in a few seconds.",
   leftChecklist: [
-    "IFC version compatibility (IFC2x3, IFC4, IFC4.1+)",
-    "3D geometry — does it contain renderable AR elements",
-    "Discipline layers — structural, MEP, architectural",
-    "Spatial anchoring — IfcSite / IfcBuilding coordinate data",
-    "Element count — AR performance estimate",
-    "Optimisation recommendations if needed",
+    "IFC Version Compatibility: We are compatible with IFC2x3, IFC4, and IFC4.1+ to provide smooth BIM coordination software integration",
+    "3D Geometry Analysis: Automated check to determine whether your file has renderable AR elements to visualise with high fidelity.",
+    "Discipline Layers: Determine and confirm structural, MEP, and architectural layers to targeted augmented reality building overlays.",
+    "Spatial Anchoring: Check IfcSite and IfcBuilding coordinate data to make sure your model snaps to physical site coordinates without drift.",
+    "Performance Estimation: Count of elements analysis using AI to give an AR estimate of the performance of your mobile device.",
+    "Optimisation Recommendations: Get technical, actionable advice to prepare your model to run.",
   ],
   privacyNote:
-    "⚠ No file is uploaded to our servers. AI analyses your description and metadata only. Your IFC data stays on your device.",
+    "⚠ Audit Note: After submitting, our engineering team will conduct a manual audit of your IFC and send you a comprehensive compatibility report within 24-48 hours.",
   leftCtas: [
     { href: "/demo", label: "Book a Full Demo", variant: "orange" },
     { href: "/pricing", label: "Pricing Plans", variant: "outline" },
@@ -601,7 +601,7 @@ export const pricingTeaserCards: PricingTeaserCard[] = [
   {
     tier: "For Growing Teams",
     name: "Project",
-    desc: "Multiple active IFC projects, larger field crews, office-to-site sync. The full DeltaARBIM experience.",
+    desc: "Multiple active IFC projects, larger field crews, office-to-site sync. The full Delta ARBIM experience.",
     price: "Custom",
     note: "built for your team · INR billing available",
     ctaLabel: "Book a Demo →",
@@ -621,11 +621,11 @@ export const pricingTeaserCards: PricingTeaserCard[] = [
 
 // ——— Simulation ———
 
-export const simulationStats: { value: string; label: string }[] = [
-  { value: "±2cm", label: "Spatial Accuracy" },
-  { value: "60fps", label: "AR Render Rate" },
-  { value: "IFC", label: "Open BIM Standard" },
-  { value: "100%", label: "Offline Capable" },
+export const simulationStats: { value: string; label: string; desc: string }[] = [
+  { value: "±2cm", label: "Spatial Precision" , desc: "Enjoy the best precision in the industry for performing augmented reality construction and structural inspection projects."},
+  { value: "60fps", label: "AR Rendering Speed", desc: "Our high-speed engine ensures seamless rendering even while working on complex IFC models." },
+  { value: "IFC", label: "Open BIM Standard", desc: "This means 100% compatibility with industry standards (IFC2x3, IFC4), so you don’t need to change your favourite BIM software." },
+  { value: "100%", label: "Offline Functionality", desc: "Built for the realities of the job site, our engine operates in basements, tunnels, and low-connectivity zones without data loss." },
 ];
 
 // ——— Field demo ———
@@ -635,19 +635,19 @@ export type FieldDemoBulletIcon = "hex" | "zap" | "target" | "diamond";
 export const fieldDemoBullets: { icon: FieldDemoBulletIcon; text: string }[] = [
   {
     icon: "hex",
-    text: "Live IFC model aligned to the real site — columns, MEP runs, slabs overlaid precisely.",
+    text: "Live IFC Model Alignment: Visualize the structural grid, MEP runs and slabs on the actual site.",
   },
   {
     icon: "zap",
-    text: "HVAC duct clash detected and flagged visually in AR before installation.",
+    text: "Proactive Clash Detection: Observe an HVAC duct clash identified and visually indicated in AR BIM prior to installation.",
   },
   {
     icon: "target",
-    text: "Markerless geo-anchoring — no QR codes, no printed markers, no GPS required.",
+    text: "Markerless Geo-Anchoring: Enjoy the full field mobility without the use of QR codes, without printed markers, and without the need to be connected to GPS.",
   },
   {
     icon: "diamond",
-    text: "LiDAR room scan vs as-designed IFC — deviation flagged in seconds.",
+    text: "LiDAR As-Built Check: Visualize a live LiDAR room scan against the as-designed IFC file- any structural anomaly is indicated in a few seconds.",
   },
 ];
 
@@ -666,19 +666,19 @@ export const arsLayers: ArsLayerRow[] = [
 export const arsInfoItems: { title: string; desc: string }[] = [
   {
     title: "→ BIM Structure Layer",
-    desc: "Grey columns, beams and slabs from your IFC file overlaid precisely to confirm placement on site.",
+    desc: "View grey columns, beams and slabs in your IFC file overlaid accurately to ensure that they are in place on-site before the concrete is poured.",
   },
   {
     title: "→ Wall & Slab Layer",
-    desc: "Semi-transparent panels show walls and openings — catch misplacements before they're built.",
+    desc: "Semi-transparent panels depict walls and holes in computerized construction-catch errors before they are actually constructed.",
   },
   {
     title: "→ MEP Pipes & Ducts",
-    desc: "Red HVAC, blue water, yellow electrical — each trade colour-coded. Toggle to isolate for clash inspection.",
+    desc: "Visualize red HVAC, blue water, and yellow electrical systems. This AR BIM toggle allows you to isolate certain trades to inspect clashes in real-time.",
   },
   {
     title: "→ AR Anchor Points",
-    desc: "LiDAR nodes lock the IFC model to physical coordinates so the overlay never drifts.",
+    desc: "LiDAR nodes fix the IFC model to physical coordinates to ensure that the augmented reality building overlay does not drift, and the accuracy is within ±2cm.",
   },
 ];
 
@@ -698,21 +698,21 @@ export const howItWorksSteps: HowStepContent[] = [
     tag: "STEP 01",
     title: "Upload your IFC",
     hudLabel: "UPLOADING IFC",
-    desc: "Import your IFC file directly into DeltaARBIM. The platform parses every structural element, MEP layer, and metadata automatically — no conversion, no manual setup required.",
+    desc: "Import your IFC file directly into Delta ARBIM. The platform parses every structural element, MEP layer, and metadata automatically — no conversion, no manual setup required.",
   },
   {
     id: 1,
     tag: "STEP 02",
     title: "Select floor or zone",
     hudLabel: "SELECT ZONE",
-    desc: "Choose the floor level and construction zone you want to verify. DeltaARBIM shows a live building tree — tap any floor to load its geometry.",
+    desc: "Choose the floor level and construction zone you want to verify. Delta ARBIM shows a live building tree — tap any floor to load its geometry.",
   },
   {
     id: 2,
     tag: "STEP 03",
     title: "Point & anchor",
     hudLabel: "ANCHORING MODEL",
-    desc: "Using LiDAR and computer vision, DeltaARBIM locks the IFC model to real-world coordinates. No markers needed — just point at two known site features.",
+    desc: "Using LiDAR and computer vision, Delta ARBIM locks the IFC model to real-world coordinates. No markers needed — just point at two known site features.",
   },
   {
     id: 3,

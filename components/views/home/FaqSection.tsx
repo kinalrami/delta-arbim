@@ -24,7 +24,7 @@ function renderFaqAnswer(item: FaqItemModel): ReactNode {
 export function FaqSection() {
   const baseId = useId();
   const listRegionId = `${baseId}-faq-list`;
-  const [activeTab, setActiveTab] = useState<FaqTabId>("all");
+  const [activeTab, setActiveTab] = useState<FaqTabId>("product");
   const [openId, setOpenId] = useState<string | null>(null);
 
   const visibleItems = useMemo(() => {
@@ -50,7 +50,7 @@ export function FaqSection() {
           eyebrowClassName="mb-2 inline-flex font-mono text-xs font-semibold uppercase text-orange-400"
           title={
             <>
-              Everything you need to know about <em className="not-italic text-orange-400">DeltaARBIM.</em>
+              Everything you need to know about <em className="not-italic text-orange-400">Delta ARBIM.</em>
             </>
           }
         />

@@ -17,18 +17,18 @@ export type DualHeroCard = {
 
 export const dualIndustryHero = {
   defence: {
-    tag: "Aerospace & Defence · iDEX Aligned",
-    titleTop: "Technology that",
+    tag: "Aerospace & Defence",
+    titleTop: "ARBIM Technology that",
     titleEmphasis: "defends the Nation.",
     body:
-      "Bharat's armed forces protect every citizen. DeltaARBIM gives defence infrastructure the precision it deserves — IFC-based AR for hangars, secure facilities, and field operations. Built for Bharat. Aligned with iDEX. Offline-first for every environment.",
+      "Bharat’s armed forces protect every citizen. Delta ARBIM gives defence infrastructure the precision it deserves—providing IFC-based AR for hangars, secure facilities, and field operations. Built for Bharat and aligned with supporters, our platform is offline-first to ensure mission-critical performance in every environment.",
     quote:
-      "Infrastructure built wrong costs lives. AR BIM ensures what's designed is exactly what's built — every time.",
-    cite: "DeltaARBIM Engineering Team",
+      "Infrastructure built wrong costs lives. AR BIM ensures what’s designed is exactly what’s built—every time.",
+    cite: "Delta ARBIM Engineering Team",
     stats: [
       { value: "100%", label: "Offline Capable" },
       { value: "±2cm", label: "Precision" },
-      { value: "iDEX", label: "Ready" },
+      { value: "", label: "" },
     ],
     ctas: [
       { href: "/contact", label: "Explore Defence Applications", variant: "green", showArrow: true },
@@ -41,10 +41,10 @@ export const dualIndustryHero = {
     titleTop: "Build it right.",
     titleEmphasis: "The first time.",
     body:
-      "Every column misplaced, every duct clashing, every wall off-axis — costs lakhs before it's caught. DeltaARBIM puts your live IFC model directly over the physical site so every team member sees exactly what's wrong, the moment it's wrong. Not after.",
+      "Every misplaced column and clashing duct costs lakhs before it is caught. Delta ARBIM puts your live IFC model directly over the physical site so your team sees exactly what's wrong the moment it's wrong—not after. This is the future of digital construction.",
     quote:
       "30% of construction rework is preventable with early clash detection. AR BIM makes that possible on day one.",
-    cite: "DeltaARBIM Engineering Team",
+    cite: "Delta ARBIM Engineering Team",
     stats: [
       { value: "30%", label: "Less Rework" },
       { value: "80%", label: "Faster QA/QC" },
@@ -116,27 +116,27 @@ export const industryPanels: Record<IndustryKey, IndustryPanel> = {
     badge: "Core Industry",
     heading: { before: "AR BIM built for", emphasis: "every construction team." },
     body:
-      "From foundation pour to final handover — DeltaARBIM overlays your live IFC model on the physical site so every team member sees exactly what's built, what's missing, and what's wrong. In real-time. On their phone.",
+      "From foundation pour to final handover, overlay your live IFC model on the physical site so every team member sees exactly what's built, what's missing, and what's wrong in real-time.",
     usecases: [
       {
         title: "Structural Verification",
         desc:
-          "Confirm rebar placement, column positions, and slab elevations against the structural IFC model before concrete is poured. Catch a misplaced column before it costs ₹ lakhs to fix.",
+          "Confirm rebar placement and slab elevations against the structural IFC before the pour.",
       },
       {
         title: "MEP Clash Detection",
         desc:
-          "Overlay HVAC, water, and electrical independently in AR. Detect duct-to-beam clashes on the floor before fabrication begins — not after installation.",
+          "Overlay HVAC, water, and electrical independently to detect duct-to-beam clashes before fabrication.",
       },
       {
         title: "QA/QC Walkthroughs",
         desc:
-          "Replace paper-based checklists with live AR overlays. Walk the floor, see deviations instantly, tag issues with geo-tagged screenshots, sync to Procore or BIM360.",
+          "Replace paper checklists with live AR overlays and sync geo-tagged issues to Procore or BIM360.",
       },
       {
         title: "As-Built Documentation",
         desc:
-          "LiDAR room scanning captures as-built geometry automatically. Compare against IFC design intent and generate deviation reports for handover documentation.",
+          "Capture geometry automatically via LiDAR room scanning for high-fidelity handover documentation.",
       },
     ],
     ctas: [
@@ -152,30 +152,30 @@ export const industryPanels: Record<IndustryKey, IndustryPanel> = {
   defence: {
     id: "defence",
     tabLabel: "Aerospace & Defence",
-    badge: "Emerging — iDEX Ready",
+    badge: "Emerging",
     heading: { before: "AR BIM for", emphasis: "aerospace & defence infrastructure." },
     body:
-      "The military and aerospace sector is rapidly adapting BIM for specialized high-security environments. From advanced aircraft maintenance hangars to terrain mapping for low-visibility operations — DeltaARBIM brings IFC-standard AR precision to defence infrastructure.",
+      "Bringing IFC-standard AR precision to high-security environments, from advanced aircraft maintenance hangars to terrain mapping for low-visibility operations.",
     usecases: [
       {
         title: "Hangar Management",
         desc:
-          "AR overlay of utility systems, bay allocations, and equipment clearance requirements — ensuring maintenance crews never compromise on safety.",
+          "AR overlay of utility systems and equipment clearance to ensure maintenance crews never compromise on safety.",
       },
       {
         title: "Synthetic Vision Systems",
         desc:
-          "Use BIM-derived 3D terrain data to create AR terrain maps for pilots in low-visibility regions. IFC geometry becomes mission-critical situational awareness.",
+          "Use 3D terrain data to create AR maps for pilots in low-visibility regions.",
       },
       {
         title: "Secure Facility Verification",
         desc:
-          "Verify construction and maintenance against approved IFC plans — with full offline capability for air‑gapped secure environments. No cloud dependency required.",
+          "Verify construction against approved IFC plans with 100% offline capability, no cloud dependency required.",
       },
       {
-        title: "iDEX Challenge Alignment",
+        title: "",
         desc:
-          "Positioned to address iDEX challenges in smart base infrastructure, maintenance modernisation, and AR-guided field operations.",
+          "",
       },
     ],
     ctas: [
@@ -194,27 +194,27 @@ export const industryPanels: Record<IndustryKey, IndustryPanel> = {
     badge: "Industrial Plants",
     heading: { before: "AR BIM for", emphasis: "factories & assembly lines." },
     body:
-      "Industrial facilities use BIM to coordinate massive machinery, robotic assembly lines, and complex utility networks. DeltaARBIM brings AR precision to factory floor planning, equipment installation, and maintenance guidance.",
+      "Coordinate massive machinery, robotic assembly lines, and complex utility networks with factory-floor AR precision.",
     usecases: [
       {
         title: "Factory Layout Simulation",
         desc:
-          "Simulate installation of robotic arms, CNC machines, and conveyors in AR — verify clearance, power access, and workflow paths before a single bolt is tightened.",
+          "Verify clearance and workflow paths for robotic arms and conveyors before a single bolt is tightened.",
       },
       {
         title: "4D BIM — Supply Chain Tracking",
         desc:
-          "Track delivery and installation of prefabricated parts against IFC schedules. AR shows what should be installed today and what's behind.",
+          "AR displays what should be installed today versus what's behind schedule based on IFC schedules.",
       },
       {
         title: "Equipment Maintenance Guides",
         desc:
-          "Technicians navigate complex machinery with AR overlays — highlight service access points, shutoffs, and safety zones without paper manuals.",
+          "Technicians navigate complex machinery with AR overlays highlighting service points and safety zones.",
       },
       {
-        title: "Utility Routing Verification",
+        title: "",
         desc:
-          "Verify compressed air, electrical, and cooling routes against the plant IFC model before startup. Catch routing errors before costly shutdowns.",
+          "",
       },
     ],
     ctas: [
@@ -233,27 +233,27 @@ export const industryPanels: Record<IndustryKey, IndustryPanel> = {
     badge: "Civil & Architecture",
     heading: { before: "AR BIM for", emphasis: "infrastructure & architecture." },
     body:
-      "Roads, bridges, tunnels, airports, and metro systems depend on precise coordination between design and delivery. DeltaARBIM closes the gap with IFC-powered AR at every stage.",
+      "Closing the gap between design and delivery for roads, bridges, tunnels, airports, and metro systems.",
     usecases: [
       {
         title: "Tunnel & Underground Work",
         desc:
-          "Works 100% offline in tunnels and underground structures. Overlay routes and safety zones where GPS and connectivity are unavailable.",
+          "Operates 100% offline where GPS and connectivity are unavailable.",
       },
       {
         title: "Bridge & Structural Inspection",
         desc:
-          "Walk inspection teams with IFC overlay showing design vs as-built deviations. LiDAR scanning captures geometry for monitoring.",
+          "LiDAR scanning captures geometry for monitoring design vs. as-built deviations.",
       },
       {
         title: "Airport & Metro Coordination",
         desc:
-          "Coordinate multi-contractor teams with AR layers for civil, MEP, signalling, and fit-out — toggled per trade.",
+          "Coordinate multi-contractor teams (signalling, MEP, civil) with trade-specific AR layers.",
       },
       {
-        title: "Architectural Design Verification",
+        title: "",
         desc:
-          "Verify complex forms and interior volumes against IFC during construction. Walk stakeholders through unbuilt spaces in AR.",
+          "",
       },
     ],
     ctas: [
@@ -272,27 +272,27 @@ export const industryPanels: Record<IndustryKey, IndustryPanel> = {
     badge: "High-Risk Environments",
     heading: { before: "AR BIM for", emphasis: "energy, oil & gas." },
     body:
-      "In high-risk energy environments, digital twins save lives and prevent disasters. DeltaARBIM brings IFC-based AR guidance to refineries, offshore rigs, and renewable installations where precision is safety-critical.",
+      "Digital twins save lives in refineries and offshore rigs where precision is safety-critical.",
     usecases: [
       {
         title: "Refinery Maintenance",
         desc:
-          "Guide technicians through complex repairs with AR BIM overlays — see valve locations, pipe routes, and safety zones in real time.",
+          "Real-time AR guidance through complex valve locations and pipe routes.",
       },
       {
         title: "Renewable Energy Planning",
         desc:
-          "Plan exact placement of wind turbines and solar arrays from IFC terrain data. Verify installation positions in AR before foundations are poured.",
+          "Verify installation positions for wind turbines and solar arrays before foundations are poured.",
       },
       {
         title: "Pipeline & Subsurface Mapping",
         desc:
-          "Overlay underground pipeline IFC models on the surface using GPS + LiDAR anchoring — excavate with confidence.",
+          "Overlay underground pipeline IFC models using GPS + LiDAR anchoring to excavate with confidence.",
       },
       {
-        title: "Digital Twin Integration",
+        title: "",
         desc:
-          "Bring as-built IFC and sensor context together in AR — a field interface for digital twin workflows.",
+          "",
       },
     ],
     ctas: [
@@ -309,8 +309,8 @@ export const industryPanels: Record<IndustryKey, IndustryPanel> = {
 
 export const overviewCopy = {
   eyebrow: "All Industries at a Glance",
-  titleBefore: "IFC AR BIM works wherever",
-  titleEmphasis: "infrastructure exists.",
+  titleBefore: "Universal AR precision for the ",
+  titleEmphasis: "world's most complex physical assets.",
   desc: undefined as undefined | string,
 } as const;
 
@@ -327,54 +327,54 @@ export const overviewItems: OverviewItem[] = [
   {
     key: "construction",
     icon: "🏗️",
-    title: "Construction",
+    title: "Augmented Reality Construction",
     desc:
-      "Structural verification, MEP clash detection, QA/QC walkthroughs, and as-built documentation for every building typology.",
+      "Eliminate the 'Interpretation Tax' by visualising MEP and structural layers directly on-site to reduce rework by 30%.",
     tag: "IFC · CLASH · LIDAR",
     href: "/industry#ind-deep-h2",
   },
   {
     key: "defence",
     icon: "✈️",
-    title: "Aerospace & Defence",
+    title: "Secure Infrastructure & Defence",
     desc:
-      "Hangar management, synthetic vision terrain mapping, and secure offline AR for defence infrastructure and iDEX challenges.",
-    tag: "IDEX · SECURE · OFFLINE",
+      "Deploy offline AR for classified facility verification and hangar maintenance without relying on cloud or GPS signals.",
+    tag: "SECURE · OFFLINE",
     href: "/industry#ind-deep-h2",
   },
   {
     key: "manufacturing",
     icon: "⚙️",
-    title: "Manufacturing & Industrial",
+    title: "Industrial Plant & Manufacturing",
     desc:
-      "Factory layout simulation, robotic arm clearance, 4D supply chain tracking, and equipment maintenance guidance.",
+      "Streamline assembly line installations and robotic cell placement using 4D BIM to track real-time supply chain progress.",
     tag: "4D BIM · ROBOTS · SUPPLY CHAIN",
     href: "/industry#ind-deep-h2",
   },
   {
     key: "infrastructure",
     icon: "🌉",
-    title: "Infrastructure & Architecture",
+    title: "Civil Engineering & Infrastructure",
     desc:
-      "Tunnels, bridges, metro systems, airports, and complex architecture — AR BIM coordination for every civil discipline.",
+      "Coordinate multi-contractor teams in tunnels and airports using augmented reality blueprints that lock to project coordinates.",
     tag: "TUNNELS · BRIDGES · CIVIL",
     href: "/industry#ind-deep-h2",
   },
   {
     key: "energy",
     icon: "⚡",
-    title: "Energy & Oil/Gas",
+    title: "Energy, Oil & Gas",
     desc:
-      "Refinery maintenance AR guides, renewable energy placement, subsurface pipeline mapping, and digital twin field interface.",
+      "Enhance safety on refineries and offshore rigs by mapping subsurface pipelines and valve locations with ±2cm spatial accuracy.",
     tag: "DIGITAL TWIN · REFINERY · RENEWABLE",
     href: "/industry#ind-deep-h2",
   },
   {
     key: "your-industry",
     icon: "🔮",
-    title: "Your Industry",
+    title: "Custom Enterprise Solutions",
     desc:
-      "If your sector works with physical infrastructure and IFC-compatible models, DeltaARBIM can bring AR to your field teams.",
+      "Tailor the Delta ARBIM engine to your unique sector requirements, from heritage restoration to advanced BIM coordination software research.",
     tag: "CUSTOM · ENTERPRISE · GLOBAL",
     href: "/contact",
   },
@@ -382,10 +382,10 @@ export const overviewItems: OverviewItem[] = [
 
 export const industryLeadCopy = {
   eyebrow: "Request a Demo",
-  titlePrefix: "See DeltaARBIM in",
+  titlePrefix: "See Delta ARBIM in",
   titleEmphasis: "your industry.",
   body:
-    "Tell us your sector and use case. We'll run a 30-minute live AR walkthrough using your actual IFC model — showing exactly what DeltaARBIM does for your specific environment and team.",
+    "Tell us your sector and use case. We'll run a 30-minute live AR walkthrough using your actual IFC model — showing exactly what Delta ARBIM does for your specific environment and team.",
   checklist: [
     "30-minute live demo using your actual IFC model",
     "Industry-specific AR scenario — construction, defence, energy, or manufacturing",
@@ -395,7 +395,7 @@ export const industryLeadCopy = {
   ],
   quickLinks: [
     { href: "/pricing", label: "→ View Pricing" },
-    { href: "/about", label: "→ About DeltaARBIM" },
+    { href: "/about", label: "→ About Delta ARBIM" },
     { href: "/privacy", label: "→ Privacy Policy" },
   ],
   form: {

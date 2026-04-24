@@ -11,16 +11,19 @@ export function Hero() {
           <div className="mx-auto max-w-4xl text-center">
             <SectionHeading
               id="contact-h2"
-                eyebrow={contactHeroCopy.eyebrow}
+              eyebrow={contactHeroCopy.eyebrow}
               eyebrowClassName="mb-5 inline-flex font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-orange-400"
               title={
                 <>
-                    {contactHeroCopy.titlePrefix}{" "}
-                    <span className="text-orange-400">{contactHeroCopy.titleEmphasis}</span>
+                  {contactHeroCopy.titlePrefix}{" "}
+                  <span className="text-orange-400">{contactHeroCopy.titleEmphasis}</span>
                 </>
               }
               titleClassName="font-serif text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-6xl"
-                desc={contactHeroCopy.desc}
+              desc={<>
+                <p>Whether you have demo requests, AR BIM pricing questions, international partnership proposals, or specific technical queries about IFC model compatibility, our engineering team in Ahmedabad reads and responds to everything personally within 24 hours.</p>
+                <p className="mt-1.5">No automated bots, just direct expert communication to help you scale your digital construction goals.</p>
+              </>}
               descWrapClassName="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-white/55 sm:text-base"
             />
           </div>

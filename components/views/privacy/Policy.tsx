@@ -10,13 +10,13 @@ function Callout({
   title?: string;
   body: string;
 }) {
-  const bodyNode = body.split("build@deltaarbim.tech").map((part, j, arr) => {
+  const bodyNode = body.split("build@Delta ARBIM.tech").map((part, j, arr) => {
     if (j === arr.length - 1) return part;
     return (
       <span key={j}>
         {part}
-        <a href="mailto:build@deltaarbim.tech" className="text-orange-300 hover:text-orange-200">
-          build@deltaarbim.tech
+        <a href="mailto:build@Delta ARBIM.tech" className="text-orange-300 hover:text-orange-200">
+          build@Delta ARBIM.tech
         </a>
       </span>
     );
@@ -57,16 +57,16 @@ export function Policy() {
         </blockquote>
 
         <div className="mt-4">
-            {p.sections.map((s, sIdx) => (
-              <section
-                key={s.id}
-                id={s.id}
-                className={sIdx === p.sections.length - 1 ? "mb-0" : "mb-8"}
-              >
-                <div className="flex items-baseline gap-0.5 border-b border-white/10 pb-3">
-                  <span className="font-mono text-xl font-bold uppercase tracking-[0.18em] text-white">
-                    {s.number}
-                  </span>
+          {p.sections.map((s, sIdx) => (
+            <section
+              key={s.id}
+              id={s.id}
+              className={sIdx === p.sections.length - 1 ? "mb-0" : "mb-8"}
+            >
+              <div className="flex items-baseline gap-0.5 border-b border-white/10 pb-3">
+                <span className="font-mono text-xl font-bold uppercase tracking-[0.18em] text-white">
+                  {s.number}
+                </span>
                 <h2 className="font-serif text-xl font-bold tracking-tight text-white">
                   {s.title}
                   {s.titleEmphasis ? (
@@ -187,16 +187,16 @@ export function Policy() {
                                         </div>
                                       </div>
                                       <p className="mt-2 text-[13px] leading-relaxed text-white/55">
-                                        {it.body.split("build@deltaarbim.tech").map((part, j, arr) => {
+                                        {it.body.split("build@Delta ARBIM.tech").map((part, j, arr) => {
                                           if (j === arr.length - 1) return part;
                                           return (
                                             <span key={j}>
                                               {part}
                                               <a
-                                                href="mailto:build@deltaarbim.tech"
+                                                href="mailto:build@Delta ARBIM.tech"
                                                 className="text-orange-400 hover:text-orange-300"
                                               >
-                                                build@deltaarbim.tech
+                                                build@Delta ARBIM.tech
                                               </a>
                                             </span>
                                           );

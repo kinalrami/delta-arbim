@@ -10,9 +10,9 @@ export const aboutWhatWeStandForCopy = {
     {
       key: "precision",
       icon: "diamond",
-      title: "Precision First",
+      title: "Precision First ±2cm accuracy",
       description:
-        "±2cm accuracy isn't a feature we added — it's the reason DeltaARBIM exists. If the overlay isn't precise enough to catch a real construction error, it isn't useful. We hold ourselves to field-grade accuracy, not demo-grade accuracy.",
+        "isn't a feature we added—it’s the reason Delta ARBIM exists. If an AR BIM overlay isn't precise enough to catch a real structural error, it’s just a toy. We hold ourselves to field-grade accuracy using LiDAR + CV sensor fusion.",
       tags: ["±2CM", "LIDAR + CV"],
     },
     {
@@ -20,7 +20,7 @@ export const aboutWhatWeStandForCopy = {
       icon: "hexagon",
       title: "Open Standards Only",
       description:
-        "IFC was an intentional choice. We believe open standards create better technology and fairer markets. No vendor lock-in. No proprietary format dependency. Any BIM tool, any contractor, any country — one standard.",
+        "Choosing IFC was an intentional choice. We believe open standards create better technology and fairer markets. No vendor lock-in. No proprietary format dependency. Any BIM software, any contractor, any country—one standard.",
       tags: ["IFC", "OPEN BIM"],
     },
     {
@@ -29,7 +29,7 @@ export const aboutWhatWeStandForCopy = {
       iconClassName: "text-orange-400",
       title: "Field Conditions, Not Lab Conditions",
       description:
-        "Every feature is tested where construction actually happens — dust, direct sunlight, zero connectivity, fast-moving teams. If it doesn't work on a real site in real conditions, it doesn't ship.",
+        "Every feature is tested where construction actually happens—dust, direct sunlight, zero connectivity, and fast-moving teams. If it doesn't work on a real job site in real conditions, it doesn't ship.",
       tags: ["OFFLINE", "FIELD-READY"],
     },
     {
@@ -38,7 +38,7 @@ export const aboutWhatWeStandForCopy = {
       iconClassName: "text-sky-400",
       title: "Access Over Premium",
       description:
-        "The best construction technology should not be reserved for teams with dollar budgets. INR pricing, GST invoicing, and multilingual support are not afterthoughts — they are the product philosophy.",
+        "The best augmented reality in construction should not be reserved for teams with massive dollar budgets. INR pricing, GST invoicing, and multilingual support are not afterthoughts—they are our core product philosophy.",
       tags: ["INR", "6 LANGUAGES"],
     },
     {
@@ -46,7 +46,7 @@ export const aboutWhatWeStandForCopy = {
       icon: "square",
       title: "Small Team. Deep Engineering.",
       description:
-        "No bloated feature lists driven by sales pitches. A focused engineering team in Ahmedabad, building one platform exceptionally well. Every update is deliberate. Every feature is field-validated.",
+        "No bloated feature lists driven by sales pitches. We are a focused engineering team in Ahmedabad, building one platform exceptionally well. Every update is deliberate; every feature is field-validated.",
       tags: ["AHMEDABAD", "FOCUSED"],
     },
     {
@@ -54,7 +54,7 @@ export const aboutWhatWeStandForCopy = {
       icon: "target",
       title: "Every Nation That Builds",
       description:
-        "DeltaARBIM's mission is not limited by geography. Infrastructure challenges are universal. We serve construction, defence, manufacturing, and energy teams globally — with the same precision, the same offline capability, the same fair pricing.",
+        "Delta ARBIM's mission is not limited by geography. Infrastructure challenges are universal. We serve construction, defence, manufacturing, and energy teams globally with the same precision and fair pricing.",
       tags: ["GLOBAL", "UNIVERSAL"],
     },
   ] as const satisfies readonly FeatureGridItem[],
@@ -67,7 +67,7 @@ export const aboutLeadCopy: LeadCaptureCopy = {
   titlePrefix: "Start a partnership.",
   titleEmphasis: "Book a demo. Say hello.",
   body:
-    "Whether you're a construction team ready to bring AR to your site, a defence or industrial client exploring IFC applications, or a global partner interested in DeltaARBIM — we'd love to hear from you.",
+    "Whether you're a construction team ready to bring AR to your site, a defence or industrial client exploring IFC applications, or a global partner interested in Delta ARBIM — we'd love to hear from you.",
   bullets: [
     { title: "30-minute live demo using your actual IFC model" },
     { title: "Direct access to the engineering team — no sales script" },
@@ -88,9 +88,9 @@ export const aboutLeadCopy: LeadCaptureCopy = {
     submitShowArrow: false,
     notePrefix: "We respond personally — no bots, no templates.",
     privacy: "Privacy Policy",
-    emailSubject: "DeltaARBIM — About / Contact",
+    emailSubject: "Delta ARBIM — About / Contact",
     mailHeader: "Message from About page",
-    waText: "Hi DeltaARBIM, I'm reaching out from your About page.",
+    waText: "Hi Delta ARBIM, I'm reaching out from your About page.",
     waPrefix: "Prefer WhatsApp?",
     waCta: "Chat on WhatsApp",
     fields: [
@@ -165,27 +165,27 @@ export const visions = [
   {
     title: "IFC-First. Always Open.",
     subtitle: "Pillar 1",
-    desc: "We chose IFC — the open BIM standard — because locking clients into proprietary formats is not a business model. It's a trap. IFC works with every BIM tool, every contractor, every country."
+    desc: "We chose IFC—the open BIM standard—because proprietary locks are a trap. Our tool works with every BIM software, every contractor, and every country."
   },
   {
     title: "Offline-First. Field-Ready.",
     subtitle: "Pillar 2",
-    desc: "Construction sites are not data centres. Our platform works 100% offline — basements, tunnels, remote sites, and secure defence facilities. The field doesn’t wait for connectivity."
+    desc: "Construction sites aren't data centres. Our platform works 100% offline—perfect for tunnels, basements, and secure facilities. The field doesn't wait for a signal."
   },
   {
     title: "INR Pricing. Global Access.",
     subtitle: "Pillar 3",
-    desc: "World-class AR BIM shouldn’t require a dollar budget. INR billing with GST-compliant invoicing for Indian teams. Competitive pricing for every market. No compromise on capability."
+    desc: "High-end Augmented Reality in construction shouldn't require a Silicon Valley budget. We offer INR billing with GST-compliant invoicing for Indian teams and competitive global rates."
   },
   {
     title: "Precision That Saves Money.",
     subtitle: "Pillar 4",
-    desc: "±2cm spatial accuracy using LiDAR + computer vision. Not a demo metric — the real field accuracy that catches a misplaced column before concrete is poured and a duct clash before installation begins."
+    desc: "Our ±2cm spatial accuracy (LiDAR + Computer Vision) isn't a demo metric—it's real-world accuracy that catches a misplaced column before the concrete pour."
   },
   {
     title: "Built by Engineers, for Engineers.",
     subtitle: "Pillar 5",
-    desc: "No venture capital pressure to bloat features. No sales-driven roadmap. Just a focused engineering team in Ahmedabad building the tool they always wished existed on site."
+    desc: "No venture capital pressure to bloat features. Just a focused engineering team in Ahmedabad building the tool they always wished they had on-site."
   }
 ];
 
@@ -198,7 +198,7 @@ export const languages = [
       bg: "bg-[#44DC781A]",
       text: "text-[#44DC78E6]"
     },
-    desc: "India, UK, USA, Australia, Singapore & worldwide English markets"
+    desc: "Serving India, UK, USA, Australia, Singapore, and worldwide English-speaking AR BIM markets."
   },
   {
     code: "AE",
@@ -208,7 +208,7 @@ export const languages = [
       bg: "bg-orange-400/10",
       text: "text-orange-400"
     },
-    desc: "UAE, Saudi Arabia, Qatar, Kuwait, Oman & Gulf construction markets"
+    desc: "Localised support for UAE, Saudi Arabia, Qatar, Kuwait, and the growing Gulf augmented reality construction sector."
   },
   {
     code: "FR",
@@ -218,7 +218,7 @@ export const languages = [
       bg: "bg-orange-400/10",
       text: "text-orange-400"
     },
-    desc: "France, Belgium, Switzerland, Canada, North & West Africa"
+    desc: "Targeting France, Belgium, Switzerland, Canada, and the North & West African infrastructure markets."
   },
   {
     code: "ES",
@@ -228,7 +228,7 @@ export const languages = [
       bg: "bg-orange-400/10",
       text: "text-orange-400"
     },
-    desc: "Spain, Mexico, Colombia, Argentina & all Spanish-speaking markets"
+    desc: "Supporting Spain, Mexico, Colombia, Argentina, and all Spanish-speaking digital twin projects."
   },
   {
     code: "DE",
@@ -238,7 +238,7 @@ export const languages = [
       bg: "bg-gray-300/10",
       text: "text-gray-300"
     },
-    desc: "Germany, Austria, Switzerland — Europe’s largest construction market"
+    desc: "Preparing for Germany, Austria, and Switzerland—Europe’s largest construction office management market."
   },
   {
     code: "BR",
@@ -248,7 +248,7 @@ export const languages = [
       bg: "bg-gray-300/10",
       text: "text-gray-300"
     },
-    desc: "Brazil, Portugal, Mozambique, Angola — fastest-growing infrastructure markets"
+    desc: "Expanding into Brazil, Portugal, Mozambique, and Angola—some of the world's fastest-growing infrastructure zones."
   }
 ];
 
@@ -272,7 +272,7 @@ export const statsData = [
   },
   {
     value: "3+",
-    label: "Complex products actively maintained — DeltaARBIM is the flagship",
+    label: "Complex products actively maintained — Delta ARBIM is the flagship",
   },
   {
     value: "5+",
@@ -292,8 +292,7 @@ export const statsStrip: { value: string; label: string }[] = [
 ] as const;
 
 export const aboutHeroCopy = {
-  eyebrow: "ABOUT DELTAARBIM",
-  title: "Precision-First IFC AR",
+  eyebrow: "ABOUT Delta ARBIM",
   description:
-    "The world's best infrastructure deserves the world's most accessible technology. DeltaARBIM is our answer — IFC-based AR BIM built in Ahmedabad, Gujarat, priced for every team that builds, defends, or maintains the world's infrastructure.",
+    "The world's best infrastructure deserves the world's most accessible technology. Delta ARBIM is our answer — IFC-based AR BIM built in Ahmedabad, Gujarat, priced for every team that builds, defends, or maintains the world's infrastructure.",
 };

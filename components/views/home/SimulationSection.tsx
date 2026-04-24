@@ -5,16 +5,19 @@ import Link from "next/link";
 import { simulationStats } from "@/components/views/home/content";
 import { SectionHeading } from "../../shared/SectionHeading";
 
-type Stat = { value: string; label: string };
+type Stat = { value: string; label: string, desc: string };
 
 function StatTile({ s }: { s: Stat }) {
   return (
-    <div className="flex flex-col items-center justify-center px-6 py-5">
+    <div className="flex flex-col items-center justify-center text-center px-6 py-5">
       <div className="font-serif text-2xl font-extrabold leading-none text-orange-300">
         {s.value}
       </div>
-      <div className="mt-1.5 font-mono text-xs uppercase text-white/45">
+      <div className="mt-1.5 font-mono text-xs uppercase text-white/60">
         {s.label}
+      </div>
+      <div className="mt-1.5 font-mono text-[10px] text-white/45">
+        {s.desc}
       </div>
     </div>
   );
@@ -32,7 +35,7 @@ export function SimulationSection() {
       <div className="relative mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
         <SectionHeading
           id="sim-h2"
-          eyebrow="Live AR Simulation — DeltaARBIM Engine"
+          eyebrow="Live AR Simulation — Delta ARBIM Engine"
           eyebrowClassName="mb-2 inline-flex font-mono text-xs uppercase font-semibold text-orange-400"
           title={
             <>
@@ -40,7 +43,7 @@ export function SimulationSection() {
             </>
           }
           titleClassName="max-w-5xl font-serif text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl"
-          desc="The simulation shows a multi-building construction complex — structural grid, active MEP pipe route, clash detection markers, and a live LiDAR scan plane sweeping the site."
+          desc="This demo shows a multiple-building construction layout, where you can see the structure grid, moving MEP pipe routes, automated clash detection markers, and dynamic LiDAR scanning planes. With Delta ARBIM, you are assured of having the perfect alignment of your digital construction data with the actual physical construction site."
           descWrapClassName="mt-2 max-w-3xl text-base leading-relaxed text-white/60"
         />
 

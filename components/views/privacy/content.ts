@@ -3,7 +3,7 @@ export const privacyHeroCopy = {
   title: "Privacy Policy",
   desc: "Written in plain language — no legal jargon. This policy explains what we collect, why, how we protect it, and your rights. Short version: we only collect what we need, and we never sell your data.",
   metaLeft: "Last updated: April 2026",
-  metaRight: "Applies to: deltaarbim.tech & DeltaARBIM app",
+  metaRight: "Applies to: Delta ARBIM.tech & Delta ARBIM app",
   highlights: [
     {
       title: "We never sell your data.",
@@ -29,7 +29,7 @@ export const privacyHeroCopy = {
 } as const;
 
 export const privacyExploreStrip = {
-  title: "Explore DeltaARBIM",
+  title: "Explore Delta ARBIM",
   links: [
     { href: "/", label: "Home" },
     { href: "/demo", label: "Book a Demo" },
@@ -91,7 +91,7 @@ export type PrivacyPolicySection = {
 export const privacyPolicy = {
   titlePrefix: "The short version:",
   intro:
-    "We only collect what we need to run DeltaARBIM and respond to your enquiries. We don't sell your data. We don't share it with advertisers. Your IFC files are encrypted and isolated. You can ask us to delete everything at any time.",
+    "We only collect what we need to run Delta ARBIM and respond to your enquiries. We don't sell your data. We don't share it with advertisers. Your IFC files are encrypted and isolated. You can ask us to delete everything at any time.",
   sections: [
     {
       id: "who-we-are",
@@ -100,17 +100,17 @@ export const privacyPolicy = {
       blocks: [
         {
           kind: "p",
-          body: "DeltaARBIM is a product of Shivlam, a technology company based in Ahmedabad, Gujarat, India. When this policy refers to 'DeltaARBIM', 'we', 'us', or 'our', it means Shivlam and the DeltaARBIM platform.",
+          body: "Delta ARBIM is a product of Shivlam, a technology company based in Ahmedabad, Gujarat, India. When this policy refers to 'Delta ARBIM', 'we', 'us', or 'our', it means Shivlam and the Delta ARBIM platform.",
         },
         {
           kind: "p",
-          body: "We are the data controller for personal information collected through deltaarbim.tech and the DeltaARBIM mobile application (iOS and Android).",
+          body: "We are the data controller for personal information collected through Delta ARBIM.tech and the Delta ARBIM mobile application (iOS and Android).",
         },
         {
           kind: "contactLine",
           prefix: "Contact:",
-          emailLabel: "build@deltaarbim.tech",
-          emailHref: "mailto:build@deltaarbim.tech",
+          emailLabel: "build@Delta ARBIM.tech",
+          emailHref: "mailto:build@Delta ARBIM.tech",
           siteLabel: "shivlam.com",
           siteHref: "https://www.shivlam.com",
         },
@@ -150,7 +150,7 @@ export const privacyPolicy = {
         {
           kind: "blockquote",
           title: "Your IFC data is yours.",
-          body: "BIM model files uploaded to DeltaARBIM are encrypted at rest, isolated per account, and never shared with any third party. We treat your project data as confidential construction information.",
+          body: "BIM model files uploaded to Delta ARBIM are encrypted at rest, isolated per account, and never shared with any third party. We treat your project data as confidential construction information.",
         },
       ],
     },
@@ -163,7 +163,7 @@ export const privacyPolicy = {
           kind: "ul",
           items: [
             "To respond to demo and pricing requests — so we can reach you within 24 hours.",
-            "To provide the DeltaARBIM service — account management, IFC model processing, and AR overlay delivery.",
+            "To provide the Delta ARBIM service — account management, IFC model processing, and AR overlay delivery.",
             "To send product updates — only if you've explicitly opted in. Unsubscribe anytime in one click.",
             "To improve the product — anonymised usage data helps us understand what's working.",
             "To comply with legal obligations — including tax records, invoicing, and applicable regulations.",
@@ -258,8 +258,8 @@ export const privacyPolicy = {
         {
           kind: "linkParagraph",
           before: "Email us at ",
-          linkLabel: "build@deltaarbim.tech",
-          href: "mailto:build@deltaarbim.tech",
+          linkLabel: "build@Delta ARBIM.tech",
+          href: "mailto:build@Delta ARBIM.tech",
           after: " to exercise any of the following rights. We respond within 5 business days.",
         },
         {
@@ -287,7 +287,7 @@ export const privacyPolicy = {
       blocks: [
         {
           kind: "p",
-          body: "DeltaARBIM operates as a long-term construction technology partner — not just a software vendor. The following terms govern how we work with clients, from data agreements to on-site engagement.",
+          body: "Delta ARBIM operates as a long-term construction technology partner — not just a software vendor. The following terms govern how we work with clients, from data agreements to on-site engagement.",
         },
         {
           kind: "partnershipGrid",
@@ -295,12 +295,12 @@ export const privacyPolicy = {
             {
               icon: "lock",
               title: "Data Security & Confidentiality",
-              body: "All IFC models, project data, and BIM information shared with DeltaARBIM are treated as confidential. Data is encrypted at rest and in transit, isolated per client account, and never shared with third parties. Clients may request a signed NDA before sharing any project files. Contact build@deltaarbim.tech to initiate.",
+              body: "All IFC models, project data, and BIM information shared with Delta ARBIM are treated as confidential. Data is encrypted at rest and in transit, isolated per client account, and never shared with third parties. Clients may request a signed NDA before sharing any project files. Contact build@Delta ARBIM.tech to initiate.",
             },
             {
               icon: "mou",
               title: "IFC-Based MOU",
-              body: "DeltaARBIM is open to formal Memoranda of Understanding (MOU) with construction companies, BIM consultants, and developers for long-term IFC-based collaboration. An MOU establishes a structured relationship covering data handling, platform access, support commitments, and roadmap input.",
+              body: "Delta ARBIM is open to formal Memoranda of Understanding (MOU) with construction companies, BIM consultants, and developers for long-term IFC-based collaboration. An MOU establishes a structured relationship covering data handling, platform access, support commitments, and roadmap input.",
             },
             {
               icon: "annual",
@@ -310,7 +310,7 @@ export const privacyPolicy = {
             {
               icon: "visits",
               title: "On-Site Visits",
-              body: "Team DeltaARBIM travels to any country for live AR demonstrations and onboarding. Subject to client-provided support:",
+              body: "Team Delta ARBIM travels to any country for live AR demonstrations and onboarding. Subject to client-provided support:",
               bullets: [
                 "Return travel (flights / ground transport)",
                 "Accommodation for the duration of the visit",
@@ -322,7 +322,7 @@ export const privacyPolicy = {
         },
         {
           kind: "blockquote",
-          body: "To initiate a partnership, MOU, annual contract, or site visit — email build@deltaarbim.tech with your company name, country, and what you're looking to explore. We respond within 24 hours. All engagement terms are formalised in writing before any work begins.",
+          body: "To initiate a partnership, MOU, annual contract, or site visit — email build@Delta ARBIM.tech with your company name, country, and what you're looking to explore. We respond within 24 hours. All engagement terms are formalised in writing before any work begins.",
         },
       ],
     },
@@ -334,9 +334,9 @@ export const privacyPolicy = {
         {
           kind: "linkParagraph",
           before:
-            "DeltaARBIM is a professional construction technology platform intended for adults in a business context. We do not knowingly collect personal data from anyone under 18. If you believe a minor has submitted information to us, contact ",
-          linkLabel: "build@deltaarbim.tech",
-          href: "mailto:build@deltaarbim.tech",
+            "Delta ARBIM is a professional construction technology platform intended for adults in a business context. We do not knowingly collect personal data from anyone under 18. If you believe a minor has submitted information to us, contact ",
+          linkLabel: "build@Delta ARBIM.tech",
+          href: "mailto:build@Delta ARBIM.tech",
           after: " and we will delete it promptly.",
         },
       ],
@@ -352,7 +352,7 @@ export const privacyPolicy = {
         },
         {
           kind: "p",
-          body: "Continued use of DeltaARBIM after a policy update constitutes acceptance of the revised policy.",
+          body: "Continued use of Delta ARBIM after a policy update constitutes acceptance of the revised policy.",
         },
       ],
     },
@@ -369,9 +369,9 @@ export const privacyPolicy = {
           kind: "contactBox",
           intro: "",
           rows: [
-            { label: "Email", value: "build@deltaarbim.tech", href: "mailto:build@deltaarbim.tech" },
+            { label: "Email", value: "build@Delta ARBIM.tech", href: "mailto:build@Delta ARBIM.tech" },
             { label: "WhatsApp", value: "+91 8460 47 3271", href: "https://wa.me/918460473271" },
-            { label: "Website", value: "deltaarbim.tech", href: "https://deltaarbim.tech" },
+            { label: "Website", value: "Delta ARBIM.tech", href: "https://Delta ARBIM.tech" },
           ],
           footerBefore: "Built by ",
           footerLinkLabel: "Shivlam",

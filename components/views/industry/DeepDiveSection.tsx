@@ -92,17 +92,24 @@ export function DeepDiveSection() {
 
             <div className="mt-8 overflow-hidden border border-white/10">
               <div className="divide-y divide-white/10">
-                {panel.usecases.map((u) => (
-                  <div key={u.title} className="bg-black/10 px-6 py-5 transition-colors hover:bg-white/[0.03]">
-                    <div className="flex items-center gap-2 font-serif text-sm font-bold text-white">
-                      <span className="font-mono text-xs text-orange-300" aria-hidden>
-                        →
-                      </span>
-                      {u.title}
+                {panel.usecases.map((u, idx) => {
+                  if (!u.title) return null;
+
+                  return (
+                    <div
+                      key={`${u.title}-${idx}`}
+                      className="bg-black/10 px-6 py-5 transition-colors hover:bg-white/[0.03]"
+                    >
+                      <div className="flex items-center gap-2 font-serif text-sm font-bold text-white">
+                        <span className="font-mono text-xs text-orange-300" aria-hidden>
+                          →
+                        </span>
+                        {u.title}
+                      </div>
+                      <p className="mt-2 text-sm leading-relaxed text-white/55">{u.desc}</p>
                     </div>
-                    <p className="mt-2 text-sm leading-relaxed text-white/55">{u.desc}</p>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
 

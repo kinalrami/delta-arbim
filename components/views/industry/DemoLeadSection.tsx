@@ -18,9 +18,9 @@ export function DemoLeadSection() {
           submit: industryLeadCopy.form.submit,
           notePrefix: industryLeadCopy.form.notePrefix,
           privacy: industryLeadCopy.form.privacy,
-          emailSubject: "DeltaARBIM — Industry Demo Request",
+          emailSubject: "Delta ARBIM — Industry Demo Request",
           mailHeader: "Industry demo request",
-          waText: "Hi DeltaARBIM, I'd like a demo for my industry.",
+          waText: "Hi Delta ARBIM, I'd like a demo for my industry.",
           fields: [
             {
               key: "firstName",

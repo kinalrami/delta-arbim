@@ -153,7 +153,7 @@ function computeResult(input: {
       verdict,
       title: "AR-Ready",
       bullets: [
-        "Your inputs look compatible with DeltaARBIM’s AR pipeline.",
+        "Your inputs look compatible with Delta ARBIM’s AR pipeline.",
         "Next step: run a live overlay test on-site to confirm anchoring & performance.",
         ...bullets,
         "If performance drops, we’ll recommend geometry simplification and layer filtering.",

@@ -28,7 +28,7 @@ export function ContactEnquiryForm({ emailTo }: { emailTo: string }) {
   const enquiryDisplay = enquiryTabs.find((t) => t.id === tab)?.display ?? "GENERAL ENQUIRY";
 
   const mailtoHref = useMemo(() => {
-    const subject = encodeURIComponent(`DeltaARBIM — ${enquiryDisplay}`);
+    const subject = encodeURIComponent(`Delta ARBIM — ${enquiryDisplay}`);
     const body = encodeURIComponent(
       [
         `Enquiry: ${enquiryDisplay}`,
