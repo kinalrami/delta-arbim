@@ -19,7 +19,7 @@ import type { IfcCheckerCopy } from "@/components/shared/IfcCheckerSection";
 // ——— Site / contact URLs ———
 
 export const site = {
-  email: "build@Delta ARBIM.tech",
+  email: "build@deltaarbim.tech",
   phoneDisplay: "+91 8460 47 3271",
   phoneTel: "+918460473271",
   waUrl: "https://wa.me/918460473271",

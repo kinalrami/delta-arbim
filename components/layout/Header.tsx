@@ -128,7 +128,6 @@ export function Header() {
             className="flex min-w-0 shrink items-center"
             aria-label="Delta ARBIM home"
           >
-            {/* Circular mask hides opaque corner pixels when the asset is a round mark on a square canvas */}
             <span className="relative flex size-12 shrink-0 items-center justify-center overflow-hidden rounded-full md:size-16">
               <Image
                 src="/logo.png"

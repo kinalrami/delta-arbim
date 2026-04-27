@@ -109,8 +109,8 @@ export const privacyPolicy = {
         {
           kind: "contactLine",
           prefix: "Contact:",
-          emailLabel: "build@Delta ARBIM.tech",
-          emailHref: "mailto:build@Delta ARBIM.tech",
+          emailLabel: "build@deltaarbim.tech",
+          emailHref: "mailto:build@deltaarbim.tech",
           siteLabel: "shivlam.com",
           siteHref: "https://www.shivlam.com",
         },
@@ -258,8 +258,8 @@ export const privacyPolicy = {
         {
           kind: "linkParagraph",
           before: "Email us at ",
-          linkLabel: "build@Delta ARBIM.tech",
-          href: "mailto:build@Delta ARBIM.tech",
+          linkLabel: "build@deltaarbim.tech",
+          href: "mailto:build@deltaarbim.tech",
           after: " to exercise any of the following rights. We respond within 5 business days.",
         },
         {
@@ -295,7 +295,7 @@ export const privacyPolicy = {
             {
               icon: "lock",
               title: "Data Security & Confidentiality",
-              body: "All IFC models, project data, and BIM information shared with Delta ARBIM are treated as confidential. Data is encrypted at rest and in transit, isolated per client account, and never shared with third parties. Clients may request a signed NDA before sharing any project files. Contact build@Delta ARBIM.tech to initiate.",
+              body: "All IFC models, project data, and BIM information shared with Delta ARBIM are treated as confidential. Data is encrypted at rest and in transit, isolated per client account, and never shared with third parties. Clients may request a signed NDA before sharing any project files. Contact build@deltaarbim.tech to initiate.",
             },
             {
               icon: "mou",
@@ -322,7 +322,7 @@ export const privacyPolicy = {
         },
         {
           kind: "blockquote",
-          body: "To initiate a partnership, MOU, annual contract, or site visit — email build@Delta ARBIM.tech with your company name, country, and what you're looking to explore. We respond within 24 hours. All engagement terms are formalised in writing before any work begins.",
+          body: "To initiate a partnership, MOU, annual contract, or site visit — email build@deltaarbim.tech with your company name, country, and what you're looking to explore. We respond within 24 hours. All engagement terms are formalised in writing before any work begins.",
         },
       ],
     },
@@ -335,8 +335,8 @@ export const privacyPolicy = {
           kind: "linkParagraph",
           before:
             "Delta ARBIM is a professional construction technology platform intended for adults in a business context. We do not knowingly collect personal data from anyone under 18. If you believe a minor has submitted information to us, contact ",
-          linkLabel: "build@Delta ARBIM.tech",
-          href: "mailto:build@Delta ARBIM.tech",
+          linkLabel: "build@deltaarbim.tech",
+          href: "mailto:build@deltaarbim.tech",
           after: " and we will delete it promptly.",
         },
       ],
@@ -369,7 +369,7 @@ export const privacyPolicy = {
           kind: "contactBox",
           intro: "",
           rows: [
-            { label: "Email", value: "build@Delta ARBIM.tech", href: "mailto:build@Delta ARBIM.tech" },
+            { label: "Email", value: "build@deltaarbim.tech", href: "mailto:build@deltaarbim.tech" },
             { label: "WhatsApp", value: "+91 8460 47 3271", href: "https://wa.me/918460473271" },
             { label: "Website", value: "Delta ARBIM.tech", href: "https://Delta ARBIM.tech" },
           ],

@@ -2,11 +2,9 @@
 
 import Image from "next/image";
 import { Fragment, useEffect, useMemo, useRef, useState, type CSSProperties, type KeyboardEvent } from "react";
-
 import { usePrefersReducedMotion } from "@/hooks/use-prefers-reduced-motion";
 import { insightThumbSrc } from "@/lib/illustration-src";
 import type { CodeLine, InsightCatStyle, InsightFilterCat, InsightFilterOption, InsightPost } from "@/lib/insights-types";
-// import { FilterRailSeparator } from "@/components/shared/section-chrome";
 
 export type { InsightPost, InsightFilterOption } from "@/lib/insights-types";
 
@@ -222,10 +220,10 @@ export function InsightsTrendsSection({
                       <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-white/60 group-hover:text-orange-200 transition-colors">
                         Read Journal
                       </span>
-                      <span className="font-mono text-[10px] uppercase tracking-widest text-white/30">
+                      {/* <span className="font-mono text-[10px] uppercase tracking-widest text-white/30">
                         [ {String(i + 1).padStart(2, "0")} /{" "}
                         {String(totalForIndex).padStart(2, "0")} ]
-                      </span>
+                      </span> */}
                     </div>
                   </div>
                 </div>

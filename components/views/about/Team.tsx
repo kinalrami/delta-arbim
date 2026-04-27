@@ -40,7 +40,7 @@ export default function Team() {
                         <div className="flex flex-col gap-1">
                             <h4 className="text-[12px] text-orange-400 uppercase font-bold">Headquarters</h4>
                             <p className="text-sm text-gray-400">Ahmedabad, Gujarat, India</p>
-                            <Link className="text-sm text-orange-400" href="mailto:build@Delta ARBIM.tech">build@Delta ARBIM.tech</Link>
+                            <Link className="text-sm text-orange-400" href="mailto:build@deltaarbim.tech">build@deltaarbim.tech</Link>
                             <Link className="text-sm text-orange-400" href="tel:+918460473271">+91 8460 47 3271</Link>
                         </div>
                     </div>

@@ -77,10 +77,10 @@ export function Partnership() {
                         <p className="text-[13px] leading-relaxed sm:max-w-2xl text-white/55">
                             Ready to discuss a partnership? Email{" "}
                             <a
-                                href="mailto:build@Delta ARBIM.tech"
+                                href="mailto:build@deltaarbim.tech"
                                 className="text-orange-400 transition-colors hover:text-orange-300"
                             >
-                                build@Delta ARBIM.tech
+                                build@deltaarbim.tech
                             </a>{" "}
                             or use WhatsApp — our engineering team responds personally.
                         </p>

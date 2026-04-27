@@ -138,10 +138,10 @@ export function Footer() {
             </h4>
             <p className="mb-2 text-[13px] leading-relaxed text-[#888888]">
               <a
-                href="mailto:build@Delta ARBIM.tech"
+                href="mailto:build@deltaarbim.tech"
                 className="break-all text-[#FF9933] hover:underline"
               >
-                build@Delta ARBIM.tech
+                build@deltaarbim.tech
               </a>
             </p>
             <p className="mb-2 text-[13px] leading-relaxed text-[#888888]">

@@ -10,13 +10,13 @@ function Callout({
   title?: string;
   body: string;
 }) {
-  const bodyNode = body.split("build@Delta ARBIM.tech").map((part, j, arr) => {
+  const bodyNode = body.split("build@deltaarbim.tech").map((part, j, arr) => {
     if (j === arr.length - 1) return part;
     return (
       <span key={j}>
         {part}
-        <a href="mailto:build@Delta ARBIM.tech" className="text-orange-300 hover:text-orange-200">
-          build@Delta ARBIM.tech
+        <a href="mailto:build@deltaarbim.tech" className="text-orange-300 hover:text-orange-200">
+          build@deltaarbim.tech
         </a>
       </span>
     );
@@ -187,16 +187,16 @@ export function Policy() {
                                         </div>
                                       </div>
                                       <p className="mt-2 text-[13px] leading-relaxed text-white/55">
-                                        {it.body.split("build@Delta ARBIM.tech").map((part, j, arr) => {
+                                        {it.body.split("build@deltaarbim.tech").map((part, j, arr) => {
                                           if (j === arr.length - 1) return part;
                                           return (
                                             <span key={j}>
                                               {part}
                                               <a
-                                                href="mailto:build@Delta ARBIM.tech"
+                                                href="mailto:build@deltaarbim.tech"
                                                 className="text-orange-400 hover:text-orange-300"
                                               >
-                                                build@Delta ARBIM.tech
+                                                build@deltaarbim.tech
                                               </a>
                                             </span>
                                           );
