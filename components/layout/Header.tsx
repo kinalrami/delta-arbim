@@ -24,6 +24,7 @@ const navItems = [
   { href: "/industry", label: "Industries" },
   { href: "/about", label: "About Us" },
   { href: "/pricing", label: "Pricing" },
+  { href: "/blogs", label: "Blogs" },
   { href: "/demo", label: "Book Demo" },
   { href: "/contact", label: "Contact" },
 ] as const;

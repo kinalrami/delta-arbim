@@ -19,7 +19,7 @@ export function Hero() {
                   <span className="text-orange-400">{contactHeroCopy.titleEmphasis}</span>
                 </>
               }
-              titleClassName="font-serif text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-6xl"
+              titleClassName="font-serif text-3xl font-bold leading-tight text-white sm:text-5xl"
               desc={<>
                 <p>Whether you have demo requests, AR BIM pricing questions, international partnership proposals, or specific technical queries about IFC model compatibility, our engineering team in Ahmedabad reads and responds to everything personally within 24 hours.</p>
                 <p className="mt-1.5">No automated bots, just direct expert communication to help you scale your digital construction goals.</p>

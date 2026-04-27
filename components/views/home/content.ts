@@ -538,6 +538,10 @@ export const homeIfcCheckerCopy: IfcCheckerCopy = {
   dropSubtitle: "or fill in details below · No file leaves your device",
   orLabel: "OR DESCRIBE YOUR MODEL",
   placeholders: {
+    fullName: "Full Name",
+    email: "Email id",
+    contactNumber: "Contact Number",
+    companyName: "Company Name",
     schema: "IFC Version / Schema",
     tool: "Authoring tool (BIM software)",
     disciplines: "Disciplines included",

@@ -18,6 +18,27 @@ body {
   color: var(--foreground);
 }
 
+/* Insights / journals — tiny syntax colors + reveal animation */
+.ins-code-kw {
+  color: rgb(251 146 60 / 0.95);
+}
+.ins-code-fn {
+  color: rgb(29 207 207 / 0.95);
+}
+.ins-code-cm {
+  color: rgb(255 255 255 / 0.28);
+}
+
+.ins-card {
+  opacity: 0.0;
+  transform: translateY(10px);
+}
+.ins-card.ins-card-revealed {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 520ms ease, transform 520ms ease;
+}
+
 @keyframes marquee {
   0% {
     transform: translateX(0);

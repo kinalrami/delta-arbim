@@ -52,6 +52,10 @@ export type IfcCheckerCopy = {
   dropSubtitle: string;
   orLabel: string;
   placeholders: {
+    fullName: string;
+    email: string;
+    contactNumber: string;
+    companyName: string;
     schema: string;
     tool: string;
     disciplines: string;
@@ -186,6 +190,11 @@ export function IfcCheckerSectionShared({ copy }: { copy: IfcCheckerCopy }) {
   const inputRef = useRef<HTMLInputElement | null>(null);
   const [dragOver, setDragOver] = useState(false);
 
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [contactNumber, setContactNumber] = useState("");
+  const [companyName, setCompanyName] = useState("");
+
   const [schema, setSchema] = useState<IfcSchema>("");
   const [tool, setTool] = useState<IfcTool>("");
   const [disciplines, setDisciplines] = useState<IfcDisciplines>("");
@@ -206,16 +215,52 @@ export function IfcCheckerSectionShared({ copy }: { copy: IfcCheckerCopy }) {
     return Math.floor(n);
   }, [elements]);
 
+  const safeContactDigitsCount = useMemo(() => {
+    const digits = contactNumber.replaceAll(/\D/g, "");
+    return digits.length;
+  }, [contactNumber]);
+
   const errors = useMemo(() => {
     const e: Partial<
-      Record<"schema" | "tool" | "disciplines" | "elements", string>
+      Record<
+        | "fullName"
+        | "email"
+        | "contactNumber"
+        | "companyName"
+        | "schema"
+        | "tool"
+        | "disciplines"
+        | "elements",
+        string
+      >
     > = {};
+    if (fullName.trim().length < 2) e.fullName = "Enter your full name.";
+    const emailTrimmed = email.trim();
+    if (!emailTrimmed) e.email = "Enter your email.";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailTrimmed))
+      e.email = "Enter a valid email address.";
+
+    if (!contactNumber.trim()) e.contactNumber = "Enter your contact number.";
+    else if (safeContactDigitsCount < 7 || safeContactDigitsCount > 15)
+      e.contactNumber = "Enter a valid contact number.";
+
+    if (!companyName.trim()) e.companyName = "Enter your company name.";
     if (!schema) e.schema = "Select your IFC schema.";
     if (!tool) e.tool = "Select your authoring tool.";
     if (!disciplines) e.disciplines = "Select the disciplines included.";
     if (safeElements === null) e.elements = "Enter a valid element count (>= 1).";
     return e;
-  }, [schema, tool, disciplines, safeElements]);
+  }, [
+    fullName,
+    email,
+    contactNumber,
+    safeContactDigitsCount,
+    companyName,
+    schema,
+    tool,
+    disciplines,
+    safeElements,
+  ]);
 
   const canRun =
     status !== "loading" && Object.keys(errors).length === 0;
@@ -385,6 +430,88 @@ export function IfcCheckerSectionShared({ copy }: { copy: IfcCheckerCopy }) {
                 </div>
 
                 <div className="grid grid-cols-1 gap-3">
+                  <input
+                    value={fullName}
+                    onChange={(e) => setFullName(e.target.value)}
+                    type="text"
+                    placeholder={copy.placeholders.fullName}
+                    autoComplete="name"
+                    aria-invalid={attempted && Boolean(errors.fullName)}
+                    className={[
+                      "w-full border bg-black/30 px-3 py-2.5 text-sm text-white/80 outline-none transition-colors placeholder:text-white/30 focus:border-orange-400/40",
+                      attempted && errors.fullName
+                        ? "border-orange-400/60"
+                        : "border-white/10",
+                    ].join(" ")}
+                  />
+                  {attempted && errors.fullName ? (
+                    <div className="-mt-1 text-xs text-orange-200">
+                      {errors.fullName}
+                    </div>
+                  ) : null}
+
+                  <input
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    type="email"
+                    placeholder={copy.placeholders.email}
+                    autoComplete="email"
+                    inputMode="email"
+                    aria-invalid={attempted && Boolean(errors.email)}
+                    className={[
+                      "w-full border bg-black/30 px-3 py-2.5 text-sm text-white/80 outline-none transition-colors placeholder:text-white/30 focus:border-orange-400/40",
+                      attempted && errors.email
+                        ? "border-orange-400/60"
+                        : "border-white/10",
+                    ].join(" ")}
+                  />
+                  {attempted && errors.email ? (
+                    <div className="-mt-1 text-xs text-orange-200">
+                      {errors.email}
+                    </div>
+                  ) : null}
+
+                  <input
+                    value={contactNumber}
+                    onChange={(e) => setContactNumber(e.target.value)}
+                    type="tel"
+                    placeholder={copy.placeholders.contactNumber}
+                    autoComplete="tel"
+                    inputMode="tel"
+                    aria-invalid={attempted && Boolean(errors.contactNumber)}
+                    className={[
+                      "w-full border bg-black/30 px-3 py-2.5 text-sm text-white/80 outline-none transition-colors placeholder:text-white/30 focus:border-orange-400/40",
+                      attempted && errors.contactNumber
+                        ? "border-orange-400/60"
+                        : "border-white/10",
+                    ].join(" ")}
+                  />
+                  {attempted && errors.contactNumber ? (
+                    <div className="-mt-1 text-xs text-orange-200">
+                      {errors.contactNumber}
+                    </div>
+                  ) : null}
+
+                  <input
+                    value={companyName}
+                    onChange={(e) => setCompanyName(e.target.value)}
+                    type="text"
+                    placeholder={copy.placeholders.companyName}
+                    autoComplete="organization"
+                    aria-invalid={attempted && Boolean(errors.companyName)}
+                    className={[
+                      "w-full border bg-black/30 px-3 py-2.5 text-sm text-white/80 outline-none transition-colors placeholder:text-white/30 focus:border-orange-400/40",
+                      attempted && errors.companyName
+                        ? "border-orange-400/60"
+                        : "border-white/10",
+                    ].join(" ")}
+                  />
+                  {attempted && errors.companyName ? (
+                    <div className="-mt-1 text-xs text-orange-200">
+                      {errors.companyName}
+                    </div>
+                  ) : null}
+
                   <select
                     value={schema}
                     onChange={(e) => setSchema(e.target.value as IfcSchema)}
