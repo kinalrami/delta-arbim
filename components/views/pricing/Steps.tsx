@@ -35,7 +35,7 @@ export function Steps() {
                                 {d.content}
                             </p>
 
-                            <Link href="d.href" className="text-orange-400 uppercase text-xs flex gap-2 ">{d.buttonLabel} <MoveRight size={16} /></Link>
+                            <Link href={d.href} className="text-orange-400 uppercase text-xs flex gap-2 ">{d.buttonLabel} <MoveRight size={16} /></Link>
                         </div>
                     ))}
                 </div>

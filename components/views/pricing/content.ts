@@ -33,7 +33,7 @@ export const steps = {
       name: "Share your IFC model",
       content: "Drop us an email or book a demo. Bring your IFC file—we run a live AR walkthrough on your actual project so you see exactly what you're paying for before making any decision.",
       buttonLabel: "Book Demo",
-      href: "/demo"
+      href: "#quote"
     },
     {
       id: "02",
