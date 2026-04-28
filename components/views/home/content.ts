@@ -632,6 +632,32 @@ export const simulationStats: { value: string; label: string; desc: string }[] =
   { value: "100%", label: "Offline Functionality", desc: "Built for the realities of the job site, our engine operates in basements, tunnels, and low-connectivity zones without data loss." },
 ];
 
+// ——— Clients ———
+
+export type HomeClient = {
+  key: string;
+  name: string;
+  industry: string;
+  country: string;
+  logoSrc?: string;
+  logoAlt?: string;
+};
+
+export const homeClients: HomeClient[] = [
+  {
+    key: "client-1",
+    name: "Client Name",
+    industry: "Construction",
+    country: "India",
+  },
+  {
+    key: "client-2",
+    name: "Client Name",
+    industry: "MEP Contractor",
+    country: "UAE",
+  },
+];
+
 // ——— Field demo ———
 
 export type FieldDemoBulletIcon = "hex" | "zap" | "target" | "diamond";

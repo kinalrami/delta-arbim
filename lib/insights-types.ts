@@ -18,6 +18,7 @@ export type CodeLine = {
 
 export type InsightPost = {
   id: string;
+  slug: string;
   cat: string;
   catKey: Exclude<InsightFilterCat, "all">;
   catStyle: InsightCatStyle;
@@ -25,6 +26,7 @@ export type InsightPost = {
   date: string; // yyyy-mm-dd
   dateLabel: string;
   read: string;
+  publisher: string;
   excerpt: string;
   code: { lines: readonly CodeLine[] };
   color: string; // hex

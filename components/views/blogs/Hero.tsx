@@ -16,18 +16,14 @@ export function Hero() {
               eyebrowClassName="inline-flex uppercase font-mono text-xs font-semibold tracking-widest text-orange-400"
               title={
                 <>
+                  <em className="not-italic text-orange-400">
+                    {blogsHeroCopy.titleEmphasis}
+                  </em>
                   {blogsHeroCopy.titleBefore}
                   <br />
-                  <span className="text-white">
-                    the{" "}
-                    <em className="not-italic text-orange-400">
-                      {blogsHeroCopy.titleEmphasis}
-                    </em>
-                    .
-                  </span>
                 </>
               }
-              titleClassName="mt-4 font-serif text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl"
+              titleClassName="mt-4 font-serif text-4xl font-bold tracking-tight text-white sm:text-5xl"
               desc={<p>{blogsHeroCopy.desc}</p>}
               descWrapClassName="mx-auto mt-5 max-w-3xl text-base leading-relaxed text-white/60 sm:text-lg"
             />

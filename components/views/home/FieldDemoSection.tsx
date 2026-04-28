@@ -46,6 +46,8 @@ function BulletRow({ b }: { b: Bullet }) {
 }
 
 export function FieldDemoSection() {
+  const fieldDemoVimeoId = "1186910934";
+
   const bullets: Bullet[] = [
     {
       icon: "hex",
@@ -88,13 +90,13 @@ export function FieldDemoSection() {
             >
               <div className="relative w-full bg-zinc-900/40" style={{ aspectRatio: "16 / 9" }}>
                 {/* corners */}
-                <Corner className="absolute top-2 left-2 h-5 w-5" />
-                <Corner className="absolute top-2 right-2 h-5 w-5 -scale-x-100" />
-                <Corner className="absolute bottom-2 left-2 h-5 w-5 -scale-y-100" />
-                <Corner className="absolute bottom-2 right-2 h-5 w-5 -scale-x-100 -scale-y-100" />
+                <Corner className="absolute top-2 left-2 z-30 h-5 w-5" />
+                <Corner className="absolute top-2 right-2 z-30 h-5 w-5 -scale-x-100" />
+                <Corner className="absolute bottom-2 left-2 z-30 h-5 w-5 -scale-y-100" />
+                <Corner className="absolute bottom-2 right-2 z-30 h-5 w-5 -scale-x-100 -scale-y-100" />
 
                 {/* HUD top */}
-                <div className="pointer-events-none absolute top-2 left-3 right-3 flex items-center justify-between">
+                <div className="pointer-events-none absolute top-2 left-3 right-3 z-30 flex items-center justify-between">
                   <div className="flex items-center gap-2 font-mono text-[10px] tracking-widest text-white/80">
                     <span className="size-2 rounded-full bg-rose-400 shadow-sm shadow-rose-400/60 animate-pulse" />
                     LIVE FIELD RECORDING
@@ -111,18 +113,17 @@ export function FieldDemoSection() {
                   </div>
                 </div>
 
-                {/* Thumbnail placeholder */}
-                <div className="absolute inset-0 z-10 grid place-items-center">
-                  <div className="flex flex-col items-center gap-3">
-                    <div className="text-4xl opacity-15" aria-hidden>
-                      🏗
-                    </div>
-                    <div className="text-center font-mono text-xs tracking-widest text-white/20">
-                      REPLACE WITH VIDEO THUMBNAIL
-                      <br />
-                      site-demo.jpg · 16:9
-                    </div>
-                  </div>
+                {/* Vimeo background preview */}
+                <div className="absolute inset-0 z-10 overflow-hidden">
+                  <iframe
+                    src={`https://player.vimeo.com/video/${fieldDemoVimeoId}?background=1&autoplay=1&loop=1&muted=1`}
+                    className="pointer-events-none absolute top-1/2 left-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 object-cover"
+                    style={{ minWidth: "100%", minHeight: "100%" }}
+                    frameBorder="0"
+                    allow="autoplay; fullscreen"
+                    title="Delta ARBIM field demo preview"
+                  />
+                  <div className="absolute inset-0 bg-black/40" />
                 </div>
               </div>
             </div>

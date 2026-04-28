@@ -276,7 +276,7 @@ export const demoHeroCopy = {
   ] as const,
   /** Set `youtubeVideoId` and/or `mp4Src` to play real media in the lightbox; empty shows the placeholder. */
   videoEmbed: {
-    vimeoId: "1184717551",
+    vimeoId: "1186910934",
     youtubeVideoId:"",
     mp4Src: "",
   },
@@ -306,7 +306,7 @@ export const demoHeroCopy = {
       clipLabel: "SITE CLIP",
       tag: "LIDAR SCAN",
       caption: "Room scanned, deviation flagged in real-time AR",
-      vimeoId:"",
+      vimeoId:"1186913352",
       youtubeVideoId: "",
       mp4Src: "",
     },

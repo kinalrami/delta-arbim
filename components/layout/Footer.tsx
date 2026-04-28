@@ -36,6 +36,7 @@ function BrandBlock() {
           alt="Delta ARBIM"
           width={220}
           height={56}
+          unoptimized
           className="h-12 w-auto md:h-16"
         />
       </div>

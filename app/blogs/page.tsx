@@ -9,19 +9,19 @@ import {
 } from "@/components/views/blogs/content";
 
 export const metadata: Metadata = {
-  title: "Blogs | Delta ARBIM",
+  title: "BIM Insights & AR Field Trends | Delta ARBIM Technical Blog",
   description:
-    "Technical journals on iOS architecture, immersive AR systems, Unity, web engineering, and brand as code — written by the Delta ARBIM engineering team.",
+    "Explore expert journals on ±2cm AR precision, IFC coordination, and Next.js engineering. Learn how Delta ARBIM eliminates site rework and bridge the office-field gap.",
 };
 
 export default function BlogsPage() {
   return (
     <main className="w-full">
       <Hero />
-
       <InsightsTrendsSection
         posts={BLOG_INSIGHT_POSTS}
         filterOptions={BLOG_INSIGHT_FILTERS}
+        postHrefBase="/blogs"
         sectionId="blog-journals"
         showCodePreview={false}
         insightsNow={INSIGHTS_NOW}

@@ -1,10 +1,12 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Fragment, useEffect, useMemo, useRef, useState, type CSSProperties, type KeyboardEvent } from "react";
 import { usePrefersReducedMotion } from "@/hooks/use-prefers-reduced-motion";
 import { insightThumbSrc } from "@/lib/illustration-src";
 import type { CodeLine, InsightCatStyle, InsightFilterCat, InsightFilterOption, InsightPost } from "@/lib/insights-types";
+import { MoveRight } from "lucide-react";
 
 export type { InsightPost, InsightFilterOption } from "@/lib/insights-types";
 
@@ -54,6 +56,8 @@ export type InsightsTrendsSectionProps = {
   showCodePreview?: boolean;
   insightsNow?: Date;
   showLoadMore?: boolean;
+  postHrefBase?: string;
+  showFilters?: boolean;
 };
 
 export function InsightsTrendsSection({
@@ -63,6 +67,8 @@ export function InsightsTrendsSection({
   showCodePreview = true,
   insightsNow = new Date(),
   showLoadMore = false,
+  postHrefBase,
+  showFilters = true,
 }: InsightsTrendsSectionProps) {
   const [filter, setFilter] = useState<InsightFilterCat>("all");
   const [loadMoreDone, setLoadMoreDone] = useState(false);
@@ -78,9 +84,10 @@ export function InsightsTrendsSection({
   );
 
   const filtered = useMemo(() => {
+    if (!showFilters) return sorted;
     if (filter === "all") return sorted;
     return sorted.filter((p) => p.catKey === filter);
-  }, [sorted, filter]);
+  }, [sorted, filter, showFilters]);
 
   useEffect(() => {
     const root = gridRef.current;
@@ -126,27 +133,29 @@ export function InsightsTrendsSection({
     >
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
         <div className="relative w-full">
-          <div className="mb-8 flex flex-wrap items-center gap-2.5 font-mono">
-            {filterOptions.map(({ key, label }, idx) => (
-              <Fragment key={key}>
-                {/* {idx === 1 ? <FilterRailSeparator /> : null} */}
-                <button
-                  type="button"
-                  className={
-                    filter === key
-                      ? "relative cursor-pointer overflow-hidden rounded border border-orange-400/60 bg-orange-400/10 px-4 py-2 text-xs uppercase tracking-widest text-orange-200 shadow-[0_0_0_2px_rgba(251,146,60,0.12)] transition-[color,box-shadow,border-color,background-color] duration-300 ease-out"
-                      : "relative cursor-pointer overflow-hidden rounded border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-widest text-white/45 transition-[color,border-color,background-color] duration-300 ease-out hover:border-white/20 hover:text-white/70 hover:bg-white/7"
-                  }
-                  onClick={() => setFilter(key)}
-                >
-                  {label}
-                </button>
-              </Fragment>
-            ))}
-            <span className="ml-auto text-xs uppercase tracking-wider text-white/35">
-              {countLabel}
-            </span>
-          </div>
+          {showFilters ? (
+            <div className="mb-8 flex flex-wrap items-center gap-2.5 font-mono">
+              {filterOptions.map(({ key, label }, idx) => (
+                <Fragment key={key}>
+                  {/* {idx === 1 ? <FilterRailSeparator /> : null} */}
+                  <button
+                    type="button"
+                    className={
+                      filter === key
+                        ? "relative cursor-pointer overflow-hidden rounded border border-orange-400/60 bg-orange-400/10 px-4 py-2 text-xs uppercase tracking-widest text-orange-200 shadow-[0_0_0_2px_rgba(251,146,60,0.12)] transition-[color,box-shadow,border-color,background-color] duration-300 ease-out"
+                        : "relative cursor-pointer overflow-hidden rounded border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-widest text-white/45 transition-[color,border-color,background-color] duration-300 ease-out hover:border-white/20 hover:text-white/70 hover:bg-white/7"
+                    }
+                    onClick={() => setFilter(key)}
+                  >
+                    {label}
+                  </button>
+                </Fragment>
+              ))}
+              <span className="ml-auto text-xs uppercase tracking-wider text-white/35">
+                {countLabel}
+              </span>
+            </div>
+          ) : null}
 
           <div ref={gridRef} className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {filtered.map((p, i) => {
@@ -156,17 +165,10 @@ export function InsightsTrendsSection({
               const isNew = diffDays <= 2;
               const codeHtml = showCodePreview ? codeLinesToHtml(p.code.lines) : "";
               const thumbSrc = insightThumbSrc(p.svgType, p.color);
+              const href = postHrefBase ? `${postHrefBase}/${p.slug}` : undefined;
 
-              return (
-                <div
-                  key={p.id}
-                  data-ins-card
-                  data-idx={i}
-                  role="button"
-                  tabIndex={0}
-                  onKeyDown={onCardKeyDown}
-                  className="ins-card group relative h-full cursor-pointer overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] shadow-none backdrop-blur-2xl transition-[transform,border-color,opacity] duration-200 hover:-translate-y-1.5 hover:border-white/20 motion-reduce:hover:translate-y-0"
-                >
+              const cardContent = (
+                <>
                   <div className="relative h-40 w-full overflow-hidden">
                     <Image src={thumbSrc} alt="" fill unoptimized sizes="100vw" className="object-cover" />
                     <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-transparent" />
@@ -190,7 +192,7 @@ export function InsightsTrendsSection({
                     </div>
                   </div>
 
-                  <div className="p-6">
+                  <div className="flex flex-1 flex-col p-6">
                     <div className="flex flex-wrap items-center gap-2 text-[10px] uppercase tracking-widest text-white/35">
                       <span className={isNew ? "text-orange-200/80" : undefined}>
                         {p.dateLabel}
@@ -201,7 +203,7 @@ export function InsightsTrendsSection({
                       <span className="text-white/25">{p.id}</span>
                     </div>
 
-                    <div className="mt-3 font-serif text-lg font-extrabold leading-snug text-white">
+                    <div className="mt-3 line-clamp-2 font-serif text-lg font-extrabold leading-snug text-white">
                       {p.title}
                     </div>
 
@@ -212,20 +214,45 @@ export function InsightsTrendsSection({
                       />
                     ) : null}
 
-                    <div className="mt-3 text-sm leading-relaxed text-white/55">
+                    <div className="mt-3 line-clamp-3 text-sm leading-relaxed text-white/55">
                       {p.excerpt}
                     </div>
 
-                    <div className="mt-6 flex items-center justify-between">
-                      <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-white/60 group-hover:text-orange-200 transition-colors">
+                    <div className="mt-auto pt-6 flex items-center justify-between">
+                      <span className="flex items-center gap-2 font-mono text-[10px] font-bold uppercase tracking-widest text-orange-400/80 group-hover:text-orange-200 transition-colors">
                         Read Journal
+                        <MoveRight className="h-3 w-3" />
                       </span>
-                      {/* <span className="font-mono text-[10px] uppercase tracking-widest text-white/30">
-                        [ {String(i + 1).padStart(2, "0")} /{" "}
-                        {String(totalForIndex).padStart(2, "0")} ]
-                      </span> */}
                     </div>
                   </div>
+                </>
+              );
+
+              if (href) {
+                return (
+                  <Link
+                    key={p.id}
+                    href={href}
+                    data-ins-card
+                    data-idx={i}
+                    className="ins-card group relative flex h-full cursor-pointer flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] shadow-none backdrop-blur-2xl transition-[transform,border-color,opacity] duration-200 hover:-translate-y-1.5 hover:border-white/20 motion-reduce:hover:translate-y-0"
+                  >
+                    {cardContent}
+                  </Link>
+                );
+              }
+
+              return (
+                <div
+                  key={p.id}
+                  data-ins-card
+                  data-idx={i}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={onCardKeyDown}
+                  className="ins-card group relative flex h-full cursor-pointer flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] shadow-none backdrop-blur-2xl transition-[transform,border-color,opacity] duration-200 hover:-translate-y-1.5 hover:border-white/20 motion-reduce:hover:translate-y-0"
+                >
+                  {cardContent}
                 </div>
               );
             })}

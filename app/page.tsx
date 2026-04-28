@@ -8,6 +8,7 @@ import { FeaturesSection } from "@/components/views/home/FeaturesSection";
 import { SolutionsSection } from "@/components/views/home/SolutionsSection";
 import { FieldDemoSection } from "@/components/views/home/FieldDemoSection";
 import { SimulationSection } from "@/components/views/home/SimulationSection";
+import { ClientsSection } from "@/components/views/home/ClientsSection";
 import { PricingTeaserSection } from "@/components/views/home/PricingTeaserSection";
 import { DemoRequestSection } from "@/components/views/home/DemoRequestSection";
 import { FaqSection } from "@/components/views/home/FaqSection";
@@ -27,6 +28,7 @@ export default function Home() {
       <SolutionsSection />
       <FieldDemoSection />
       <SimulationSection />
+      <ClientsSection />
       <PricingTeaserSection />
       <DemoRequestSection />
       <FaqSection />

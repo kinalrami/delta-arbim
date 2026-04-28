@@ -135,6 +135,7 @@ export function Header() {
                 width={220}
                 height={56}
                 priority
+                unoptimized
                 className="h-full w-full object-contain object-center"
               />
             </span>
