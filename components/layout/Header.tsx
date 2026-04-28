@@ -207,7 +207,7 @@ export function Header() {
             </div> */}
 
             <Link
-              href="/demo"
+              href="/demo#demo-lead-h2"
               className="hidden whitespace-nowrap bg-[#FF9933] px-4 py-2 font-mono text-[10px] font-bold uppercase tracking-[0.1em] text-black transition-opacity duration-[0.22s] hover:opacity-[0.85] min-[601px]:inline-block sm:px-[18px] sm:text-[11px]"
             >
               Book a Demo

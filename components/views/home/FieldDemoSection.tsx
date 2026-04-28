@@ -2,9 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { Diamond, Hexagon, Play, Target, Zap } from "lucide-react";
 
-import { fieldDemoBullets, site, type FieldDemoBulletIcon } from "@/components/views/home/content";
+import { VideoLightbox } from "@/components/shared/VideoLightbox";
+import { site, type FieldDemoBulletIcon } from "@/components/views/home/content";
 import { SectionHeading } from "../../shared/SectionHeading";
 
 function Corner({ className }: { className: string }) {
@@ -47,6 +49,7 @@ function BulletRow({ b }: { b: Bullet }) {
 
 export function FieldDemoSection() {
   const fieldDemoVimeoId = "1186910934";
+  const [lightboxOpen, setLightboxOpen] = useState(false);
 
   const bullets: Bullet[] = [
     {
@@ -67,6 +70,10 @@ export function FieldDemoSection() {
     },
   ];
 
+  function openVideo() {
+    setLightboxOpen(true);
+  }
+
   return (
     <section id="field-demo" aria-labelledby="vid-h2" className="w-full">
       <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
@@ -77,16 +84,14 @@ export function FieldDemoSection() {
               role="button"
               tabIndex={0}
               aria-label="Play Delta ARBIM field demo video"
-              className="relative w-full max-w-xl overflow-hidden border border-orange-400/25 bg-black shadow-2xl outline-none transition-colors hover:border-orange-400/40 focus-visible:ring-2 focus-visible:ring-orange-400/50"
+              className="group relative w-full max-w-xl overflow-hidden border border-orange-400/25 bg-black shadow-2xl outline-none transition-colors hover:border-orange-400/40 focus-visible:ring-2 focus-visible:ring-orange-400/50"
               onKeyDown={(e) => {
                 if (e.key === "Enter" || e.key === " ") {
                   e.preventDefault();
-                  // placeholder for future modal/player
+                  openVideo();
                 }
               }}
-              onClick={() => {
-                // placeholder for future modal/player
-              }}
+              onClick={openVideo}
             >
               <div className="relative w-full bg-zinc-900/40" style={{ aspectRatio: "16 / 9" }}>
                 {/* corners */}
@@ -107,7 +112,15 @@ export function FieldDemoSection() {
                 </div>
 
                 {/* Play overlay */}
-                <div className="pointer-events-none absolute inset-0 z-20 grid place-items-center">
+                <div
+                  className={[
+                    "pointer-events-none absolute inset-0 z-20 grid place-items-center transition-opacity",
+                    // Hide by default while the preview is playing; only show as an affordance on hover/focus.
+                    "opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100",
+                    // Always hide while the actual player is open.
+                    lightboxOpen ? "!opacity-0" : "",
+                  ].join(" ")}
+                >
                   <div className="grid place-items-center rounded-full border border-orange-400/30 bg-black/40 p-4 shadow-[0_0_0_6px_rgba(255,153,51,0.08)]">
                     <Play className="size-7 translate-x-0.5 text-orange-200" aria-hidden />
                   </div>
@@ -169,6 +182,14 @@ export function FieldDemoSection() {
           </div>
         </div>
       </div>
+      <VideoLightbox
+        open={lightboxOpen}
+        onClose={() => setLightboxOpen(false)}
+        embed={{ vimeoId: fieldDemoVimeoId }}
+        closeLabel="CLOSE"
+        placeholderTitle="FIELD DEMO VIDEO"
+        placeholderSubtitle="Vimeo player unavailable"
+      />
     </section>
   );
 }

@@ -98,7 +98,7 @@ export const plans = {
   links: [
     { href: "/#how", label: "→ HOW IT WORKS" },
     { href: "/industry", label: "→ INDUSTRIES" },
-    { href: "/demo", label: "→ BOOK FREE DEMO" },
+    { href: "#quote", label: "→ BOOK FREE DEMO" },
   ]
 }
 
@@ -115,7 +115,7 @@ export const plans = {
         features: ["IFC OVERLAY", "CLASH DETECTION", "LIDAR SCAN", "FIELD REPORTS", "MULTI-SITE", "WHITE-LABEL", "MOU"],
         activeFeatures: 4, // First 4 are active
         cta: "GET A QUOTE",
-        href: "/demo"
+        href: "#quote"
       },
       {
         title: "Project",
@@ -124,7 +124,7 @@ export const plans = {
         features: ["IFC OVERLAY", "CLASH DETECTION", "LIDAR SCAN", "FIELD REPORTS", "MULTI-SITE", "WHITE-LABEL", "MOU"],
         activeFeatures: 5, // First 5 are active
         cta: "BOOK DEMO",
-        href: "/demo"
+        href: "#quote"
 
       },
       {
@@ -139,7 +139,7 @@ export const plans = {
       }
     ],
     links: [
-      { href: "/demo", label: "→ BOOK A FREE DEMO" },
+      { href: "#quote", label: "→ BOOK A FREE DEMO" },
       { href: "/contact", label: "→ CUSTOM QUOTE" },
       { href: "/industry", label: "→ YOUR INDUSTRIES" },
       { href: "/about", label: "→ WHY Delta ARBIM" },
@@ -313,7 +313,7 @@ export const pricingFaq = {
     },
   ] satisfies PricingFaqItem[],
   links: [
-    { href: "/demo", label: "— BOOK A DEMO" },
+    { href: "#quote", label: "— BOOK A DEMO" },
     { href: "/contact", label: "— ASK A QUESTION" },
     { href: "/privacy", label: "— PRIVACY POLICY" },
   ],

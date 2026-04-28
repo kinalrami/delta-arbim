@@ -111,9 +111,9 @@ export const contactMainCopy = {
 } as const;
 
 export const contactSocialLinks = {
-  linkedin: "https://linkedin.com/company/Delta ARBIM/",
-  instagram: "https://www.instagram.com/Delta ARBIM/",
-  facebook: "https://www.facebook.com/Delta ARBIM/",
+  linkedin: "https://linkedin.com/company/DeltaARBIM/",
+  instagram: "https://www.instagram.com/DeltaARBIM/",
+  facebook: "https://www.facebook.com/DeltaARBIM/",
 } as const;
 
 export const contactWaDirectHref =

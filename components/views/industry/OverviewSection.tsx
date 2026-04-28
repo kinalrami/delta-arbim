@@ -20,11 +20,11 @@ export function OverviewSection() {
         <div className="font-mono text-[9px] font-bold uppercase tracking-[0.15em] text-orange-400">
           {it.tag}
         </div>
-        <div className="mt-2">
+        {/* <div className="mt-2">
           <CtaPill href={it.href ?? "/contact"} variant="gray" className="text-[10px] text-white/50 group-hover:text-orange-200">
             {it.key === "your-industry" ? "Talk to us →" : "Explore →"}
           </CtaPill>
-        </div>
+        </div> */}
       </div>
     ),
   }));

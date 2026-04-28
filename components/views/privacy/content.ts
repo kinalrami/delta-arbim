@@ -371,7 +371,7 @@ export const privacyPolicy = {
           rows: [
             { label: "Email", value: "build@deltaarbim.tech", href: "mailto:build@deltaarbim.tech" },
             { label: "WhatsApp", value: "+91 8460 47 3271", href: "https://wa.me/918460473271" },
-            { label: "Website", value: "Delta ARBIM.tech", href: "https://Delta ARBIM.tech" },
+            { label: "Website", value: "Delta ARBIM.tech", href: "https://DeltaARBIM.tech" },
           ],
           footerBefore: "Built by ",
           footerLinkLabel: "Shivlam",

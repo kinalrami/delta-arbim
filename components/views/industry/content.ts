@@ -32,7 +32,7 @@ export const dualIndustryHero = {
     ],
     ctas: [
       { href: "/contact", label: "Explore Defence Applications", variant: "green", showArrow: true },
-      { href: "/demo", label: "Request a Demo", variant: "gray", showArrow: false },
+      { href: "#industry-lead-h2", label: "Request a Demo", variant: "gray", showArrow: false },
     ],
     badges: ["🇮🇳 Made in Bharat", "Secure Offline AR", "Hangar Management", "Synthetic Vision"],
   } satisfies DualHeroCard,
@@ -51,7 +51,7 @@ export const dualIndustryHero = {
       { value: "<60s", label: "IFC to AR" },
     ],
     ctas: [
-      { href: "/demo", label: "Book a Construction Demo", variant: "orange", showArrow: true },
+      { href: "#industry-lead-h2", label: "Book a Construction Demo", variant: "orange", showArrow: true },
       { href: "/pricing", label: "View Pricing", variant: "gray", showArrow: false },
     ],
     badges: ["IFC Open Standard", "MEP Clash Detection", "LiDAR Scanning", "INR Billing"],

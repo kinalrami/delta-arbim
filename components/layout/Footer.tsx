@@ -45,7 +45,7 @@ function BrandBlock() {
       </p>
       <div className="flex flex-wrap gap-2.5" aria-label="Social media links">
         <a
-          href="https://linkedin.com/company/Delta ARBIM/"
+          href="https://linkedin.com/company/DeltaARBIM/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
@@ -57,7 +57,7 @@ function BrandBlock() {
           </SocialIcon>
         </a>
         <a
-          href="https://www.instagram.com/Delta ARBIM/"
+          href="https://www.instagram.com/DeltaARBIM/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"
@@ -69,7 +69,7 @@ function BrandBlock() {
           </SocialIcon>
         </a>
         <a
-          href="https://www.facebook.com/Delta ARBIM/"
+          href="https://www.facebook.com/DeltaARBIM/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Facebook"

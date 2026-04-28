@@ -26,7 +26,7 @@ export const site = {
   waEarlyAccessQuery:
     "Hi%20Delta ARBIM%2C%20I%27d%20like%20early%20access.",
   waDemoQuery: "Hi%20Delta ARBIM%2C%20I%27d%20like%20to%20book%20a%20demo.",
-  instagramUrl: "https://www.instagram.com/Delta ARBIM/",
+  instagramUrl: "https://www.instagram.com/DeltaARBIM/",
 } as const;
 
 export const siteWa = {
