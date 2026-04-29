@@ -3,7 +3,7 @@ import type { InsightFilterOption, InsightPost } from "@/lib/insights-types";
 export const blogsHeroCopy = {
   eyebrow: "INSIGHTS & TRENDS",
   titleBefore: "Technical Journals from",
-  titleEmphasis: "the Engineering Floor",
+  titleEmphasis: "the Engineering Floor.",
   desc:
     "How we think about iOS architecture, immersive AR systems, Unity game development, web engineering, and brand as code — written by the team that ships it.",
 } as const;
